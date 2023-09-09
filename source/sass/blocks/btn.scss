@@ -1,26 +1,68 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  position: relative;
+  display: flex;
+  background-color: $color-default-white;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  padding: 4px 4px 4px 20px;
+  gap: 20px;
+  align-items: center;
+  min-height: 54px;
+  height: fit-content;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
-  cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
+  & p {
+    margin: 0;
+    padding: 0;
+    max-width: max-content;
+    font-size: $fz-xsmall;
+    font-weight: $fw-medium;
+    letter-spacing:$ls-light;
+    align-items: center;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
   }
 
-  &:disabled {
-    opacity: 0.5;
+  & span {
+    display: flex;
+    background-color: $color-cerulean-blue;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
 
-    pointer-events: none;
+    & svg {
+      width: 8px;
+      height: 8px;
+      stroke: $color-default-white;
+      stroke-width: 2px;
+    }
   }
 
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  //display: inline-flex;
+  //padding: 10px 20px;
+  //
+  //color: $color-default-white;
+  //
+  //background-color: $color-neon-blue;
+  //border: none;
+  //cursor: pointer;
+  //
+  //transition: opacity $trans-default;
+  //
+  //&--red {
+  //  background-color: $color-torch-red;
+  //}
+  //
+  //&:disabled {
+  //  opacity: 0.5;
+  //
+  //  pointer-events: none;
+  //}
+  //
+  //@include hover-focus {
+  //  opacity: 0.8;
+  //}
 }

@@ -1,0 +1,18 @@
+//.burger {
+//  background-color: $color-cerulean-blue;
+//  width: 46px;
+//  height: 46px;
+//  border-radius: 50%;
+//  border: none;
+//  padding: 0;
+//}
+
+.burger__open {
+  width: 22px;
+  height: 22px;
+  stroke: $color-default-white;
+}
+
+.burger__closed {
+  display: none;
+}
