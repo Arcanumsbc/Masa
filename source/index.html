@@ -17,8 +17,8 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header" id="top" data-header="data-header">
-        <div class="main-header__container container">
+      <header class="main-header" id="top" data-header="data-header" data-close-menu="data-close-menu">
+        <div class="main-header__container container" data-close-menu="data-close-menu">
           <div class="main-header__logo logo">
             <a class="logo__link" href="index.html" aria-label="Логотип сайта Маса.">
               <svg width="52" height="52" aria-hidden="true">
@@ -27,30 +27,7 @@
             </a>
           </div>
           <div class="main-header__wrappper">
-
-<!--              <nav class="main-header__menu menu">-->
-<!--                <ul class="menu__list">-->
-<!--                  <li class="menu__item">-->
-<!--                    <a class="menu__link" href="#">О проекте</a>-->
-<!--                  </li>-->
-<!--                  <li class="menu__item">-->
-<!--                    <a class="menu__link" href="#">Программы</a>-->
-<!--                  </li>-->
-<!--                  <li class="menu__item">-->
-<!--                    <a class="menu__link" href="#">Как поехать</a>-->
-<!--                  </li>-->
-<!--                  <li class="menu__item">-->
-<!--                    <a class="menu__link" href="#">Отзывы</a>-->
-<!--                  </li>-->
-<!--                  <li class="menu__item">-->
-<!--                    <a class="menu__link" href="#">Новости</a>-->
-<!--                  </li>-->
-<!--                  <li class="menu__item">-->
-<!--                    <a class="menu__link" href="#">Контакты</a>-->
-<!--                  </li>-->
-<!--                </ul>-->
-<!--              </nav>-->
-            <button class="menu__button btn burger" type="button" data-burger="data-burger" tabindex="0" aria-label="Кнопка открытия меню.">
+            <button class="main-header__button btn burger" type="button" data-burger="data-burger" tabindex="0" aria-label="Кнопка открытия меню.">
               <p>Меню</p>
               <span>
                 <svg class="burger__open" width="22" height="22" aria-hidden="true">
@@ -61,6 +38,78 @@
                 </svg>
               </span>
             </button>
+              <nav class="main-header__menu menu">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a class="menu__link" href="#" data-link="data-link">О проекте</a>
+                  </li>
+                  <li class="menu__item">
+                    <div class="menu__select select" data-accordion="parent">
+                      <div class="select-wrapper" data-accordion="element">
+                        <button class="select__button" data-accordion="button" type="button" tabindex="0">
+                          <p>Программы</p>
+                          <span>
+                          <svg width="12" height="12" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
+                          </svg>
+                        </span>
+                        </button>
+                        <ul class="select__list" data-accordion="content">
+                          <li class="select__item">
+                            <a class="select__link" href="#">Стажировки</a>
+                          </li>
+                          <li class="select__item">
+                            <a class="select__link" href="#">Волонтёрство</a>
+                          </li>
+                          <li class="select__item">
+                            <a class="select__link" href="#">Учеба</a>
+                          </li>
+                          <li class="select__item">
+                            <a class="select__link" href="#">Религия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#" data-link="data-link">Как поехать</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#" data-link="data-link">Отзывы</a>
+                  </li>
+                  <li class="menu__item">
+                    <div class="menu__select select" data-accordion="parent">
+                      <div class="select-wrapper" data-accordion="element">
+                        <button class="select__button" data-accordion="button" type="button" tabindex="0">
+                          <p>Новости</p>
+                          <span>
+                          <svg width="12" height="12" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
+                          </svg>
+                        </span>
+                        </button>
+                        <ul class="select__list" data-accordion="content">
+                          <li class="select__item">
+                            <a class="select__link" href="#">Стажировки</a>
+                          </li>
+                          <li class="select__item">
+                            <a class="select__link" href="#">Волонтёрство</a>
+                          </li>
+                          <li class="select__item">
+                            <a class="select__link" href="#">Учеба</a>
+                          </li>
+                          <li class="select__item">
+                            <a class="select__link" href="#">Религия</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#" data-link="data-link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
           </div>
         </div>
       </header>
@@ -140,7 +189,7 @@
                     <h2>Глобальный профессиональный опыт обучения за рубежом</h2>
                     <div class="hero__description">
                       <p>Погрузитесь в академическую программу, проходя практику в Тель-Авиве и ощущая настоящий израильский стиль жизни!</p>
-                      <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
+                      <a class="hero__button btn" href="#" aria-label="Подробнее о программе" disabled>
                         <p>Подробнее</p>
                         <span>
                           <svg width="22" height="22" aria-hidden="true">

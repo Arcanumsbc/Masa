@@ -9,6 +9,8 @@
   align-items: center;
   min-height: 54px;
   height: fit-content;
+  justify-content: space-between;
+  cursor: pointer;
 
   & p {
     margin: 0;
@@ -16,7 +18,7 @@
     max-width: max-content;
     font-size: $fz-xsmall;
     font-weight: $fw-medium;
-    letter-spacing:$ls-light;
+    letter-spacing: $ls-light;
     align-items: center;
     text-transform: uppercase;
     color: $color-cerulean-blue;
@@ -41,28 +43,48 @@
     }
   }
 
-  //display: inline-flex;
-  //padding: 10px 20px;
-  //
-  //color: $color-default-white;
-  //
-  //background-color: $color-neon-blue;
-  //border: none;
-  //cursor: pointer;
-  //
-  //transition: opacity $trans-default;
-  //
-  //&--red {
-  //  background-color: $color-torch-red;
-  //}
-  //
-  //&:disabled {
-  //  opacity: 0.5;
-  //
-  //  pointer-events: none;
-  //}
-  //
-  //@include hover-focus {
-  //  opacity: 0.8;
-  //}
+  @include hover-focus {
+    outline: none;
+    transition: $trans-default;
+    background-color: $color-cerulean-blue;
+
+    > p {
+      color: $color-default-white;
+    }
+
+    > span {
+      background-color: $color-default-white;
+
+      & svg {
+        stroke: $color-cerulean-blue;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  @include active {
+    transition: $trans-default;
+
+    > p {
+      opacity: 0.7;
+    }
+  }
+
+  @include disabled {
+    border-color: $color-mischka;
+    pointer-events: none;
+    cursor: default;
+
+    > p {
+      color: $color-mischka;
+    }
+
+    > span {
+      background-color: $color-mischka;
+
+      & svg {
+        stroke: $color-default-white;
+      }
+    }
+  }
 }

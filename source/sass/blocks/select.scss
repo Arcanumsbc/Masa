@@ -1,0 +1,88 @@
+.select-wrapper {
+  opacity: 0.7;
+
+  @include hover-focus {
+    opacity: 1;
+  }
+}
+
+.select-wrapper.is-active {
+  opacity: 1;
+
+  & .select__list {
+    margin-top: 20px;
+    margin-bottom: 18px;
+    padding: 0 0 0 16px;
+    display: block;
+    visibility: visible;
+    transition: all $trans-default;
+  }
+
+  & .select__button {
+    & svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.select__button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  gap: 10px;
+  cursor: pointer;
+  outline: none;
+
+  > p {
+    text-transform: uppercase;
+    color: $color-default-white;
+    line-height: $lh-xxsmall;
+    letter-spacing: $ls-light;
+    margin: 0;
+    padding: 0;
+  }
+
+  & svg {
+    width: 12px;
+    height: 12px;
+    fill: none;
+    stroke: $color-default-white;
+  }
+  //
+  //@include hover-focus {
+  //  opacity: 1;
+  //}
+}
+
+.select__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  visibility: hidden;
+}
+
+.select__item {
+  padding-bottom: 16px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.select__link {
+  outline: none;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  line-height: $lh-xxsmall;
+  color: rgba($color-default-white, 0.7);
+
+  @include hover-focus {
+    color: rgba($color-default-white, 1);
+  }
+
+  @include active {
+    color: rgba($color-default-white, 1);
+  }
+}
+

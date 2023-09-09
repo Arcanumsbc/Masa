@@ -1,18 +1,32 @@
-//.burger {
-//  background-color: $color-cerulean-blue;
-//  width: 46px;
-//  height: 46px;
-//  border-radius: 50%;
-//  border: none;
-//  padding: 0;
-//}
+.burger {
+  margin-bottom: 4px;
 
-.burger__open {
-  width: 22px;
-  height: 22px;
-  stroke: $color-default-white;
+  & span {
+    & svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    & .burger__open {
+      stroke: $color-default-white;
+    }
+
+    & .burger__closed {
+      display: none;
+    }
+  }
+
+  @include hover-focus {
+    outline: none;
+
+      & .burger__open {
+        transform: rotate(0);
+      }
+
+    & .burger__closed {
+      transform: rotate(0);
+    }
+  }
 }
 
-.burger__closed {
-  display: none;
-}
+

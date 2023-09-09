@@ -1,8 +1,25 @@
-//.menu__button {
-//  background-color: $color-cerulean-blue;
-//  width: 46px;
-//  height: 46px;
-//  border-radius: 50%;
-//  border: none;
-//  padding: 0;
-//}
+.menu {
+  background-color: $color-cerulean-blue;
+  border-radius: 16px;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu__link {
+  outline: none;
+  text-transform: uppercase;
+  line-height: $lh-xxsmall;
+  letter-spacing: $ls-light;
+  color: rgba($color-default-white, 0.7);
+
+  @include hover-focus {
+    color: rgba($color-default-white, 1);
+  }
+}

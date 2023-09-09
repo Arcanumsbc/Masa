@@ -2,7 +2,12 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import './vendor/focus-visible-polyfill';
+import './utils/scroll-lock';
+
+import {Burger} from './modules/menu/burger';
 import {initHeroSlider} from './modules/hero/sliderHero.js';
+import {initAccordions} from './vendor/init-accordion.js';
+
 
 // ---------------------------------
 
@@ -23,6 +28,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    const burger = new Burger();
+    window.burger = burger;
+    burger.init();
+    initAccordions();
     initHeroSlider();
   });
 });

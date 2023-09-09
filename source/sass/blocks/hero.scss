@@ -49,7 +49,7 @@
     line-height: $lh-xlarge;
     font-weight: $fw-regular;
     color: $color-cerulean-blue;
-    max-width: 970px;
+    max-width: 980px;
   }
 }
 
@@ -63,7 +63,7 @@
   width: 772px;
   justify-content: space-between;
 
-  ::before {
+  &::before {
     position: absolute;
     content: "";
     background: url("../img/svg/icon-angle.svg");
@@ -94,7 +94,7 @@
     outline: none;
   }
 
-  ::before {
+  &::before {
     position: absolute;
     content: "";
     background: url("../img/svg/icon-angle.svg");
@@ -141,7 +141,7 @@
 
 .hero__bg-photo {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: -1;
   width: 100%;
@@ -151,6 +151,6 @@
   & img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
   }
 }

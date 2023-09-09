@@ -1,9 +1,65 @@
 .main-header {
-  padding-top: 30px;
   z-index: 2;
 
-  @include vp-767 {
-    padding-top: 20px;
+  & .main-header__button {
+    min-width: 134px;
+    transition: width $trans-default, height $trans-default, opacity $trans-default, visibility $trans-default, margin-top $trans-default;
+  }
+
+  & .main-header__menu {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    transition: width $trans-default, height $trans-default, opacity $trans-default, visibility $trans-default, margin-top $trans-default;
+  }
+
+  &.is-open {
+    //.main-header__container {
+      background-color: $overlay-dark;
+      width: 100%;
+      height: 100vh;
+      //overflow: hidden;
+      //position: static;
+      //top: 0;
+      //left: 0;
+    //}
+
+    & .main-header__menu {
+      width: 286px;
+      height: fit-content;
+      padding: 35px 25px;
+      opacity: 1;
+      visibility: visible;
+      transition: width $trans-default, height $trans-default, opacity $trans-default, visibility $trans-default, margin-top $trans-default;
+    }
+
+    & .main-header__button {
+      min-width: 286px;
+      background-color: $color-cerulean-blue;
+      transition: all $trans-default;
+
+      >  p {
+        color: $color-default-white;
+      }
+
+      > span {
+        background-color: $color-default-white;
+
+        & .burger__open {
+          display: none;
+        }
+
+        & .burger__closed {
+          display: block;
+          width: 16px;
+          height: 16px;
+          stroke: $color-cerulean-blue;
+        }
+      }
+    }
   }
 }
 
@@ -12,27 +68,15 @@
   flex-direction: row;
   flex-grow: 1;
   justify-content: space-between;
+  padding-top: 30px;
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
 }
 
-//.main-header__wrappper  {
-//  display: flex;
-//  //justify-content: space-between;
-//  border: 1px solid $color-cerulean-blue;
-//  border-radius: 30px;
-//  padding: 4px 4px 4px 20px;
-//  gap: 20px;
-//  align-items: center;
-//  //min-width: 134px;
-//
-//  & p {
-//    margin: 0;
-//    padding: 0;
-//    max-width: max-content;
-//    font-size: $fz-xsmall;
-//    font-weight: $fw-medium;
-//    letter-spacing:$ls-light;
-//    align-items: center;
-//    text-transform: uppercase;
-//    color: $color-cerulean-blue;
-//  }
-//}
+.main-header__wrappper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
