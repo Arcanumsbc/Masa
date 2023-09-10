@@ -17,19 +17,19 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header" id="top" data-header="data-header" data-close-menu="data-close-menu">
+      <header class="main-header" id="top" data-header="data-header">
         <div class="main-header__container container" data-close-menu="data-close-menu">
-          <div class="main-header__logo logo">
-            <a class="logo__link" href="index.html" aria-label="Логотип сайта Маса.">
-              <svg width="52" height="52" aria-hidden="true">
-                <use xlink:href="./img/sprite.svg#logo"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="main-header__wrappper">
-            <button class="main-header__button btn burger" type="button" data-burger="data-burger" tabindex="0" aria-label="Кнопка открытия меню.">
-              <p>Меню</p>
-              <span>
+            <div class="main-header__logo logo">
+              <a class="logo__link" href="index.html" aria-label="Логотип сайта Маса.">
+                <svg width="52" height="52" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="main-header__inner">
+              <button class="main-header__button btn burger" type="button" data-burger="data-burger" tabindex="0" aria-label="Кнопка открытия меню.">
+                <p>Меню</p>
+                <span>
                 <svg class="burger__open" width="22" height="22" aria-hidden="true">
                   <use xlink:href="./img/sprite.svg#icon-menu"></use>
                 </svg>
@@ -37,7 +37,7 @@
                   <use xlink:href="./img/sprite.svg#icon-cross"></use>
                 </svg>
               </span>
-            </button>
+              </button>
               <nav class="main-header__menu menu">
                 <ul class="menu__list">
                   <li class="menu__item">
@@ -110,7 +110,7 @@
                   </li>
                 </ul>
               </nav>
-          </div>
+            </div>
         </div>
       </header>
       <main>
@@ -122,19 +122,20 @@
                 <li class="hero__item swiper-slide">
                   <div class="hero__content container">
                     <div class="hero__control swiper-pagination" tabindex="0"></div>
-                    <h2>Программы стажировок<br>в&nbsp;крупнейших компаниях Израиля</h2>
+                    <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
                     <div class="hero__description">
                       <p>Получите незаменимый опыт работы в ведущих израильских компаниях и государственных организациях.</p>
-                      <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
-                        <p>Подробнее</p>
-                        <span>
+                      <div class="hero__wrapper-btn">
+                        <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
+                          <p>Подробнее</p>
+                          <span>
                           <svg width="22" height="22" aria-hidden="true">
                             <use xlink:href="./img/sprite.svg#icon-arrow"></use>
                           </svg>
                         </span>
-                      </a>
+                        </a>
+                      </div>
                     </div>
-
                   </div>
                   <picture class="hero__bg-photo">
 <!--                    <source type="image/webp" media="(max-width: 767px)"-->
@@ -147,8 +148,7 @@
                             srcset="./img/hero/slide_1/hero-mobile.jpg 1x, ./img/hero/slide_1/hero-mobile@2x.jpg 2x" width="320" height="568">
                     <source media="(max-width: 1199px)"
                             srcset="./img/hero/slide_1/hero-tablet.jpg 1x, ./img/hero/slide_1/hero-tablet@2x.jpg 2x" width="768" height="1024">
-                    <img src="./img/hero/slide_1/hero-desk.jpg" srcset="./img/hero/slide_1/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440"
-                         height="800">
+                    <img src="./img/hero/slide_1/hero-desk.jpg" srcset="./img/hero/slide_1/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440" height="800">
                   </picture>
                 </li>
                 <li class="hero__item swiper-slide">
@@ -157,16 +157,17 @@
                     <h2>Волонтёрские программы – внесите свой вклад в общество</h2>
                     <div class="hero__description">
                       <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-                      <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
-                        <p>Подробнее</p>
-                        <span>
+                      <div class="hero__wrapper-btn">
+                        <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
+                          <p>Подробнее</p>
+                          <span>
                           <svg width="22" height="22" aria-hidden="true">
                             <use xlink:href="./img/sprite.svg#icon-arrow"></use>
                           </svg>
                         </span>
-                      </a>
+                        </a>
+                      </div>
                     </div>
-
                   </div>
                   <picture class="hero__bg-photo">
 <!--                    <source type="image/webp" media="(max-width: 767px)"-->
@@ -179,8 +180,7 @@
                             srcset="./img/hero/slide_2/hero-mobile.jpg 1x, ./img/hero/slide_2/hero-mobile@2x.jpg 2x" width="320" height="568">
                     <source media="(max-width: 1199px)"
                             srcset="./img/hero/slide_2/hero-tablet.jpg 1x, ./img/hero/slide_2/hero-tablet@2x.jpg 2x" width="768" height="1024">
-                    <img src="./img/hero/slide_2/hero-desk.jpg" srcset="./img/hero/slide_2/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440"
-                         height="800">
+                    <img src="./img/hero/slide_2/hero-desk.jpg" srcset="./img/hero/slide_2/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440" height="800">
                   </picture>
                 </li>
                 <li class="hero__item swiper-slide">
@@ -189,16 +189,17 @@
                     <h2>Глобальный профессиональный опыт обучения за рубежом</h2>
                     <div class="hero__description">
                       <p>Погрузитесь в академическую программу, проходя практику в Тель-Авиве и ощущая настоящий израильский стиль жизни!</p>
-                      <a class="hero__button btn" href="#" aria-label="Подробнее о программе" disabled>
-                        <p>Подробнее</p>
-                        <span>
+                      <div class="hero__wrapper-btn">
+                        <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
+                          <p>Подробнее</p>
+                          <span>
                           <svg width="22" height="22" aria-hidden="true">
                             <use xlink:href="./img/sprite.svg#icon-arrow"></use>
                           </svg>
                         </span>
-                      </a>
+                        </a>
+                      </div>
                     </div>
-
                   </div>
                   <picture class="hero__bg-photo">
 <!--                    <source type="image/webp" media="(max-width: 767px)"-->
@@ -211,8 +212,7 @@
                             srcset="./img/hero/slide_3/hero-mobile.jpg 1x, ./img/hero/slide_3/hero-mobile@2x.jpg 2x" width="320" height="568">
                     <source media="(max-width: 1199px)"
                             srcset="./img/hero/slide_3/hero-tablet.jpg 1x, ./img/hero/slide_3/hero-tablet@2x.jpg 2x" width="768" height="1024">
-                    <img src="./img/hero/slide_3/hero-desk.jpg" srcset="./img/hero/slide_3/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440"
-                         height="800">
+                    <img src="./img/hero/slide_3/hero-desk.jpg" srcset="./img/hero/slide_3/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440" height="800">
                   </picture>
                 </li>
               </ul>

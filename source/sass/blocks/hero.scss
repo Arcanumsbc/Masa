@@ -7,8 +7,8 @@
 }
 
 .hero__slider {
-  height: 100%;
-  max-height: 800px;
+  width: 100%;
+  height: auto;
 }
 
 .hero__list {
@@ -16,20 +16,38 @@
   padding: 0;
   list-style: none;
   width: 100%;
+  display: flex;
+  align-items: stretch;
 }
 
 .hero__item {
   position: relative;
   display: flex;
-  padding-top: 419px;
+  padding-top: 200px;
   padding-bottom: 60px;
+  align-items: flex-end;
+  min-height: 800px;
+  height: auto;
 
-  &.swiper-slide {
-    visibility: hidden;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb($color-cerulean-blue, 0.2);
   }
 
-  &.swiper-slide.swiper-slide-active {
-    visibility: visible;
+  @include vp-1199 {
+    min-height: 1024px;
+    padding-top: 400px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+    padding-top: 200px;
+    padding-bottom: 20px;
   }
 }
 
@@ -50,6 +68,28 @@
     font-weight: $fw-regular;
     color: $color-cerulean-blue;
     max-width: 980px;
+
+    @include vp-1199 {
+      padding: 30px 30px 24px 40px;
+      font-size: $fz-big;
+      line-height: $lh-xlbig;
+    }
+
+    @include vp-767 {
+      min-width: 290px;
+      font-size: $fz-xsmedium;
+      line-height: $lh-xxxmedium;
+      padding: 20px 14px 16px 14px;
+    }
+  }
+
+  @include vp-1199 {
+    padding-right: 64px;
+  }
+
+  @include vp-767 {
+    max-width: 675px;
+    padding-right: 15px;
   }
 }
 
@@ -60,7 +100,7 @@
   border-radius: 0 0 30px 30px;
   padding: 0 50px 35px 50px;
   gap: 30px;
-  width: 772px;
+  max-width: 772px;
   justify-content: space-between;
 
   &::before {
@@ -79,12 +119,87 @@
     margin: 0;
     min-width: 452px;
     line-height: $lh-xxxmedium;
+
+    @include vp-1199 {
+      min-width: 285px;
+      //max-width: 100%;
+      line-height: $lh-smedium;
+    }
+
+    @include vp-767 {
+      background-color: $color-default-white;
+      min-width: 261px;
+      margin-right: 44px;
+      font-size: $fz-xsmall;
+      padding: 0 14px 15px 14px;
+      border-radius: 0 0 14px 0;
+    }
+  }
+
+  @include vp-1199 {
+    margin-right: 68px;
+    padding: 0 40px 35px 40px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    min-width: 261px;
+    margin-right: 0;
+    padding: 0;
+    gap: 0;
+    background-color: transparent;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      right: 34px;
+      top: -2px;
+    }
+
+    & .hero__wrapper-btn {
+      position: relative;
+      min-width: 182px;
+      margin-right: 108px;
+      border-radius: 0 0 14px 14px;
+      padding: 10px 15px 10px 15px;
+      background-color: $color-default-white;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background: url("../img/svg/icon-angle.svg");
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        right: -10px;
+        top: -1px;
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 
 .hero__button {
   padding-left: 30px;
   gap: 24px;
+
+  @include vp-767 {
+    > p {
+      font-size: $fz-small;
+      line-height: $lh-small;
+    }
+
+    min-height: 42px;
+    min-width: 152px;
+    padding: 3px 4px 3px 20px;
+    gap: 0;
+    background-color: $color-default-white;
+
+    & span {
+      width: 34px;
+      height: 34px;
+    }
+  }
 }
 
 .hero__control {
@@ -101,7 +216,7 @@
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
-    bottom: 0px;
+    bottom: 0;
     right: -20px;
     transform: rotate(0);
   }
@@ -141,11 +256,12 @@
 
 .hero__bg-photo {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   z-index: -1;
   width: 100%;
-  min-height: 800px;
   height: 100%;
 
   & img {

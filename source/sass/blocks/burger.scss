@@ -1,6 +1,4 @@
 .burger {
-  margin-bottom: 4px;
-
   & span {
     & svg {
       width: 22px;
@@ -19,14 +17,12 @@
   @include hover-focus {
     outline: none;
 
-      & .burger__open {
-        transform: rotate(0);
-      }
+    & .burger__open {
+      transform: rotate(0);
+    }
 
     & .burger__closed {
       transform: rotate(0);
     }
   }
 }
-
-

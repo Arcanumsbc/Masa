@@ -1,8 +1,6 @@
 import {ScrollLock} from '../../utils/scroll-lock';
 import {FocusLock} from '../../utils/focus-lock';
 
-// const navMain = document.querySelector('.main-header__menu');
-// navMain.classList.remove('main-header__menu--no-js');
 export class Burger {
   constructor() {
     this._header = document.querySelector('[data-header]');

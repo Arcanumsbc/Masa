@@ -9,8 +9,15 @@ const initHeroSlider = () => {
 
   const heroSlider = new Swiper(heroContainer, {
     allowTouchMove: isMobile(),
-    loop: true,
     speed: 3000,
+    disableOnInteraction: false,
+    autoplay: {
+      delay: 3000,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: false,
+    },
 
     pagination: {
       el: '.swiper-pagination',
