@@ -1,0 +1,53 @@
+.link-btn {
+  width: 30px;
+  height: 30px;
+
+  & span {
+    display: flex;
+    background-color: $color-cerulean-blue;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    & svg {
+      width: 8px;
+      height: 8px;
+      stroke: $color-default-white;
+      stroke-width: 2px;
+    }
+  }
+
+  @include hover-focus {
+    outline: none;
+    transition: all $trans-default;
+
+    > span {
+      background-color: $color-default-white;
+      transition: all $trans-default;
+
+      & svg {
+        stroke: $color-cerulean-blue;
+        transition: all $trans-default;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  @include disabled {
+    border-color: $color-mischka;
+    pointer-events: none;
+    cursor: default;
+
+    > span {
+      background-color: $color-mischka;
+
+      & svg {
+        stroke: $color-default-white;
+      }
+    }
+  }
+}
