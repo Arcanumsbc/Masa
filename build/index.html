@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!--    <link rel="icon" href="favicon.ico">-->
-<!--    <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">-->
-<!--    <link rel="apple-touch-icon" href="./img/favicons/512.png">-->
-<!--    <link rel="manifest" href="./manifest.webmanifest">-->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/512.png">
+    <link rel="manifest" href="./manifest.webmanifest">
     <link rel="preload" href="./fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -15,6 +15,7 @@
     <title>Маса</title>
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
+
   <body>
     <div class="wrapper">
       <header class="main-header" id="top" data-header="data-header">
@@ -46,7 +47,7 @@
                   <li class="menu__item">
                     <div class="menu__select select" data-accordion="parent">
                       <div class="select-wrapper" data-accordion="element">
-                        <button class="select__button" data-accordion="button" type="button" tabindex="0">
+                        <button class="select__button" data-accordion="button" type="button" tabindex="0" aria-label="Нажми чтобы развернуть.">
                           <p>Программы</p>
                           <span>
                           <svg width="12" height="12" aria-hidden="true">
@@ -80,7 +81,7 @@
                   <li class="menu__item">
                     <div class="menu__select select" data-accordion="parent">
                       <div class="select-wrapper" data-accordion="element">
-                        <button class="select__button" data-accordion="button" type="button" tabindex="0">
+                        <button class="select__button" data-accordion="button" type="button" tabindex="0" aria-label="Нажми чтобы развернуть.">
                           <p>Новости</p>
                           <span>
                           <svg width="12" height="12" aria-hidden="true">
@@ -114,7 +115,7 @@
         </div>
       </header>
       <main>
-        <section class="hero">
+        <section class="hero" id="hero">
           <div class="hero__container">
             <h1 class="visually-hidden">Обучение по программе Маса</h1>
             <div class="hero__slider swiper">
@@ -126,29 +127,30 @@
                     <div class="hero__description">
                       <p>Получите незаменимый опыт работы в ведущих израильских компаниях и государственных организациях.</p>
                       <div class="hero__wrapper-btn">
-                        <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
+                        <a class="hero__button btn" href="#" aria-label="Подробнее о программе.">
                           <p>Подробнее</p>
                           <span>
-                          <svg width="22" height="22" aria-hidden="true">
-                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
-                          </svg>
-                        </span>
+                            <svg width="22" height="22" aria-hidden="true">
+                              <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                            </svg>
+                          </span>
                         </a>
                       </div>
                     </div>
                   </div>
                   <picture class="hero__bg-photo">
-<!--                    <source type="image/webp" media="(max-width: 767px)"-->
-<!--                            srcset="./img/hero/slide_1/hero-mobile.webp 1x, ./img/hero/slide_1/hero-mobile@2x.webp 2x" width="320" height="568">-->
-<!--                    <source type="image/webp" media="(max-width: 1199px)"-->
-<!--                            srcset="./img/hero/slide_1/hero-tablet.webp 1x, ./img/hero/slide_1/hero-tablet@2x.webp 2x" width="768" height="1024">-->
-<!--                    <source type="image/webp"-->
-<!--                            srcset="./img/hero/slide_1/hero-desk.webp 1x, ./img/hero/slide_1/hero-desk@2x.webp 2x" width="1440" height="800">-->
+                    <source type="image/webp" media="(max-width: 767px)"
+                            srcset="./img/hero/slide_1/hero-mobile-slide-1.webp 1x, ./img/hero/slide_1/hero-mobile-slide-1@2x.webp 2x" width="320" height="568">
+                    <source type="image/webp" media="(max-width: 1199px)"
+                            srcset="./img/hero/slide_1/hero-tablet-slide-1.webp 1x, ./img/hero/slide_1/hero-tablet-slide-1@2x.webp 2x" width="768" height="1024">
+                    <source type="image/webp"
+                            srcset="./img/hero/slide_1/hero-desk-slide-1.webp 1x, ./img/hero/slide_1/hero-desk-slide-1@2x.webp 2x" width="1440" height="800">
                     <source media="(max-width: 767px)"
-                            srcset="./img/hero/slide_1/hero-mobile.jpg 1x, ./img/hero/slide_1/hero-mobile@2x.jpg 2x" width="320" height="568">
+                            srcset="./img/hero/slide_1/hero-mobile-slide-1.jpg 1x, ./img/hero/slide_1/hero-mobile-slide-1@2x.jpg 2x" width="320" height="568">
                     <source media="(max-width: 1199px)"
-                            srcset="./img/hero/slide_1/hero-tablet.jpg 1x, ./img/hero/slide_1/hero-tablet@2x.jpg 2x" width="768" height="1024">
-                    <img src="./img/hero/slide_1/hero-desk.jpg" srcset="./img/hero/slide_1/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440" height="800">
+                            srcset="./img/hero/slide_1/hero-tablet-slide-1.jpg 1x, ./img/hero/slide_1/hero-tablet-slide-1@2x.jpg 2x" width="768" height="1024">
+                    <img src="./img/hero/slide_1/hero-desk-slide-1.jpg" srcset="./img/hero/slide_1/hero-desk-slide-1@2x.jpg 2x"
+                         alt="Программы стажировок в крупнейших компаниях Израиля" width="1440" height="800">
                   </picture>
                 </li>
                 <li class="hero__item swiper-slide">
@@ -161,26 +163,27 @@
                         <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
                           <p>Подробнее</p>
                           <span>
-                          <svg width="22" height="22" aria-hidden="true">
-                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
-                          </svg>
-                        </span>
+                            <svg width="22" height="22" aria-hidden="true">
+                              <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                            </svg>
+                          </span>
                         </a>
                       </div>
                     </div>
                   </div>
                   <picture class="hero__bg-photo">
-<!--                    <source type="image/webp" media="(max-width: 767px)"-->
-<!--                            srcset="./img/hero/slide_1/hero-mobile.webp 1x, ./img/hero/slide_1/hero-mobile@2x.webp 2x" width="320" height="568">-->
-<!--                    <source type="image/webp" media="(max-width: 1199px)"-->
-<!--                            srcset="./img/hero/slide_1/hero-tablet.webp 1x, ./img/hero/slide_1/hero-tablet@2x.webp 2x" width="768" height="1024">-->
-<!--                    <source type="image/webp"-->
-<!--                            srcset="./img/hero/slide_1/hero-desk.webp 1x, ./img/hero/slide_1/hero-desk@2x.webp 2x" width="1440" height="800">-->
+                    <source type="image/webp" media="(max-width: 767px)"
+                            srcset="./img/hero/slide_2/hero-mobile-slide-2.webp 1x, ./img/hero/slide_2/hero-mobile-slide-2@2x.webp 2x" width="320" height="568">
+                    <source type="image/webp" media="(max-width: 1199px)"
+                            srcset="./img/hero/slide_2/hero-tablet-slide-2.webp 1x, ./img/hero/slide_2/hero-tablet-slide-2@2x.webp 2x" width="768" height="1024">
+                    <source type="image/webp"
+                            srcset="./img/hero/slide_2/hero-desk-slide-2.webp 1x, ./img/hero/slide_2/hero-desk-slide-2@2x.webp 2x" width="1440" height="800">
                     <source media="(max-width: 767px)"
-                            srcset="./img/hero/slide_2/hero-mobile.jpg 1x, ./img/hero/slide_2/hero-mobile@2x.jpg 2x" width="320" height="568">
+                            srcset="./img/hero/slide_2/hero-mobile-slide-2.jpg 1x, ./img/hero/slide_2/hero-mobile-slide-2@2x.jpg 2x" width="320" height="568">
                     <source media="(max-width: 1199px)"
-                            srcset="./img/hero/slide_2/hero-tablet.jpg 1x, ./img/hero/slide_2/hero-tablet@2x.jpg 2x" width="768" height="1024">
-                    <img src="./img/hero/slide_2/hero-desk.jpg" srcset="./img/hero/slide_2/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440" height="800">
+                            srcset="./img/hero/slide_2/hero-tablet-slide-2.jpg 1x, ./img/hero/slide_2/hero-tablet-slide-2@2x.jpg 2x" width="768" height="1024">
+                    <img src="./img/hero/slide_2/hero-desk-slide-2.jpg" srcset="./img/hero/slide_2/hero-desk-slide-2@2x.jpg 2x"
+                         alt="Глобальный профессиональный опыт обучения за рубежом" width="1440" height="800">
                   </picture>
                 </li>
                 <li class="hero__item swiper-slide">
@@ -193,26 +196,27 @@
                         <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
                           <p>Подробнее</p>
                           <span>
-                          <svg width="22" height="22" aria-hidden="true">
-                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
-                          </svg>
-                        </span>
+                            <svg width="22" height="22" aria-hidden="true">
+                              <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                            </svg>
+                          </span>
                         </a>
                       </div>
                     </div>
                   </div>
                   <picture class="hero__bg-photo">
-<!--                    <source type="image/webp" media="(max-width: 767px)"-->
-<!--                            srcset="./img/hero/slide_1/hero-mobile.webp 1x, ./img/hero/slide_1/hero-mobile@2x.webp 2x" width="320" height="568">-->
-<!--                    <source type="image/webp" media="(max-width: 1199px)"-->
-<!--                            srcset="./img/hero/slide_1/hero-tablet.webp 1x, ./img/hero/slide_1/hero-tablet@2x.webp 2x" width="768" height="1024">-->
-<!--                    <source type="image/webp"-->
-<!--                            srcset="./img/hero/slide_1/hero-desk.webp 1x, ./img/hero/slide_1/hero-desk@2x.webp 2x" width="1440" height="800">-->
+                    <source type="image/webp" media="(max-width: 767px)"
+                            srcset="./img/hero/slide_3/hero-mobile-slide-3.webp 1x, ./img/hero/slide_3/hero-mobile-slide-3@2x.webp 2x" width="320" height="568">
+                    <source type="image/webp" media="(max-width: 1199px)"
+                            srcset="./img/hero/slide_3/hero-tablet-slide-3.webp 1x, ./img/hero/slide_3/hero-tablet-slide-3@2x.webp 2x" width="768" height="1024">
+                    <source type="image/webp"
+                            srcset="./img/hero/slide_3/hero-desk-slide-3.webp 1x, ./img/hero/slide_3/hero-desk-slide-3@2x.webp 2x" width="1440" height="800">
                     <source media="(max-width: 767px)"
-                            srcset="./img/hero/slide_3/hero-mobile.jpg 1x, ./img/hero/slide_3/hero-mobile@2x.jpg 2x" width="320" height="568">
+                            srcset="./img/hero/slide_3/hero-mobile-slide-3.jpg 1x, ./img/hero/slide_3/hero-mobile-slide-3@2x.jpg 2x" width="320" height="568">
                     <source media="(max-width: 1199px)"
-                            srcset="./img/hero/slide_3/hero-tablet.jpg 1x, ./img/hero/slide_3/hero-tablet@2x.jpg 2x" width="768" height="1024">
-                    <img src="./img/hero/slide_3/hero-desk.jpg" srcset="./img/hero/slide_3/hero-desk@2x.jpg 2x" alt="Фотография гор Кавказа" width="1440" height="800">
+                            srcset="./img/hero/slide_3/hero-tablet-slide-3.jpg 1x, ./img/hero/slide_3/hero-tablet-slide-3@2x.jpg 2x" width="768" height="1024">
+                    <img src="./img/hero/slide_3/hero-desk-slide-3.jpg" srcset="./img/hero/slide_3/hero-desk-slide-3@2x.jpg 2x"
+                         alt="Глобальный профессиональный опыт обучения за рубежом" width="1440" height="800">
                   </picture>
                 </li>
               </ul>
@@ -222,6 +226,285 @@
 <!--            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>-->
 <!--            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>-->
           </div>
+        </section>
+        <section class="about">
+          <div class="about__container container">
+            <div class="about__inner-top">
+              <div class="about__heading">
+                <h2 class="title" >О проекте «Маса»</h2>
+                <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.</p>
+              </div>
+              <div class="about__description">
+                <h3>Наша цель</h3>
+                <p>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях карьеры, предоставляя им инструменты для решения сложных проблем,  с которыми сталкиваются Израиль и еврейские общины во всем мире. Цель центра – наделить этих людей способностью инициировать значимые изменения. </p>
+                <button class="about__button btn" type="button" aria-label="Нажми чтобы задать вопрос" tabindex="0">
+                  <p>подробнее о проекте</p>
+                  <span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="about__inner-bottom">
+              <ul>
+                <li>
+                  <span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </span>
+                  <h4>Более 250 программ</h4>
+                  <p>учебных и рабочих, разной длительностью от 3 месяцев до 1 года</p>
+                </li>
+                <li>
+                  <span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </span>
+                  <h4>Более 3000 участников</h4>
+                  <p>уже успешно прошли программу от «Маса» и остались в Израиле</p>
+                </li>
+                <li>
+                  <span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </span>
+                  <h4>от 4 200 $ до 8 400 $</h4>
+                  <p>грант всем участникам для комфортного прохождения программы</p>
+                </li>
+                <li>
+                  <span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </span>
+                  <h4>участники из 60 стран</h4>
+                  <p>студенты со всего мира приезжают на программу «Маса»</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="programs">
+          <div class="programs__container container">
+            <div class="programs__heading">
+              <h2 class="title">Программы</h2>
+              <button class="programs__button btn" type="button" aria-label="Нажми чтобы увидеть все программы" tabindex="0">
+                <p>все программы</p>
+                <span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </span>
+              </button>
+            </div>
+
+            <div class="programs__slider swiper">
+              <ul class="programs__list swiper-wrapper">
+                <li class="programs__item swiper-slide">
+                  <div class="programs__content">
+                    <h3>Стажировки</h3>
+                    <div class="programs__description">
+                      <p>Получите незаменимый опыт работы в крупнейших израильских компаниях.</p>
+                      <a class="programs__link" href="#" aria-label="Показать программу">
+                        <span>
+                          <svg width="8" height="8" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <picture class="programs__bg-photo">
+<!--                    <source type="image/webp" media="(max-width: 767px)"-->
+<!--                            srcset="./img/programs/internships-mobile.webp 1x, ./img/programs/internships-mobile@2x.webp 2x" width="290" height="400">-->
+<!--                    <source type="image/webp" media="(max-width: 1199px)"-->
+<!--                            srcset="./img/programs/internships-tablet.webp 1x, ./img/programs/internships-tablet@2x.webp 2x" width="324" height="420">-->
+<!--                    <source type="image/webp"-->
+<!--                            srcset="./img/programs/internships-desk.webp 1x, ./img/programs/internships-desk@2x.webp 2x" width="392" height="420">-->
+                    <source media="(max-width: 767px)"
+                            srcset="./img/programs/internships-mobile.jpg 1x, ./img/programs/internships-mobile@2x.jpg 2x" width="290" height="400">
+                    <source media="(max-width: 1199px)"
+                            srcset="./img/programs/internships-tablet.jpg 1x, ./img/programs/internships-tablet@2x.jpg 2x" width="324" height="420">
+                    <img src="./img/programs/internships-desk.jpg" srcset="./img/programs/internships-desk@2x.jpg 2x" alt="Фотография стажировок" width="392" height="420">
+                  </picture>
+                </li>
+
+                <li class="programs__item swiper-slide">
+                  <div class="programs__content">
+                    <h3>Волонтёрство</h3>
+                    <div class="programs__description">
+                      <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                      <a class="programs__link" href="#" aria-label="Показать программу">
+                        <span>
+                          <svg width="8" height="8" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <picture class="programs__bg-photo">
+                    <!--                    <source type="image/webp" media="(max-width: 767px)"-->
+                    <!--                            srcset="./img/programs/volunteering-mobile.webp 1x, ./img/programs/volunteering-mobile@2x.webp 2x" width="290" height="400">-->
+                    <!--                    <source type="image/webp" media="(max-width: 1199px)"-->
+                    <!--                            srcset="./img/programs/volunteering-tablet.webp 1x, ./img/programs/volunteering-tablet@2x.webp 2x" width="324" height="420">-->
+                    <!--                    <source type="image/webp"-->
+                    <!--                            srcset="./img/programs/volunteering-desk.webp 1x, ./img/programs/volunteering-desk@2x.webp 2x" width="392" height="420">-->
+                    <source media="(max-width: 767px)"
+                            srcset="./img/programs/volunteering-mobile.jpg 1x, ./img/programs/volunteering-mobile@2x.jpg 2x" width="290" height="400">
+                    <source media="(max-width: 1199px)"
+                            srcset="./img/programs/volunteering-tablet.jpg 1x, ./img/programs/volunteering-tablet@2x.jpg 2x" width="324" height="420">
+                    <img src="./img/programs/volunteering-desk.jpg" srcset="./img/programs/volunteering-desk@2x.jpg 2x" alt="Фотография стажировок" width="392" height="420">
+                  </picture>
+                </li>
+
+                <li class="programs__item swiper-slide">
+                  <div class="programs__content">
+                    <h3>Учёба</h3>
+                    <div class="programs__description">
+                      <p>Получите образование и измените свое будущее.</p>
+                      <a class="programs__link" href="#" aria-label="Показать программу">
+                        <span>
+                          <svg width="8" height="8" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <picture class="programs__bg-photo">
+                    <!--                    <source type="image/webp" media="(max-width: 767px)"-->
+                    <!--                            srcset="./img/programs/study-mobile.webp 1x, ./img/programs/study-mobile@2x.webp 2x" width="290" height="400">-->
+                    <!--                    <source type="image/webp" media="(max-width: 1199px)"-->
+                    <!--                            srcset="./img/programs/study-tablet.webp 1x, ./img/programs/study-tablet@2x.webp 2x" width="324" height="420">-->
+                    <!--                    <source type="image/webp"-->
+                    <!--                            srcset="./img/programs/study-desk.webp 1x, ./img/programs/study-desk@2x.webp 2x" width="392" height="420">-->
+                    <source media="(max-width: 767px)"
+                            srcset="./img/programs/study-mobile.jpg 1x, ./img/programs/study-mobile@2x.jpg 2x" width="290" height="400">
+                    <source media="(max-width: 1199px)"
+                            srcset="./img/programs/study-tablet.jpg 1x, ./img/programs/study-tablet@2x.jpg 2x" width="324" height="420">
+                    <img src="./img/programs/study-desk.jpg" srcset="./img/programs/study-desk@2x.jpg 2x" alt="Фотография стажировок" width="392" height="420">
+                  </picture>
+                </li>
+
+                <li class="programs__item swiper-slide">
+                  <div class="programs__content">
+                    <h3>Стажировки</h3>
+                    <div class="programs__description">
+                      <p>Получите незаменимый опыт работы в крупнейших израильских компаниях.</p>
+                      <a class="programs__link" href="#" aria-label="Показать программу">
+                        <span>
+                          <svg width="8" height="8" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <picture class="programs__bg-photo">
+                    <!--                    <source type="image/webp" media="(max-width: 767px)"-->
+                    <!--                            srcset="./img/programs/internships-mobile.webp 1x, ./img/programs/internships-mobile@2x.webp 2x" width="290" height="400">-->
+                    <!--                    <source type="image/webp" media="(max-width: 1199px)"-->
+                    <!--                            srcset="./img/programs/internships-tablet.webp 1x, ./img/programs/internships-tablet@2x.webp 2x" width="324" height="420">-->
+                    <!--                    <source type="image/webp"-->
+                    <!--                            srcset="./img/programs/internships-desk.webp 1x, ./img/programs/internships-desk@2x.webp 2x" width="392" height="420">-->
+                    <source media="(max-width: 767px)"
+                            srcset="./img/programs/internships-mobile.jpg 1x, ./img/programs/internships-mobile@2x.jpg 2x" width="290" height="400">
+                    <source media="(max-width: 1199px)"
+                            srcset="./img/programs/internships-tablet.jpg 1x, ./img/programs/internships-tablet@2x.jpg 2x" width="324" height="420">
+                    <img src="./img/programs/internships-desk.jpg" srcset="./img/programs/internships-desk@2x.jpg 2x" alt="Фотография стажировок" width="392" height="420">
+                  </picture>
+                </li>
+
+                <li class="programs__item swiper-slide">
+                  <div class="programs__content">
+                    <h3>Волонтёрство</h3>
+                    <div class="programs__description">
+                      <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                      <a class="programs__link" href="#" aria-label="Показать программу">
+                        <span>
+                          <svg width="8" height="8" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <picture class="programs__bg-photo">
+                    <!--                    <source type="image/webp" media="(max-width: 767px)"-->
+                    <!--                            srcset="./img/programs/volunteering-mobile.webp 1x, ./img/programs/volunteering-mobile@2x.webp 2x" width="290" height="400">-->
+                    <!--                    <source type="image/webp" media="(max-width: 1199px)"-->
+                    <!--                            srcset="./img/programs/volunteering-tablet.webp 1x, ./img/programs/volunteering-tablet@2x.webp 2x" width="324" height="420">-->
+                    <!--                    <source type="image/webp"-->
+                    <!--                            srcset="./img/programs/volunteering-desk.webp 1x, ./img/programs/volunteering-desk@2x.webp 2x" width="392" height="420">-->
+                    <source media="(max-width: 767px)"
+                            srcset="./img/programs/volunteering-mobile.jpg 1x, ./img/programs/volunteering-mobile@2x.jpg 2x" width="290" height="400">
+                    <source media="(max-width: 1199px)"
+                            srcset="./img/programs/volunteering-tablet.jpg 1x, ./img/programs/volunteering-tablet@2x.jpg 2x" width="324" height="420">
+                    <img src="./img/programs/volunteering-desk.jpg" srcset="./img/programs/volunteering-desk@2x.jpg 2x" alt="Фотография стажировок" width="392" height="420">
+                  </picture>
+                </li>
+
+                <li class="programs__item swiper-slide">
+                  <div class="programs__content">
+                    <h3>Учёба</h3>
+                    <div class="programs__description">
+                      <p>Получите образование и измените свое будущее.</p>
+                      <a class="programs__link" href="#" aria-label="Показать программу">
+                        <span>
+                          <svg width="8" height="8" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <picture class="programs__bg-photo">
+                    <!--                    <source type="image/webp" media="(max-width: 767px)"-->
+                    <!--                            srcset="./img/programs/study-mobile.webp 1x, ./img/programs/study-mobile@2x.webp 2x" width="290" height="400">-->
+                    <!--                    <source type="image/webp" media="(max-width: 1199px)"-->
+                    <!--                            srcset="./img/programs/study-tablet.webp 1x, ./img/programs/study-tablet@2x.webp 2x" width="324" height="420">-->
+                    <!--                    <source type="image/webp"-->
+                    <!--                            srcset="./img/programs/study-desk.webp 1x, ./img/programs/study-desk@2x.webp 2x" width="392" height="420">-->
+                    <source media="(max-width: 767px)"
+                            srcset="./img/programs/study-mobile.jpg 1x, ./img/programs/study-mobile@2x.jpg 2x" width="290" height="400">
+                    <source media="(max-width: 1199px)"
+                            srcset="./img/programs/study-tablet.jpg 1x, ./img/programs/study-tablet@2x.jpg 2x" width="324" height="420">
+                    <img src="./img/programs/study-desk.jpg" srcset="./img/programs/study-desk@2x.jpg 2x" alt="Фотография стажировок" width="392" height="420">
+                  </picture>
+                </li>
+              </ul>
+            </div>
+            <div class="programs__control">
+              <div class="programs__arrows arrows" data-nojs="no-js">
+                <button class="programs__arrows-prev arrows__prev">
+                  <svg width="10" height="10" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <button class="programs__arrows-next arrows__next">
+                  <svg width="10" height="10" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="programs__scrollbar swiper-scrollbar"></div>
+            </div>
+
+          </div>
+
         </section>
       </main>
       <footer>

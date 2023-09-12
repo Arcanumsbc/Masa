@@ -7,6 +7,8 @@ import './utils/scroll-lock';
 import {Burger} from './modules/menu/burger';
 import {initHeroSlider} from './modules/hero/sliderHero.js';
 import {initAccordions} from './vendor/init-accordion.js';
+import {initProgramsSlider} from './modules/programs/sliderPrograms.js';
+import {sliderWindowResize} from './modules/programs/sliderResize.js';
 
 
 // ---------------------------------
@@ -33,6 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
     burger.init();
     initAccordions();
     initHeroSlider();
+    initProgramsSlider();
+    sliderWindowResize();
   });
 });
 

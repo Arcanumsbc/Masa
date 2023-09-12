@@ -1,0 +1,227 @@
+.about {
+  position: relative;
+  margin-bottom: 120px;
+
+  @include vp-1199 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 67px;
+  }
+}
+
+.about__inner-top {
+  display: flex;
+  flex-direction: row;
+  gap: 137px;
+  padding-right: 106px;
+  margin-bottom: 60px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding-right: 180px;
+    gap: 40px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding-right: 0;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.about__heading {
+  flex: 50%;
+
+  > h2 {
+    padding-bottom: 43px;
+
+    @include vp-1199 {
+      padding-right: 64px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 15px;
+      padding-right: 47px;
+    }
+  }
+
+  > p {
+    margin: 0;
+    font-size: $fz-xsmedium;
+    line-height: $lh-sbig;
+
+    @include vp-1199 {
+      font-size: $fz-medium;
+      line-height: $lh-xxxmedium;
+      padding-right: 54px;
+    }
+
+    @include vp-767 {
+      font-size: $fz-xxsmall;
+      line-height: $lh-xsmedium;
+      padding-right: 47px;
+    }
+  }
+}
+
+.about__description {
+  flex: 50%;
+
+  > h3 {
+    margin: 0;
+    padding-bottom: 46px;
+    font-size: $fz-sbig;
+    line-height: $lh-big;
+    font-weight: $fw-regular;
+    color: $color-cerulean-blue;
+
+    @include vp-1199 {
+      font-size: $fz-xxlmedium;
+      line-height: $lh-xxlmedium;
+      padding-right: 84px;
+    }
+
+    @include vp-767 {
+      font-size: $fz-xxxsmall;
+      line-height: $lh-xsmedium;
+      padding-right: 84px;
+      padding-bottom: 20px;
+    }
+  }
+
+  > p {
+    margin: 0;
+    padding-bottom: 40px;
+    line-height: $lh-xxxmedium;
+
+    @include vp-1199 {
+      line-height: $lh-smedium;
+    }
+
+    @include vp-767 {
+      font-size: $fz-xsmall;
+      line-height: $lh-smedium;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.about__inner-bottom {
+  background-color: $color-cerulean-blue;
+  border-radius: 20px;
+  padding: 70px 106px 70px 106px;
+
+  @include vp-1199 {
+    padding: 40px;
+    padding-left: 60px;
+  }
+
+  @include vp-767 {
+    padding: 42px 20px 40px 30px;
+  }
+
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 53px;
+
+    @include vp-1199 {
+      gap: 42px 50px;
+    }
+
+    @include vp-1199 {
+      gap: 22px;
+    }
+  }
+
+  & li {
+    position: relative;
+    flex: 40%;
+    display: flex;
+    padding: 30px 48px 30px 60px;
+    border-radius: 20px;
+    border: 1px solid $color-default-white;
+    justify-content: space-between;
+
+    & span {
+      position: absolute;
+      top: -21px;
+      left: -21px;
+      width: 42px;
+      height: 42px;
+      background-color: $color-cerulean-blue;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & svg {
+        width: 22px;
+        height: 22px;
+        fill: $color-default-white;
+      }
+    }
+
+    & h4 {
+      margin: 0;
+      font-size: $fz-xxxmedium;
+      line-height: $lh-xxxlmedium;
+      color: $color-default-white;
+      letter-spacing: $ls-small;
+      font-weight: $fw-regular;
+      text-transform: uppercase;
+      width: 171px;
+
+      @include vp-1199 {
+        width: 100%;
+        padding-right: 80px;
+        font-size: $fz-medium;
+        line-height: $lh-xsmedium;
+      }
+
+      @include vp-767 {
+        padding-right: 0;
+        font-size: $fz-xxsmall;
+        line-height: $lh-smedium;
+      }
+    }
+
+    & p {
+      margin: 0;
+      line-height: $lh-smedium;
+      font-weight: $fw-light;
+      color: $color-default-white;
+      width: 191px;
+
+      @include vp-1199 {
+        width: 100%;
+        padding-right: 25px;
+      }
+
+      @include vp-767 {
+        padding-right: 36px;
+        font-size: $fz-xsmall;
+        line-height: $lh-smedium;
+      }
+    }
+
+    @include vp-1199 {
+      padding: 30px;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @include vp-767 {
+      flex: 100%;
+      padding: 24px 13px 24px 20px;
+      gap: 8px;
+      border-radius: 16px;
+    }
+  }
+}

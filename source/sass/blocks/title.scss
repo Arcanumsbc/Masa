@@ -1,0 +1,16 @@
+.title {
+  margin: 0;
+  font-size: $fz-large;
+  line-height: $lh-large;
+  font-weight: $fw-regular;
+  color: $color-cerulean-blue;
+
+  @include vp-1199 {
+    font-size: $fz-xsbig;
+  }
+
+  @include vp-767 {
+    font-size: $fz-medium;
+    line-height: $lh-smedium;
+  }
+}

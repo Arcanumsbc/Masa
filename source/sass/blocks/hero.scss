@@ -1,9 +1,14 @@
 .hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
+  margin-bottom: 120px;
+
+  @include vp-1199 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 67px;
+  }
 }
 
 .hero__slider {
@@ -175,29 +180,6 @@
         top: -1px;
         transform: rotate(90deg);
       }
-    }
-  }
-}
-
-.hero__button {
-  padding-left: 30px;
-  gap: 24px;
-
-  @include vp-767 {
-    > p {
-      font-size: $fz-small;
-      line-height: $lh-small;
-    }
-
-    min-height: 42px;
-    min-width: 152px;
-    padding: 3px 4px 3px 20px;
-    gap: 0;
-    background-color: $color-default-white;
-
-    & span {
-      width: 34px;
-      height: 34px;
     }
   }
 }

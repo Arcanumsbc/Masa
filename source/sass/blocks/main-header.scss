@@ -1,5 +1,8 @@
 .main-header {
   z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .main-header__container {
@@ -8,7 +11,7 @@
   justify-content: space-between;
   padding-top: 30px;
 
-  &::before{
+  &::before {
     content: "";
     position: fixed;
     z-index: 2;
@@ -30,7 +33,7 @@
 }
 
 .main-header__button {
-  width: 134px;
+  width: 136px;
   transition: width $trans-default;
 }
 
@@ -59,7 +62,7 @@
     visibility: visible;
     transition: width $trans-default, height $trans-default, opacity $trans-default, visibility $trans-default, margin-top $trans-default;
 
-    @include vp-767  {
+    @include vp-767 {
       width: 290px;
     }
   }

@@ -1,0 +1,55 @@
+.arrows {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.arrows button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all $trans-default;
+  width: 22px;
+  height: 22px;
+
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    width: 10px;
+    height: 10px;
+    stroke: $color-cerulean-blue;
+    stroke-width: 3px;
+    transform: rotate(-135deg);
+  }
+
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
+
+  @include active {
+    transition: all $trans-default;
+
+    & svg {
+      opacity: 0.7;
+    }
+  }
+
+  @include disabled {
+    background-color: transparent;
+    pointer-events: none;
+    cursor: default;
+
+    & svg {
+      stroke: $color-mischka;
+    }
+  }
+}
+
+.arrows__next {
+  transform: rotate(180deg);
+}
