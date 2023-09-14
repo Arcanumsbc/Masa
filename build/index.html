@@ -292,7 +292,7 @@
           </div>
         </section>
 
-        <section class="programs">
+        <section class="programs" id="programs">
           <div class="programs__container container">
             <div class="programs__heading">
               <h2 class="title">Программы</h2>
@@ -507,7 +507,7 @@
           </div>
         </section>
 
-        <section class="conditions">
+        <section class="conditions" id="conditions">
           <div class="conditions__container container">
             <div class="conditions__inner">
               <h2 class="title">Как поехать</h2>
@@ -530,6 +530,40 @@
               </ul>
             </div>
           </div>
+        </section>
+
+        <section class="news" id="news">
+          <div class="news__container container">
+            <h2 class="title">Новости и материалы</h2>
+            <div class="news__tabs">
+              <button class="news__btn is-active" type="button" data-tab="all" aria-label="Вкладка общее" data-index="0">Общее</button>
+              <button class="news__btn" type="button" data-tab="volunteering" aria-label="Вкладка волонтёрство" data-index="0">Волонтёрство</button>
+              <button class="news__btn" type="button" data-tab="internships" aria-label="Вкладка стажировки" data-index="0">Стажировки</button>
+              <button class="news__btn" type="button" data-tab="career" aria-label="Вкладка карьеры" data-index="0">Карьера</button>
+              <button class="news__btn" type="button" data-tab="trips" aria-label="Вкладка путешествия" data-index="0">Путешествия</button>
+            </div>
+            <div class="news__slider swiper">
+              <div class="news__wrapper swiper-wrapper"></div>
+              <div class="news__control">
+                <div class="news__arrows arrows" data-nojs="no-js">
+                  <button class="news__arrows-prev arrows__prev">
+                    <svg width="10" height="10" aria-label="Перейти назад">
+                      <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </button>
+
+                  <div class="news__pagination swiper-pagination"></div>
+
+                  <button class="news__arrows-next arrows__next">
+                    <svg width="10" height="10" aria-label="Перейти вперед">
+                      <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </section>
 
       </main>
@@ -566,7 +600,32 @@
 <!--        </div>-->
 <!--      </div>-->
 <!--    </div>-->
-
+    <template id="news-card">
+      <div class="news-card">
+        <picture>
+          <source srcset="image.webp" type="image/webp" />
+          <img src="image.jpg" srcset="image@2x.jpg" loading="lazy" alt="Новость" width="286" height="400"/>
+        </picture>
+        <div class="news-card__content">
+          <div class="news-card__date">
+            <span></span>
+          </div>
+          <div class="news-card__title">
+            <h3></h3>
+          </div>
+          <div class="news-card__description">
+            <p></p>
+            <a class="news-card__btn link-btn" aria-label="Перейти" href="#">
+              <span>
+                <svg width="8" height="8">
+                  <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </template>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

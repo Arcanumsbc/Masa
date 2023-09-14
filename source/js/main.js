@@ -9,6 +9,7 @@ import {initHeroSlider} from './modules/hero/sliderHero.js';
 import {initAccordions} from './vendor/init-accordion.js';
 import {initProgramsSlider} from './modules/programs/sliderPrograms.js';
 import {sliderWindowResize} from './modules/programs/sliderResize.js';
+import {initNewsSlider} from './modules/news/sliderNews.js';
 
 
 // ---------------------------------
@@ -37,6 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initProgramsSlider();
     sliderWindowResize();
+    initNewsSlider();
+    // scrollToElement();
   });
 });
 

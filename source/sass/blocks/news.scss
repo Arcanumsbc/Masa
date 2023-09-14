@@ -1,0 +1,227 @@
+.news {
+  position: relative;
+  margin-bottom: 120px;
+
+  @include vp-1199 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 67px;
+  }
+}
+
+.news__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  & h2 {
+    padding-bottom: 40px;
+
+    @include vp-1199 {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.news__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px 30px;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  padding-bottom: 40px;
+
+  @include vp-1199 {
+    gap: 15px 9px;
+  }
+
+  @include vp-767 {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-right: -15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 24px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.news__btn {
+  padding: 14px 26px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: 20px;
+  font-weight: $fw-medium;
+  font-size: $fz-xsmall;
+  line-height: $lh-xsmall;
+  letter-spacing: $ls-light;
+  text-transform: uppercase;
+  color: rgba($color-cerulean-blue, 0.6);
+  cursor: pointer;
+
+  @include hover-focus {
+    outline: none;
+    color: rgba($color-cerulean-blue, 1);
+  }
+
+  &.is-active {
+    border-color: $color-cerulean-blue;
+    color: rgba($color-cerulean-blue, 1);
+  }
+
+  @include vp-1199 {
+    padding: 14px 20px;
+  }
+
+  @include vp-767 {
+    padding: 8px 13px;
+    font-size: $fz-small;
+    line-height: $lh-small;
+  }
+}
+
+.news__slider {
+  margin: 0;
+}
+
+.news__wrapper {
+  display: flex;
+  max-width: 1240px;
+  justify-content: flex-start;
+
+  @include vp-1199 {
+    justify-content: center;
+
+    & .slide-new {
+      display: grid;
+      grid-template-columns: auto auto;
+      width: 100%;
+      gap: 30px;
+
+      & .news-card:first-child {
+        order: 1;
+      }
+
+      & .news-card:last-child {
+        order: 2;
+      }
+
+      & .news-card:nth-child(3n) {
+        order: 4;
+      }
+
+      & .news-card:nth-last-child(3n) {
+        order: 3;
+      }
+    }
+  }
+
+  @include vp-767 {
+    justify-content: flex-start;
+
+    & .slide-new {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & .news-card:first-child {
+        order: 1;
+      }
+
+      & .news-card:last-child {
+        order: 1;
+      }
+
+      & .news-card:nth-child(3n) {
+        order: 1;
+      }
+
+      & .news-card:nth-last-child(3n) {
+        order: 1;
+      }
+    }
+  }
+}
+
+.news__control {
+  margin-top: 40px;
+}
+
+.news__arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+}
+
+.news__pagination.swiper-pagination {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  gap: 12px;
+  position: inherit;
+  bottom: 0;
+  flex-wrap: wrap;
+  //max-width: 800px;
+
+  @include vp-1199 {
+    max-width: 600px;
+  }
+
+  @include vp-767 {
+    flex-wrap: nowrap;
+    max-width: 197px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    overflow-scrolling: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.news__pagination .swiper-pagination-bullet {
+  font-size: $fz-xxsmall;
+  font-weight: $fw-regular;
+  line-height: $lh-smedium;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid $color-transparent;
+  background-color: transparent;
+  color: $color-cerulean-blue;
+  opacity: 0.5;
+
+  @include hover-focus {
+    color: $color-cerulean-blue;
+    opacity: 1;
+    border-color: $color-cerulean-blue;
+
+    @include active {
+      background-color: $color-endeavour;
+      border: 1px solid $color-endeavour;
+      color: $color-default-white;
+      opacity: 1;
+    }
+  }
+}
+
+.news__pagination .swiper-pagination-bullet-active {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  opacity: 1;
+}
