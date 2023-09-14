@@ -15,7 +15,7 @@ export class Accordions {
 
   _documentClickHandler(evt) {
     const target = evt.target;
-    if (!target.closest('[data-accordion="button"]')) {
+    if (!target.closest('[data-accordion="element"]')) {
       return;
     }
 
@@ -26,7 +26,7 @@ export class Accordions {
       return;
     }
 
-    const element = target.closest('[data-accordion="element"]');
+    const element = target.closest('[data-accordion="button"]' && '[data-accordion="element"]');
     if (element.classList.contains('is-active')) {
       this.closeAccordion(element);
       return;

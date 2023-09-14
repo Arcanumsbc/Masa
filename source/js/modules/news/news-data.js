@@ -5,7 +5,7 @@ export const newsData = [
     srcset: 'img/news/news-internships@2x.jpg 2x',
     date: '23/03/2023',
     title: 'Интервью с участницей программы стажировки',
-    webp: 'img/news/news-interview.webp 1x, img/news/news-interview@2x.webp 2x',
+    webp: 'img/news/news-internships.webp 1x, img/news/news-internships@2x.webp 2x',
     text: 'Саша рассказывает, как попала в\u00A0программу и\u00A0как\u00A0прошла 6- месячная стажировка в\u00A0ISOFound',
   },
   {
@@ -41,7 +41,7 @@ export const newsData = [
     srcset: 'img/news/news-internships@2x.jpg 2x',
     date: '23/03/2023',
     title: 'Интервью с участницей программы стажировки',
-    webp: 'img/news/news-interview.webp 1x, img/news/news-interview@2x.webp 2x',
+    webp: 'img/news/news-internships.webp 1x, img/news/news-internships@2x.webp 2x',
     text: 'Саша рассказывает, как попала в\u00A0программу и\u00A0как\u00A0прошла 6- месячная стажировка в\u00A0ISOFound',
   },
   {
@@ -77,7 +77,7 @@ export const newsData = [
     srcset: 'img/news/news-internships@2x.jpg 2x',
     date: '23/03/2023',
     title: 'Интервью с участницей программы стажировки',
-    webp: 'img/news/news-interview.webp 1x, img/news/news-interview@2x.webp 2x',
+    webp: 'img/news/news-internships.webp 1x, img/news/news-internships@2x.webp 2x',
     text: 'Саша рассказывает, как попала в\u00A0программу и\u00A0как\u00A0прошла 6- месячная стажировка в\u00A0ISOFound',
   },
   {
