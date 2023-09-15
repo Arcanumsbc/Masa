@@ -1,6 +1,5 @@
 import Swiper from '../../vendor/swiper';
 import {isMobile} from '../../utils/is-mobile';
-
 const initProgramsSlider = () => {
   const programsContainer = document.querySelector('.programs__slider');
   const programsControl = document.querySelector('.programs__arrows');
@@ -43,10 +42,6 @@ const initProgramsSlider = () => {
 
       320: {
         spaceBetween: 30,
-        // effect: 'fade',
-        // fadeEffect: {
-        //   crossFade: false,
-        // },
         scrollbar: {
           enabled: false,
         },
@@ -58,3 +53,5 @@ const initProgramsSlider = () => {
 };
 
 export {initProgramsSlider};
+
+

@@ -1,0 +1,250 @@
+.reviews {
+  position: relative;
+  margin-bottom: 120px;
+
+  @include vp-1199 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 67px;
+  }
+}
+
+.reviews__container {
+  & h2 {
+    padding-bottom: 52px;
+
+    @include vp-1199 {
+      padding-bottom: 53px;
+      padding-right: 45px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 35px;
+      padding-right: 0;
+    }
+  }
+
+  @include vp-1199 {
+    padding-right: 0;
+  }
+
+  @include vp-767 {
+    padding: 15px;
+  }
+}
+
+.reviews__title {
+  @include vp-767 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  padding-right: 45px;
+  border-radius: 16px;
+  border: 1px solid $color-cerulean-blue;
+  width: auto;
+  min-height: 430px;
+  align-items: center;
+
+  @include vp-1199 {
+    width: 560px;
+    min-height: 395px;
+  }
+
+  @include vp-767 {
+    padding:  30px 15px;
+    min-width: 290px;
+    width: 100%;
+  }
+}
+
+.reviews__heading {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  padding-bottom: 30px;
+  padding-right: 5px;
+  justify-content: space-between;
+
+  @include vp-767 {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+.reviews__user {
+  display: flex;
+  flex-direction: row;
+
+  picture {
+    @include vp-767 {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  & h3 {
+    font-size: $fz-xxxsmall;
+    line-height: $lh-xxmedium;
+    color: $color-cerulean-blue;
+    font-weight: $fw-regular;
+    margin: 0;
+    padding-left: 15px;
+    max-width: 110px;
+    align-self: center;
+
+    @include vp-1199 {
+      font-size: $fz-medium;
+    }
+
+    @include vp-767 {
+      font-size: $fz-xsmall;
+      line-height: $lh-xxxsmall;
+      padding-right: 20px;
+    }
+  }
+}
+
+.reviews__info {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+
+  & dl {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    dd {
+      margin: 0;
+      font-size: $fz-small;
+      line-height: $lh-small;
+      letter-spacing: $ls-small;
+      text-transform: uppercase;
+      color: $color-cerulean-blue;
+    }
+
+    dt {
+      font-size: $fz-xsmall;
+      line-height: $lh-xxxsmall;
+      display: flex;
+
+      @include vp-1199 {
+        line-height: $lh-smedium;
+      }
+    }
+  }
+}
+
+.reviews__content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  & h4 {
+    font-size: $fz-xxmedium;
+    line-height: $lh-xxxmedium;
+    font-weight: $fw-regular;
+    color: $color-cerulean-blue;
+    margin: 0;
+
+    @include vp-1199 {
+      font-size: $fz-medium;
+    }
+
+    @include vp-767 {
+      font-size: $fz-xsmall;
+      line-height: $lh-xxxsmall;
+      padding-right: 15px;
+    }
+  }
+
+  & p {
+    margin: 0;
+    line-height: $lh-xxmedium;
+
+    @include vp-1199{
+      line-height: $lh-smedium;
+    }
+
+    @include vp-767 {
+      font-size: $fz-xsmall;
+    }
+  }
+}
+
+.reviews__control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  @include vp-1199 {
+    padding-right: 45px;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
+    align-items: flex-start;
+  }
+}
+
+.reviews__arrows {
+  order: 2;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 52px;
+
+  @include vp-1199 {
+    padding-left: 64px;
+  }
+}
+
+.reviews__scrollbar.swiper-scrollbar {
+  position: relative;
+  order: 1;
+  width: 1134px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: rgba($color-cerulean-blue, 0.2);
+  cursor: pointer;
+  display: block;
+
+  & .swiper-scrollbar-drag {
+    background-color: $color-cerulean-blue;
+  }
+
+  @include vp-1199 {
+    min-width: 560px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

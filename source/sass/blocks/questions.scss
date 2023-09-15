@@ -19,28 +19,41 @@
 
   & h2 {
     padding-bottom: 60px;
+
+    @include vp-1199 {
+      padding-bottom: 53px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 36px;
+    }
   }
 }
 
 .questions__list {
   margin: 0;
-  //padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 0 106px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
 }
 
 .questions__item {
   padding: 40px;
-  gap: 30px;
+  //gap: 30px;
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
   width: 100%;
   position: relative;
   min-height: 40px;
-  //cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 
   @include hover-focus {
     outline: none;
@@ -113,6 +126,8 @@
 
   &.is-active {
     background-color: $color-cerulean-blue;
+    //display: flex;
+    gap: 30px;
 
     & h3 {
       color: $color-default-white;
@@ -131,6 +146,23 @@
         visibility: visible;
       }
     }
+
+    @include vp-1199 {
+      gap: 32px;
+    }
+
+    @include vp-767 {
+      gap: 22px;
+    }
+  }
+
+  @include vp-1199 {
+    padding: 30px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px 20px 15px;
+    border-radius: 14px;
   }
 }
 
@@ -149,6 +181,20 @@
     color: $color-cerulean-blue;
     align-self: center;
     min-width: 600px;
+
+
+    @include vp-1199 {
+      font-size: $fz-xsmedium;
+      line-height: $lh-xxxmedium;
+      min-width: auto;
+      padding-right: 50px;
+    }
+
+    @include vp-767 {
+      font-size: $fz-xxsmall;
+      line-height: $lh-xxxsmall;
+      padding-right: 10px;
+    }
   }
 }
 
@@ -194,11 +240,29 @@
 }
 
 .questions__accordion-content {
-  padding-right: 311px;
+  padding-right: 300px;
 
   & p {
+    margin: 0;
     font-size: $fz-xxsmall;
     line-height: $lh-xxxmedium;
     color: $color-alabaster;
+
+    @include vp-1199 {
+      font-size: $fz-xxsmall;
+      line-height: $lh-smedium;
+    }
+
+    @include vp-767 {
+      font-size: $fz-xsmall;
+    }
+  }
+
+  @include vp-1199 {
+    padding-right: 88px;
+  }
+
+  @include vp-767 {
+    padding-right: 10px;
   }
 }

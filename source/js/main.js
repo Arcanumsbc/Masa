@@ -10,6 +10,7 @@ import {initAccordions} from './vendor/init-accordion.js';
 import {initProgramsSlider} from './modules/programs/sliderPrograms.js';
 import {sliderWindowResize} from './modules/programs/sliderResize.js';
 import {initNewsSlider} from './modules/news/sliderNews.js';
+import {initReviewsSlider} from './modules/rewiews/sliderReviews.js';
 
 
 // ---------------------------------
@@ -39,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initProgramsSlider();
     sliderWindowResize();
     initNewsSlider();
-    // scrollToElement();
+    initReviewsSlider();
   });
 });
 
