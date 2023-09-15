@@ -74,7 +74,7 @@
   }
 
   @include vp-767 {
-    padding:  30px 15px;
+    padding: 30px 15px;
     min-width: 290px;
     width: 100%;
   }
@@ -187,7 +187,7 @@
     margin: 0;
     line-height: $lh-xxmedium;
 
-    @include vp-1199{
+    @include vp-1199 {
       line-height: $lh-smedium;
     }
 

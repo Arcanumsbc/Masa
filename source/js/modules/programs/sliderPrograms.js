@@ -53,5 +53,3 @@ const initProgramsSlider = () => {
 };
 
 export {initProgramsSlider};
-
-

@@ -3445,10 +3445,8 @@ button,
     max-width: 197px;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    overflow-scrolling: auto;
     overflow-y: hidden;
     scrollbar-width: none;
-    -ms-overflow-style: none;
   }
   .news__pagination.swiper-pagination::-webkit-scrollbar {
     display: none;
