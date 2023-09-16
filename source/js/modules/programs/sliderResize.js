@@ -13,7 +13,6 @@ function moveElement() {
     programsHeading.appendChild(programsControl);
   }
   if (reviewsTitle.contains(reviewsTitle) && reviewsContainer.contains(reviewsControl)) {
-    reviewsContainer.removeChild(reviewsControl);
     reviewsTitle.appendChild(reviewsControl);
   }
 }

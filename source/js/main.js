@@ -5,12 +5,13 @@ import './vendor/focus-visible-polyfill';
 import './utils/scroll-lock';
 
 import {Burger} from './modules/menu/burger';
-import {initHeroSlider} from './modules/hero/sliderHero.js';
-import {initAccordions} from './vendor/init-accordion.js';
-import {initProgramsSlider} from './modules/programs/sliderPrograms.js';
-import {sliderWindowResize} from './modules/programs/sliderResize.js';
-import {initNewsSlider} from './modules/news/sliderNews.js';
-import {initReviewsSlider} from './modules/rewiews/sliderReviews.js';
+import {initHeroSlider} from './modules/hero/sliderHero';
+import {initAccordions} from './vendor/init-accordion';
+import {initProgramsSlider} from './modules/programs/sliderPrograms';
+import {sliderWindowResize} from './modules/programs/sliderResize';
+import {initNewsSlider} from './modules/news/sliderNews';
+import {initReviewsSlider} from './modules/rewiews/sliderReviews';
+import {initContactsMap} from './modules/map/map';
 
 
 // ---------------------------------
@@ -41,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
     sliderWindowResize();
     initNewsSlider();
     initReviewsSlider();
+    initContactsMap();
   });
 });
 
