@@ -43,7 +43,7 @@
   position: absolute;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
-  padding: 70px 71px 51px 74px;
+  padding: 82px 71px 51px 74px;
   height: 803px;
   max-width: 498px;
 
@@ -51,30 +51,32 @@
     color: $color-default-white;
     font-size: $fz-sbig;
     line-height: $lh-big;
-    padding-bottom: 38px;
+    padding-bottom: 25px;
+    word-spacing: -2px;
   }
 
   & p {
     margin: 0;
     line-height: $lh-xxxmedium;
     color: rgba($color-alabaster, 0.9);
-    padding-bottom: 30px;
+    padding-bottom: 19px;
+    word-spacing: -2px;
   }
 
   @include vp-1199 {
     height: 780px;
     max-width: 442px;
-    padding: 50px 43px 50px 45px;
+    padding: 60px 43px 50px 45px;
 
     & h2 {
       font-size: $fz-xxlmedium;
       line-height: $lh-xxlmedium;
-      padding-bottom: 35px;
+      padding-bottom: 27px;
     }
 
     & p {
       line-height: $lh-smedium;
-      padding-bottom: 40px;
+      padding-bottom: 32px;
     }
   }
 
@@ -87,13 +89,13 @@
     & h2 {
       font-size: $fz-xxxsmall;
       line-height: $lh-xsmedium;
-      padding-bottom: 26px;
+      padding-bottom: 18px;
     }
 
     & p {
       font-size: $fz-xsmall;
       line-height: $lh-smedium;
-      padding-bottom: 30px;
+      padding-bottom: 26px;
     }
   }
 }
@@ -107,6 +109,10 @@
     gap: 15px;
     padding: 0;
     margin: 0;
+
+    @include vp-767 {
+      gap: 22px;
+    }
 
     @include disabled {
       pointer-events: none;
@@ -160,7 +166,7 @@
 .form__custom-select {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 
   p {
     font-size: $fz-xsmall;
@@ -211,6 +217,8 @@
   }
 
   @include vp-1199 {
+    gap: 7px;
+
     p {
       line-height: $lh-smedium;
     }
@@ -222,6 +230,8 @@
   }
 
   @include vp-767 {
+    gap: 10px;
+
     p {
       font-size: $fz-small;
       line-height: $lh-xsmall;
@@ -238,7 +248,15 @@
   }
 }
 
+.form__custom-select {
+  @include vp-1199 {
+    margin-top: -6px;
+  }
+}
+
 .form__custom-input-checkbox {
+  margin-top: 6px;
+
   label {
     display: flex;
     flex-direction: row;
@@ -320,9 +338,14 @@
       background-color: rgba($color-wild-watermelon, 0.2);
     }
   }
+
+  @include vp-767 {
+    margin-top: 1px;
+  }
 }
 
 .form__button {
+  margin-top: 25px;
   border: 1px solid $color-default-white;
   width: 350px;
   color: $color-default-white;
@@ -335,7 +358,7 @@
 
   & span {
     position: absolute;
-    right: 4px;
+    right: 3px;
     background-color: $color-default-white;
 
     svg {
@@ -383,6 +406,6 @@
 
   @include vp-767 {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }

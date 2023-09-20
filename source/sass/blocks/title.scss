@@ -4,6 +4,7 @@
   line-height: $lh-large;
   font-weight: $fw-regular;
   color: $color-cerulean-blue;
+  word-spacing: -4px;
 
   @include vp-1199 {
     font-size: $fz-xsbig;

@@ -33,7 +33,7 @@
 }
 
 .main-header__button {
-  width: 136px;
+  width: 134px;
   transition: width $trans-default;
 }
 
@@ -57,7 +57,7 @@
     width: 286px;
     height: auto;
     margin-top: 4px;
-    padding: 35px 25px;
+    padding: 29px 25px 31px;
     opacity: 1;
     visibility: visible;
     transition: width $trans-default, height $trans-default, opacity $trans-default, visibility $trans-default, margin-top $trans-default;
@@ -75,6 +75,7 @@
 
     > span {
       background-color: $color-default-white;
+      transform: translateX(1px);
 
       & .burger__open {
         display: none;

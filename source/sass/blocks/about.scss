@@ -1,13 +1,13 @@
 .about {
   position: relative;
-  margin-bottom: 120px;
+  margin-bottom: 124px;
 
   @include vp-1199 {
     margin-bottom: 100px;
   }
 
   @include vp-767 {
-    margin-bottom: 67px;
+    margin-bottom: 70px;
   }
 }
 
@@ -21,13 +21,13 @@
   @include vp-1199 {
     flex-direction: column;
     padding-right: 180px;
-    gap: 40px;
+    gap: 33px;
   }
 
   @include vp-767 {
     flex-direction: column;
     padding-right: 0;
-    gap: 40px;
+    gap: 35px;
     margin-bottom: 40px;
   }
 }
@@ -36,15 +36,18 @@
   flex: 50%;
 
   > h2 {
-    padding-bottom: 43px;
+    padding-bottom: 30px;
+    word-spacing: -4px;
 
     @include vp-1199 {
+      padding-bottom: 25px;
       padding-right: 64px;
     }
 
     @include vp-767 {
-      padding-bottom: 15px;
+      padding-bottom: 13px;
       padding-right: 47px;
+      word-spacing: -2px;
     }
   }
 
@@ -52,6 +55,7 @@
     margin: 0;
     font-size: $fz-xsmedium;
     line-height: $lh-sbig;
+    word-spacing: -3px;
 
     @include vp-1199 {
       font-size: $fz-medium;
@@ -72,51 +76,62 @@
 
   > h3 {
     margin: 0;
-    padding-bottom: 46px;
+    padding-bottom: 29px;
     font-size: $fz-sbig;
     line-height: $lh-big;
     font-weight: $fw-regular;
     color: $color-cerulean-blue;
+    transform: translateY(-5px);
 
     @include vp-1199 {
       font-size: $fz-xxlmedium;
       line-height: $lh-xxlmedium;
       padding-right: 84px;
+      padding-bottom: 18px;
     }
 
     @include vp-767 {
       font-size: $fz-xxxsmall;
       line-height: $lh-xsmedium;
       padding-right: 84px;
-      padding-bottom: 20px;
+      padding-bottom: 6px;
     }
   }
 
   > p {
     margin: 0;
-    padding-bottom: 40px;
+    padding-bottom: 32px;
     line-height: $lh-xxxmedium;
+    word-spacing: -1px;
 
     @include vp-1199 {
+      padding-bottom: 36px;
       line-height: $lh-smedium;
     }
 
     @include vp-767 {
       font-size: $fz-xsmall;
       line-height: $lh-smedium;
-      padding-bottom: 30px;
+      padding-bottom: 25px;
     }
+  }
+}
+
+.about__button {
+  gap: 28px;
+
+  @include vp-767 {
+    gap: 17px;
   }
 }
 
 .about__inner-bottom {
   background-color: $color-cerulean-blue;
   border-radius: 20px;
-  padding: 70px 106px 70px 106px;
+  padding: 92px 106px 57px 126px;
 
   @include vp-1199 {
-    padding: 40px;
-    padding-left: 60px;
+    padding: 62px 40px 40px 60px;
   }
 
   @include vp-767 {
@@ -127,31 +142,54 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 53px;
 
     @include vp-1199 {
-      gap: 42px 50px;
+      gap: 42px 48px;
     }
 
-    @include vp-1199 {
+    @include vp-767 {
       gap: 22px;
+      display: flex;
+      flex-direction: column;
     }
   }
 
   & li {
     position: relative;
-    flex: 40%;
     display: flex;
-    padding: 30px 48px 30px 60px;
+    flex-wrap: wrap;
+    padding: 30px 33px 28px 59px;
     border-radius: 20px;
     border: 1px solid $color-default-white;
     justify-content: space-between;
+    gap: 5px;
+
+    &:first-child {
+      padding-right: 45px;
+
+      @include vp-767 {
+        padding-right: 0;
+      }
+    }
+
+    &:nth-child(3n) {
+      padding-right: 45px;
+
+      @include vp-1199 {
+        padding-right: 42px;
+      }
+
+      @include vp-767 {
+        padding-right: 0;
+      }
+    }
 
     & span {
       position: absolute;
-      top: -21px;
+      top: -22px;
       left: -21px;
       width: 42px;
       height: 42px;
@@ -165,6 +203,11 @@
         width: 22px;
         height: 22px;
         fill: $color-default-white;
+
+        @include vp-767 {
+          width: 16px;
+          height: 16px;
+        }
       }
     }
 
@@ -176,19 +219,21 @@
       letter-spacing: $ls-small;
       font-weight: $fw-regular;
       text-transform: uppercase;
-      width: 171px;
+      width: 170px;
+      word-spacing: -3px;
 
       @include vp-1199 {
         width: 100%;
-        padding-right: 80px;
         font-size: $fz-medium;
         line-height: $lh-xsmedium;
+        word-spacing: -2px;
       }
 
       @include vp-767 {
         padding-right: 0;
         font-size: $fz-xxsmall;
         line-height: $lh-smedium;
+        word-spacing: -1px;
       }
     }
 
@@ -201,26 +246,26 @@
 
       @include vp-1199 {
         width: 100%;
-        padding-right: 25px;
       }
 
       @include vp-767 {
-        padding-right: 36px;
+        padding-right: 44px;
         font-size: $fz-xsmall;
         line-height: $lh-smedium;
+        word-spacing: -1px;
       }
     }
 
     @include vp-1199 {
-      padding: 30px;
+      padding: 30px 28px 25px 29px;
       flex-direction: column;
-      gap: 12px;
+      gap: 7px;
     }
 
     @include vp-767 {
-      flex: 100%;
-      padding: 24px 13px 24px 20px;
-      gap: 8px;
+      width: 100%;
+      padding: 19px 13px 23px 20px;
+      gap: 4px;
       border-radius: 16px;
     }
   }

@@ -1,9 +1,9 @@
 .programs {
   position: relative;
-  margin-bottom: 120px;
+  margin-bottom: 121px;
 
   @include vp-1199 {
-    margin-bottom: 100px;
+    margin-bottom: 101px;
   }
 
   @include vp-767 {
@@ -24,7 +24,7 @@
 .programs__heading {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 40px;
+  padding-bottom: 42px;
 
   > h2 {
     padding-right: 100px;
@@ -36,10 +36,11 @@
 
   @include vp-1199 {
     padding-right: 45px;
+    padding-bottom: 40px;
   }
 
   @include vp-767 {
-    padding-right: 15px;
+    padding-right: 0;
     padding-bottom: 30px;
   }
 }
@@ -47,13 +48,22 @@
 .programs__button {
   gap: 30px;
   padding-left: 30px;
+  transform: translateX(2px) translateY(-4px);
+
+  @include vp-1199 {
+    transform: translateX(1px) translateY(0);
+  }
+
+  @include vp-767 {
+    gap: 27px;
+  }
 }
 
 .programs__list {
   margin: 0;
   padding: 0;
   list-style: none;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 
   @include vp-767 {
     padding-bottom: 30px;
@@ -86,6 +96,7 @@
   }
 
   @include vp-767 {
+    min-height: 400px;
     min-width: 290px;
     width: 100%;
     padding: 20px 10px 18px 10px;
@@ -104,8 +115,9 @@
     font-weight: $fw-regular;
     color: $color-cerulean-blue;
     border-radius: 12px 12px 0 0;
-    padding: 18px 18px 6px 18px;
+    padding: 13px 18px 6px 18px;
     width: 194px;
+    transform: translateY(4px);
 
     &::before {
       position: absolute;
@@ -115,7 +127,7 @@
       background-repeat: no-repeat;
       width: 18px;
       height: 18px;
-      bottom: 0;
+      bottom: 4px;
       right: -18px;
       transform: rotate(0);
     }
@@ -124,12 +136,14 @@
       width: 173px;
       font-size: $fz-medium;
       line-height: $lh-xxmedium;
+      padding: 12px 18px 6px 18px;
     }
 
     @include vp-767 {
       width: 146px;
       font-size: $fz-xxsmall;
       line-height: $lh-xxxsmall;
+      padding: 18px 18px 10px 18px;
     }
   }
 }
@@ -138,10 +152,14 @@
   display: flex;
   background-color: $color-default-white;
   border-radius: 0 12px 12px 12px;
-  padding: 12px 18px 15px 18px;
+  padding: 10px 18px 15px 18px;
   gap: 16px;
   align-items: center;
   min-height: 79px;
+
+  & span {
+    transform: translateY(1px);
+  }
 
   & p {
     margin: 0;
@@ -151,14 +169,21 @@
 
   @include vp-1199 {
     min-height: 77px;
+    padding: 0 18px 5px 18px;
 
     & p {
       line-height: $lh-smedium;
+      word-spacing: -2px;
     }
   }
 
   @include vp-767 {
     min-height: 69px;
+    padding: 0 18px 4px 18px;
+
+    & span {
+      transform: translateY(0);
+    }
 
     & p {
       font-size: $fz-small;

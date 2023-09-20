@@ -9,13 +9,13 @@
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba($color-default-black, 0.8);
+  background-color: rgba($color-black-pearl, 0.4);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
   transition: opacity $trans-modal,
-  transform $trans-modal,
-  visibility $trans-modal;
+    transform $trans-modal,
+    visibility $trans-modal;
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -36,7 +36,7 @@
     padding: 60px 40px;
 
     @include vp-767 {
-      padding: 60px 16px;
+      padding: 23px 16px;
     }
   }
 
@@ -56,13 +56,13 @@
     align-items: center;
     position: relative;
     width: 510px;
-    padding: 60px 80px 60px 80px;
+    padding: 53px 80px 59px 80px;
     background-color: $color-default-white;
 
     & h2 {
       font-size: $fz-sbig;
       line-height: $lh-big;
-      padding-bottom: 20px;
+      padding-bottom: 7px;
     }
 
     & p {
@@ -70,12 +70,39 @@
       font-size: $fz-xxsmall;
       line-height: $lh-xxxmedium;
       text-align: center;
-      padding-bottom: 30px;
+      padding-bottom: 19px;
+      word-spacing: -2px;
+    }
+
+    @include vp-1199 {
+      padding: 53px 80px 60px 80px;
+
+      & h2 {
+        font-size: $fz-xxlmedium;
+        line-height: $lh-xxlmedium;
+        padding-bottom: 15px;
+      }
+
+      & p {
+        line-height: $lh-smedium;
+      }
     }
 
     @include vp-767 {
       width: 100%;
-      padding: 20px;
+      padding: 38px 15px 40px;
+
+      & h2 {
+        font-size: $fz-xxxsmall;
+        line-height: $lh-xxxsmall;
+        padding-bottom: 7px;
+      }
+
+      & p {
+        font-size: $fz-xsmall;
+        padding: 0 19px 20px;
+        word-spacing: 0;
+      }
     }
   }
 
@@ -146,9 +173,9 @@
   &__custom-select {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 
-    p {
+    & p {
       font-size: $fz-xsmall;
       line-height: $lh-xxxsmall;
       color: rgba($color-charcoal, 0.8);
@@ -180,6 +207,27 @@
       @include disabled {
         border: 1px solid rgba($color-mischka, 0.2);
         background-color: rgba($color-mischka, 0.4);
+      }
+    }
+
+    @include vp-1199 {
+      & p {
+        line-height: $lh-smedium;
+      }
+    }
+
+    @include vp-767 {
+      gap: 8px;
+
+      input,
+      textarea {
+        width: 100%;
+        height: 44px;
+      }
+
+      & p {
+        font-size: $fz-xsmall;
+        line-height: $lh-xsmall;
       }
     }
 
@@ -228,11 +276,14 @@
 
       @include vp-767 {
         width: 100%;
+        height: 44px;
       }
     }
   }
 
   &__custom-input-checkbox {
+    margin-top: 7px;
+
     label {
       display: flex;
       flex-direction: row;
@@ -315,17 +366,44 @@
         background-color: rgba($color-wild-watermelon, 0.2);
       }
     }
+
+    @include vp-1199 {
+      margin-top: 5px;
+    }
+
+    @include vp-767 {
+      margin-top: 2px;
+    }
   }
 
   &__button {
     width: max-content;
     align-self: center;
+    margin-top: 16px;
+
+    @include vp-1199 {
+      margin-top: 14px;
+    }
+
+    @include vp-767 {
+      margin-top: 12px;
+      position: relative;
+      padding-right: 57px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      & span {
+        position: absolute;
+        right: 2px;
+      }
+    }
   }
 
   &__close-btn {
     position: absolute;
-    top: 32px;
-    right: 32px;
+    top: 24px;
+    right: 21px;
     z-index: 1;
     width: 40px;
     height: 40px;
@@ -338,6 +416,18 @@
       width: 22px;
       height: 22px;
       stroke: $color-cerulean-blue;
+    }
+
+    @include vp-767 {
+      top: 20px;
+      right: 20px;
+      width: 22px;
+      height: 22px;
+
+      & svg {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 

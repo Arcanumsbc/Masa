@@ -1,6 +1,6 @@
 .news {
   position: relative;
-  margin-bottom: 120px;
+  margin-bottom: 123px;
 
   @include vp-1199 {
     margin-bottom: 100px;
@@ -18,10 +18,14 @@
   text-align: center;
 
   & h2 {
-    padding-bottom: 40px;
+    padding-bottom: 46px;
 
     @include vp-1199 {
       padding-bottom: 30px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 27px;
     }
   }
 }
@@ -36,6 +40,7 @@
 
   @include vp-1199 {
     gap: 15px 9px;
+    padding-bottom: 30px;
   }
 
   @include vp-767 {
@@ -47,7 +52,7 @@
     overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-bottom: 24px;
+    padding-bottom: 23px;
 
     &::-webkit-scrollbar {
       display: none;
@@ -56,7 +61,7 @@
 }
 
 .news__btn {
-  padding: 14px 26px;
+  padding: 11px 25px;
   border: 1px solid transparent;
   background-color: transparent;
   border-radius: 20px;
@@ -79,7 +84,7 @@
   }
 
   @include vp-1199 {
-    padding: 14px 20px;
+    padding: 11px 19px;
   }
 
   @include vp-767 {
@@ -103,7 +108,7 @@
 
     & .slide-new {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 1fr 1fr;
       width: 100%;
       gap: 30px;
 
@@ -154,6 +159,14 @@
 
 .news__control {
   margin-top: 40px;
+
+  @include vp-1199 {
+    margin-top: 30px;
+  }
+
+  @include vp-767 {
+    margin-top: 25px;
+  }
 }
 
 .news__arrows {
@@ -178,11 +191,13 @@
 
   @include vp-767 {
     flex-wrap: nowrap;
-    max-width: 197px;
+    max-width: 160px;
     overflow-x: scroll;
     scroll-behavior: smooth;
     overflow-y: hidden;
     scrollbar-width: none;
+    gap: 8px;
+    transform: translateY(-1px);
 
     &::-webkit-scrollbar {
       display: none;
@@ -213,6 +228,11 @@
       color: $color-default-white;
       opacity: 1;
     }
+  }
+
+  @include vp-767 {
+    min-width: 26px;
+    height: 26px;
   }
 }
 

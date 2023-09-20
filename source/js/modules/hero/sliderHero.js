@@ -11,10 +11,10 @@ const initHeroSlider = () => {
     allowTouchMove: isMobile(),
     watchSlidesProgress: true,
     speed: 3000,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     effect: 'fade',
     fadeEffect: {
       crossFade: false,
