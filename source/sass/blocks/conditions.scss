@@ -33,13 +33,13 @@
 .conditions__inner {
   width: 498px;
 
-  & h2 {
+  h2 {
     color: $color-default-white;
     padding-bottom: 29px;
     word-spacing: -4px;
   }
 
-  & p {
+  p {
     margin: 0;
     font-size: $fz-xxsmall;
     line-height: $lh-xxxmedium;
@@ -49,7 +49,7 @@
     word-spacing: -2px;
   }
 
-  & img {
+  img {
     object-fit: cover;
     width: 100%;
     height: 363px;
@@ -59,34 +59,34 @@
   @include vp-1199 {
     width: 100%;
 
-    & h2 {
+    h2 {
       padding-bottom: 28px;
     }
 
-    & p {
+    p {
       line-height: $lh-smedium;
       padding-right: 170px;
       padding-bottom: 36px;
     }
 
-    & img {
+    img {
       height: 375px;
     }
   }
 
   @include vp-767 {
-    & h2 {
+    h2 {
       padding-bottom: 13px;
       word-spacing: -2px;
     }
 
-    & p {
+    p {
       font-size: $fz-xsmall;
       padding-right: 0;
       padding-bottom: 25px;
     }
 
-    & img {
+    img {
       height: 200px;
     }
   }
@@ -95,7 +95,7 @@
 .conditions__info {
   width: 498px;
 
-  & h3 {
+  h3 {
     margin: 0;
     font-size: $fz-sbig;
     line-height: $lh-big;
@@ -110,7 +110,7 @@
   @include vp-1199 {
     width: 100%;
 
-    & h3 {
+    h3 {
       font-size: $fz-xxlmedium;
       line-height: $lh-xxlmedium;
       padding-right: 0;
@@ -120,7 +120,7 @@
   }
 
   @include vp-767 {
-    & h3 {
+    h3 {
       font-size: $fz-xxxsmall;
       line-height: $lh-xsmedium;
       padding-bottom: 29px;

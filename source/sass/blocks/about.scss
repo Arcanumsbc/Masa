@@ -35,7 +35,7 @@
 .about__heading {
   flex: 50%;
 
-  > h2 {
+  h2 {
     padding-bottom: 30px;
     word-spacing: -4px;
 
@@ -51,7 +51,7 @@
     }
   }
 
-  > p {
+  p {
     margin: 0;
     font-size: $fz-xsmedium;
     line-height: $lh-sbig;
@@ -74,7 +74,7 @@
 .about__description {
   flex: 50%;
 
-  > h3 {
+  h3 {
     margin: 0;
     padding-bottom: 29px;
     font-size: $fz-sbig;
@@ -98,7 +98,7 @@
     }
   }
 
-  > p {
+  p {
     margin: 0;
     padding-bottom: 32px;
     line-height: $lh-xxxmedium;
@@ -138,7 +138,7 @@
     padding: 42px 20px 40px 30px;
   }
 
-  & ul {
+  ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -157,7 +157,7 @@
     }
   }
 
-  & li {
+  li {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -211,7 +211,7 @@
       }
     }
 
-    & h4 {
+    h4 {
       margin: 0;
       font-size: $fz-xxxmedium;
       line-height: $lh-xxxlmedium;
@@ -237,7 +237,7 @@
       }
     }
 
-    & p {
+    p {
       margin: 0;
       line-height: $lh-smedium;
       font-weight: $fw-light;

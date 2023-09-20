@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
 
-  & svg {
+  svg {
     width: 10px;
     height: 10px;
     stroke: $color-cerulean-blue;
@@ -34,7 +34,7 @@
   @include active {
     transition: all $trans-default;
 
-    & svg {
+    svg {
       opacity: 0.7;
     }
   }
@@ -44,7 +44,7 @@
     pointer-events: none;
     cursor: default;
 
-    & svg {
+    svg {
       stroke: $color-mischka;
     }
   }

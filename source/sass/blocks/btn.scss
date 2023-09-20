@@ -20,7 +20,7 @@
   color: $color-cerulean-blue;
   user-select: none;
 
-  & span {
+  span {
     display: flex;
     background-color: $color-cerulean-blue;
     width: 46px;
@@ -31,7 +31,7 @@
     justify-content: center;
     align-items: center;
 
-    & svg {
+    svg {
       width: 8px;
       height: 8px;
       stroke: $color-default-white;
@@ -45,11 +45,11 @@
     transition: all $trans-default;
     color: $color-default-white;
 
-    > span {
+    span {
       background-color: $color-default-white;
       transition: all $trans-default;
 
-      & svg {
+      svg {
         stroke: $color-cerulean-blue;
         transform: rotate(45deg);
       }
@@ -67,10 +67,10 @@
     cursor: default;
     color: $color-mischka;
 
-    > span {
+    span {
       background-color: $color-mischka;
 
-      & svg {
+      svg {
         stroke: $color-default-white;
       }
     }
@@ -83,7 +83,7 @@
     font-size: $fz-small;
     line-height: $lh-small;
 
-    & span {
+    span {
       width: 34px;
       height: 34px;
     }

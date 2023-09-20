@@ -26,7 +26,7 @@
   justify-content: space-between;
   padding-bottom: 42px;
 
-  > h2 {
+  h2 {
     padding-right: 100px;
 
     @include vp-767 {
@@ -56,6 +56,7 @@
 
   @include vp-767 {
     gap: 27px;
+    width: 203px;
   }
 }
 
@@ -106,7 +107,7 @@
 .programs__content {
   z-index: 2;
 
-  & h3 {
+  h3 {
     position: relative;
     background-color: $color-default-white;
     margin: 0;
@@ -157,11 +158,11 @@
   align-items: center;
   min-height: 79px;
 
-  & span {
+  span {
     transform: translateY(1px);
   }
 
-  & p {
+  p {
     margin: 0;
     font-size: $fz-xsmall;
     line-height: $lh-xxxsmall;
@@ -171,7 +172,7 @@
     min-height: 77px;
     padding: 0 18px 5px 18px;
 
-    & p {
+    p {
       line-height: $lh-smedium;
       word-spacing: -2px;
     }
@@ -181,11 +182,11 @@
     min-height: 69px;
     padding: 0 18px 4px 18px;
 
-    & span {
+    span {
       transform: translateY(0);
     }
 
-    & p {
+    p {
       font-size: $fz-small;
       line-height: $lh-xsmall;
     }
@@ -201,7 +202,7 @@
   height: 100%;
   z-index: -1;
 
-  & img {
+  img {
     border-radius: 12px;
     width: 100%;
     height: 100%;

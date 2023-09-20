@@ -2365,13 +2365,13 @@ button,
   color: #ffffff;
 }
 
-.btn.focus-visible:focus > span {
+.btn.focus-visible:focus span {
   background-color: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.btn.focus-visible:focus > span svg {
+.btn.focus-visible:focus span svg {
   stroke: #316dc2;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2391,11 +2391,11 @@ button,
   color: #a9afb7;
 }
 
-.btn[disabled] > span {
+.btn[disabled] span {
   background-color: #a9afb7;
 }
 
-.btn[disabled] > span svg {
+.btn[disabled] span svg {
   stroke: #ffffff;
 }
 
@@ -2436,13 +2436,13 @@ button,
   transition: all 0.3s ease;
 }
 
-.link-btn.focus-visible:focus > span {
+.link-btn.focus-visible:focus span {
   background-color: #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.link-btn.focus-visible:focus > span svg {
+.link-btn.focus-visible:focus span svg {
   stroke: #316dc2;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -2457,11 +2457,11 @@ button,
   cursor: default;
 }
 
-.link-btn[disabled] > span {
+.link-btn[disabled] span {
   background-color: #a9afb7;
 }
 
-.link-btn[disabled] > span svg {
+.link-btn[disabled] span svg {
   stroke: #ffffff;
 }
 
@@ -3057,18 +3057,18 @@ button,
   color: #ffffff;
 }
 
-.main-header.is-open .main-header__button > span {
+.main-header.is-open .main-header__button span {
   background-color: #ffffff;
   -webkit-transform: translateX(1px);
   -ms-transform: translateX(1px);
   transform: translateX(1px);
 }
 
-.main-header.is-open .main-header__button > span .burger__open {
+.main-header.is-open .main-header__button span .burger__open {
   display: none;
 }
 
-.main-header.is-open .main-header__button > span .burger__closed {
+.main-header.is-open .main-header__button span .burger__closed {
   display: block;
   width: 16px;
   height: 16px;
@@ -3348,7 +3348,7 @@ button,
   transform: rotate(90deg);
 }
 
-.hero__description > p {
+.hero__description p {
   margin: 0;
   min-width: 452px;
   line-height: 26px;
@@ -3466,12 +3466,12 @@ button,
   flex: 50%;
 }
 
-.about__heading > h2 {
+.about__heading h2 {
   padding-bottom: 30px;
   word-spacing: -4px;
 }
 
-.about__heading > p {
+.about__heading p {
   margin: 0;
   font-size: 22px;
   line-height: 32px;
@@ -3484,7 +3484,7 @@ button,
   flex: 50%;
 }
 
-.about__description > h3 {
+.about__description h3 {
   margin: 0;
   padding-bottom: 29px;
   font-size: 32px;
@@ -3496,7 +3496,7 @@ button,
   transform: translateY(-5px);
 }
 
-.about__description > p {
+.about__description p {
   margin: 0;
   padding-bottom: 32px;
   line-height: 26px;
@@ -3608,7 +3608,7 @@ button,
   padding-bottom: 42px;
 }
 
-.programs__heading > h2 {
+.programs__heading h2 {
   padding-right: 100px;
 }
 
@@ -5643,7 +5643,7 @@ button,
     padding: 2px 28px 17px 41px;
   }
 
-  .hero__item:last-child .hero__description > p {
+  .hero__item:last-child .hero__description p {
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
@@ -5671,7 +5671,7 @@ button,
     min-height: 269px;
   }
 
-  .hero__description > p {
+  .hero__description p {
     min-width: 285px;
     line-height: 20px;
     min-height: 89px;
@@ -5704,25 +5704,25 @@ button,
     gap: 33px;
   }
 
-  .about__heading > h2 {
+  .about__heading h2 {
     padding-bottom: 25px;
     padding-right: 64px;
   }
 
-  .about__heading > p {
+  .about__heading p {
     font-size: 20px;
     line-height: 26px;
     padding-right: 54px;
   }
 
-  .about__description > h3 {
+  .about__description h3 {
     font-size: 28px;
     line-height: 28px;
     padding-right: 84px;
     padding-bottom: 18px;
   }
 
-  .about__description > p {
+  .about__description p {
     padding-bottom: 36px;
     line-height: 20px;
   }
@@ -6393,7 +6393,7 @@ button,
     padding: 0;
   }
 
-  .hero__item:last-child .hero__description > p {
+  .hero__item:last-child .hero__description p {
     padding: 0 12px 8px 14px;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -6429,7 +6429,7 @@ button,
     padding-right: 15px;
   }
 
-  .hero__description > p {
+  .hero__description p {
     background-color: #ffffff;
     min-height: 85px;
     min-width: 261px;
@@ -6524,26 +6524,26 @@ button,
     margin-bottom: 40px;
   }
 
-  .about__heading > h2 {
+  .about__heading h2 {
     padding-bottom: 13px;
     padding-right: 47px;
     word-spacing: -2px;
   }
 
-  .about__heading > p {
+  .about__heading p {
     font-size: 16px;
     line-height: 22px;
     padding-right: 47px;
   }
 
-  .about__description > h3 {
+  .about__description h3 {
     font-size: 18px;
     line-height: 22px;
     padding-right: 84px;
     padding-bottom: 6px;
   }
 
-  .about__description > p {
+  .about__description p {
     font-size: 14px;
     line-height: 20px;
     padding-bottom: 25px;
@@ -6610,7 +6610,7 @@ button,
     padding-right: 15px;
   }
 
-  .programs__heading > h2 {
+  .programs__heading h2 {
     padding-right: 15px;
   }
 
@@ -6621,6 +6621,7 @@ button,
 
   .programs__button {
     gap: 27px;
+    width: 203px;
   }
 
   .programs__list {
@@ -7132,6 +7133,7 @@ button,
   .form__button {
     width: 100%;
     margin-top: 10px;
+    padding-right: 58px;
   }
 
   .custom-select__button {
@@ -7229,13 +7231,13 @@ button,
     color: #ffffff;
   }
 
-  .btn:hover:not(.focus-visible) > span {
+  .btn:hover:not(.focus-visible) span {
     background-color: #ffffff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
-  .btn:hover:not(.focus-visible) > span svg {
+  .btn:hover:not(.focus-visible) span svg {
     stroke: #316dc2;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -7254,13 +7256,13 @@ button,
     transition: all 0.3s ease;
   }
 
-  .link-btn:hover:not(.focus-visible) > span {
+  .link-btn:hover:not(.focus-visible) span {
     background-color: #ffffff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
-  .link-btn:hover:not(.focus-visible) > span svg {
+  .link-btn:hover:not(.focus-visible) span svg {
     stroke: #316dc2;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;

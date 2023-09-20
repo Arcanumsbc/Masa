@@ -36,7 +36,7 @@
 }
 
 .main-footer__logo {
-  & a {
+  a {
     outline: none;
   }
 
@@ -70,14 +70,14 @@
   display: flex;
   justify-content: space-between;
 
-  & p {
+  p {
     margin: 0;
     font-size: $fz-xsmall;
     line-height: $lh-xxxsmall;
     transform: translateY(3px);
   }
 
-  & a {
+  a {
     font-size: $fz-xsmall;
     line-height: $lh-xxxsmall;
     border-bottom: 1px solid $color-charcoal;
@@ -102,12 +102,12 @@
     gap: 10px;
     justify-content: space-between;
 
-    & a {
+    a {
       font-size: $fz-small;
       line-height: $lh-small;
     }
 
-    & p {
+    p {
       order: 2;
       color: rgba($color-charcoal, 0.6);
       font-size: $fz-small;
@@ -119,11 +119,11 @@
     margin-top: 11px;
     align-items: center;
 
-    & a {
+    a {
       line-height: $lh-xsmall;
     }
 
-    & p {
+    p {
       line-height: $lh-xsmall;
     }
   }

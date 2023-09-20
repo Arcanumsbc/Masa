@@ -47,7 +47,7 @@
   height: 803px;
   max-width: 498px;
 
-  & h2 {
+  h2 {
     color: $color-default-white;
     font-size: $fz-sbig;
     line-height: $lh-big;
@@ -55,7 +55,7 @@
     word-spacing: -2px;
   }
 
-  & p {
+  p {
     margin: 0;
     line-height: $lh-xxxmedium;
     color: rgba($color-alabaster, 0.9);
@@ -68,13 +68,13 @@
     max-width: 442px;
     padding: 60px 43px 50px 45px;
 
-    & h2 {
+    h2 {
       font-size: $fz-xxlmedium;
       line-height: $lh-xxlmedium;
       padding-bottom: 27px;
     }
 
-    & p {
+    p {
       line-height: $lh-smedium;
       padding-bottom: 32px;
     }
@@ -86,13 +86,13 @@
     height: 100%;
     padding: 50px 15px 50px 15px;
 
-    & h2 {
+    h2 {
       font-size: $fz-xxxsmall;
       line-height: $lh-xsmedium;
       padding-bottom: 18px;
     }
 
-    & p {
+    p {
       font-size: $fz-xsmall;
       line-height: $lh-smedium;
       padding-bottom: 26px;
@@ -133,7 +133,7 @@
         background-color: $color-mischka;
         border: 1px solid rgba($color-mischka, 1);
 
-        & svg {
+        svg {
           stroke: rgba($color-default-white, 0.7);
         }
       }
@@ -142,7 +142,7 @@
         border: 1px solid $color-mischka;
         color: $color-mischka;
 
-        & span {
+        span {
           background-color: $color-mischka;
 
           svg {
@@ -407,5 +407,6 @@
   @include vp-767 {
     width: 100%;
     margin-top: 10px;
+    padding-right: 58px;
   }
 }

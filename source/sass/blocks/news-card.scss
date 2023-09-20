@@ -7,7 +7,7 @@
   align-items: flex-end;
   width: calc((100% - 96px) / 4);
 
-  & img {
+  img {
     position: absolute;
     z-index: -1;
     left: 0;
@@ -81,7 +81,7 @@
     background-repeat: no-repeat;
   }
 
-  & span {
+  span {
     font-size: $fz-small;
     line-height: $lh-small;
     font-weight: $fw-regular;
@@ -110,7 +110,7 @@
     background-repeat: no-repeat;
   }
 
-  & h3 {
+  h3 {
     margin: 0;
     font-size: $fz-xxmedium;
     line-height: $lh-xxxmedium;
@@ -163,7 +163,7 @@
     background-repeat: no-repeat;
   }
 
-  & p {
+  p {
     margin: 0;
     font-size: $fz-xsmall;
     line-height: $lh-xxxsmall;

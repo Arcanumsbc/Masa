@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
 
-  & h2 {
+  h2 {
     padding-bottom: 67px;
 
     @include vp-1199 {
@@ -96,27 +96,27 @@
       outline: none;
       background-color: transparent;
 
-      & span {
+      span {
         background-color: $color-default-white;
         border-color: $color-cerulean-blue;
 
-        & svg {
+        svg {
           stroke: $color-cerulean-blue;
         }
       }
     }
 
     &:active {
-      & h3 {
+      h3 {
         color: $color-endeavour;
       }
 
       & .questions__accordion-button {
-        & span {
+        span {
           background-color: $color-default-white;
           border-color: $color-endeavour;
 
-          & svg {
+          svg {
             stroke: $color-endeavour;
           }
         }
@@ -125,12 +125,12 @@
       &.is-active {
         background-color: $color-endeavour;
 
-        & h3 {
+        h3 {
           color: $color-default-white;
         }
 
         & .questions__accordion-button {
-          & span {
+          span {
             background-color: $color-default-white;
             border-color: $color-default-white;
           }
@@ -146,7 +146,7 @@
       background-color: $color-cerulean-blue;
 
       & .questions__accordion-button {
-        & span {
+        span {
           background-color: $color-cerulean-blue;
           border-color: $color-default-white;
         }
@@ -163,15 +163,15 @@
     gap: 14px;
     padding-bottom: 32px;
 
-    & h3 {
+    h3 {
       color: $color-default-white;
     }
 
     & .questions__accordion-button {
-      & span {
+      span {
         background-color: $color-default-white;
 
-        & svg {
+        svg {
           visibility: hidden;
         }
       }
@@ -183,7 +183,7 @@
       @include hover-focus {
         background-color: transparent;
 
-        & span {
+        span {
           background-color: transparent;
           border-color: $color-default-white;
         }
@@ -221,7 +221,7 @@
   justify-content: space-between;
   gap: 10px;
 
-  & h3 {
+  h3 {
     margin: 0;
     padding-right: 160px;
     font-size: $fz-xxlmedium;
@@ -264,7 +264,7 @@
   @include hover-focus {
     background-color: transparent;
 
-    & span {
+    span {
       background-color: transparent;
       border-color: $color-cerulean-blue;
 
@@ -275,17 +275,17 @@
   }
 
   @include disabled {
-    & span {
+    span {
       background-color: $color-mischka;
       border-color: $color-mischka;
     }
 
-    & svg {
+    svg {
       stroke: $color-default-white;
     }
   }
 
-  & span {
+  span {
     width: 40px;
     height: 40px;
     display: flex;
@@ -296,7 +296,7 @@
     border-radius: 50%;
     position: relative;
 
-    & svg {
+    svg {
       width: 18px;
       height: 18px;
       stroke: $color-default-white;
@@ -321,7 +321,7 @@
 .questions__accordion-content {
   padding-right: 300px;
 
-  & p {
+  p {
     margin: 0;
     font-size: $fz-xxsmall;
     line-height: $lh-xxxmedium;
