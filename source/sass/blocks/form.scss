@@ -1,0 +1,388 @@
+.form {
+  position: relative;
+  margin-bottom: 60px;
+
+  @include vp-767 {
+    margin-bottom: 29px;
+  }
+}
+
+.form__container {
+  width: 100%;
+  height: 803px;
+
+  > picture {
+    z-index: -1;
+    position: relative;
+    border-radius: 16px;
+    top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+  }
+
+  @include vp-1199 {
+    height: 780px;
+  }
+
+  @include vp-767 {
+    height: 100%;
+
+    > picture {
+      display: none;
+    }
+  }
+}
+
+.form__wrapper {
+  z-index: 1;
+  position: absolute;
+  background-color: $color-cerulean-blue;
+  border-radius: 16px;
+  padding: 70px 71px 51px 74px;
+  height: 803px;
+  max-width: 498px;
+
+  & h2 {
+    color: $color-default-white;
+    font-size: $fz-sbig;
+    line-height: $lh-big;
+    padding-bottom: 38px;
+  }
+
+  & p {
+    margin: 0;
+    line-height: $lh-xxxmedium;
+    color: rgba($color-alabaster, 0.9);
+    padding-bottom: 30px;
+  }
+
+  @include vp-1199 {
+    height: 780px;
+    max-width: 442px;
+    padding: 50px 43px 50px 45px;
+
+    & h2 {
+      font-size: $fz-xxlmedium;
+      line-height: $lh-xxlmedium;
+      padding-bottom: 35px;
+    }
+
+    & p {
+      line-height: $lh-smedium;
+      padding-bottom: 40px;
+    }
+  }
+
+  @include vp-767 {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    padding: 50px 15px 50px 15px;
+
+    & h2 {
+      font-size: $fz-xxxsmall;
+      line-height: $lh-xsmedium;
+      padding-bottom: 26px;
+    }
+
+    & p {
+      font-size: $fz-xsmall;
+      line-height: $lh-smedium;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.form__feedback {
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+
+    @include disabled {
+      pointer-events: none;
+      cursor: default;
+
+      input,
+      textarea {
+        border: 1px solid rgba($color-default-white, 0.2);
+        background-color: rgba($color-default-white, 0.4);
+      }
+
+      input[type="checkbox"] + .form__checkbox {
+        border: 1px solid rgba($color-default-white, 1);
+        background-color: rgba($color-default-white, 0.6);
+      }
+
+      input[type="checkbox"]:checked + .form__checkbox {
+        background-color: $color-mischka;
+        border: 1px solid rgba($color-mischka, 1);
+
+        & svg {
+          stroke: rgba($color-default-white, 0.7);
+        }
+      }
+
+      & .form__button {
+        border: 1px solid $color-mischka;
+        color: $color-mischka;
+
+        & span {
+          background-color: $color-mischka;
+
+          svg {
+            stroke: rgba($color-default-white, 0.6);
+          }
+        }
+      }
+
+      & .form__custom-select {
+        & .custom-select__button {
+          border: 1px solid rgba($color-default-white, 0.2);
+          background-color: rgba($color-default-white, 0.4);
+        }
+      }
+    }
+  }
+}
+
+.form__custom-input,
+.form__custom-textarea,
+.form__custom-select {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  p {
+    font-size: $fz-xsmall;
+    line-height: $lh-xxxsmall;
+    color: rgba($color-alabaster, 0.8);
+    padding: 0;
+    margin: 0;
+  }
+
+  input,
+  textarea {
+    outline: none;
+    border: 1px solid rgba($color-default-white, 0.3);
+    background-color: transparent;
+    border-radius: 8px;
+    height: 50px;
+    width: 350px;
+    padding: 16px 25px;
+    font-size: $fz-xsmall;
+    line-height: $lh-xsmall;
+    color: $color-default-white;
+
+    @include hover-focus {
+      border: 1px solid rgba($color-default-white, 1);
+    }
+
+    @include active {
+      border: 1px solid rgba($color-default-white, 1);
+    }
+
+    @include disabled {
+      border: 1px solid rgba($color-default-white, 0.2);
+      background-color: rgba($color-default-white, 0.4);
+    }
+  }
+
+  textarea {
+    height: 98px;
+    overflow-y: auto;
+  }
+
+  &.is-invalid {
+    input,
+    textarea, {
+      border: 1px solid $color-wild-watermelon;
+      background-color: rgba($color-wild-watermelon, 0.2);
+    }
+  }
+
+  @include vp-1199 {
+    p {
+      line-height: $lh-smedium;
+    }
+
+    input,
+    textarea {
+      width: 352px;
+    }
+  }
+
+  @include vp-767 {
+    p {
+      font-size: $fz-small;
+      line-height: $lh-xsmall;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+    }
+
+    textarea {
+      height: 94px;
+    }
+  }
+}
+
+.form__custom-input-checkbox {
+  label {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    span {
+      font-size: $fz-small;
+      line-height: $lh-small;
+      color: rgba($color-default-white, 0.9);
+    }
+
+    input[type="checkbox"] + .form__checkbox {
+      width: 20px;
+      height: 20px;
+      background-color: $color-cerulean-blue;
+      border: 1px solid rgba($color-default-white, 0.7);
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 6px 4px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+
+      & svg {
+        width: 10px;
+        height: 10px;
+      }
+
+      @include hover-focus {
+        border: 1px solid rgba($color-default-white, 1);
+      }
+    }
+
+    input[type="checkbox"]:checked + .form__checkbox {
+      background-color: $color-default-white;
+      border: 1px solid rgba($color-default-white, 1);
+
+      & svg {
+        stroke: $color-cerulean-blue;
+        stroke-width: 2px;
+      }
+
+      @include hover-focus {
+        background-color: $color-cerulean-blue;
+
+        & svg {
+          stroke: $color-default-white;
+        }
+      }
+    }
+
+    @include disabled {
+      input[type="checkbox"] + .form__checkbox {
+        border: 1px solid rgba($color-default-white, 1);
+        background-color: rgba($color-default-white, 0.6);
+        pointer-events: none;
+        cursor: default;
+      }
+
+      input[type="checkbox"]:checked + .form__checkbox {
+        background-color: $color-mischka;
+        border: 1px solid rgba($color-mischka, 1);
+        pointer-events: none;
+        cursor: default;
+
+        & svg {
+          stroke: $color-default-white;
+        }
+      }
+    }
+  }
+
+  &.is-invalid {
+    input[type="checkbox"] + .form__checkbox {
+      border: 1px solid $color-wild-watermelon;
+      background-color: rgba($color-wild-watermelon, 0.2);
+    }
+  }
+}
+
+.form__button {
+  border: 1px solid $color-default-white;
+  width: 350px;
+  color: $color-default-white;
+  position: relative;
+  padding-right: 80px;
+  display: flex;
+  line-height: $lh-xsmall;
+  text-align: center;
+  justify-content: center;
+
+  & span {
+    position: absolute;
+    right: 4px;
+    background-color: $color-default-white;
+
+    svg {
+      stroke: $color-cerulean-blue;
+    }
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: $color-cerulean-blue;
+
+    & span {
+      background-color: $color-cerulean-blue;
+
+      svg {
+        stroke: $color-default-white;
+      }
+    }
+
+    @include active {
+      color: rgba($color-cerulean-blue, 0.7);
+
+      svg {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @include disabled {
+    border: 1px solid $color-mischka;
+    color: $color-mischka;
+
+    & span {
+      background-color: $color-mischka;
+
+      svg {
+        stroke: rgba($color-default-white, 0.6);
+      }
+    }
+  }
+
+  @include vp-1199 {
+    width: 352px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}

@@ -5,23 +5,18 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
   background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
-
   transition: opacity $trans-modal,
-    transform $trans-modal,
-    visibility $trans-modal;
-
+  transform $trans-modal,
+  visibility $trans-modal;
   pointer-events: none;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -31,7 +26,7 @@
 
   &__wrapper {
     position: relative;
-
+    border-radius: 16px;
     display: flex;
     flex-shrink: 0;
     justify-content: center;
@@ -49,20 +44,34 @@
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     cursor: pointer;
   }
 
   &__content {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-
-    width: 600px;
-    padding: 40px;
-
+    width: 510px;
+    padding: 60px 80px 60px 80px;
     background-color: $color-default-white;
+
+    & h2 {
+      font-size: $fz-sbig;
+      line-height: $lh-big;
+      padding-bottom: 20px;
+    }
+
+    & p {
+      margin: 0;
+      font-size: $fz-xxsmall;
+      line-height: $lh-xxxmedium;
+      text-align: center;
+      padding-bottom: 30px;
+    }
 
     @include vp-767 {
       width: 100%;
@@ -70,19 +79,266 @@
     }
   }
 
+  &__feedback {
+    fieldset {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+
+      & p {
+        text-align: start;
+        padding: 0;
+      }
+
+      @include disabled {
+        pointer-events: none;
+        cursor: default;
+
+        input,
+        textarea {
+          border: 1px solid rgba($color-mischka, 0.2);
+          background-color: rgba($color-mischka, 0.4);
+        }
+
+        input[type="checkbox"] + .modal__checkbox {
+          border: 1px solid rgba($color-mischka, 1);
+          background-color: rgba($color-mischka, 0.6);
+        }
+
+        input[type="checkbox"]:checked + .modal__checkbox {
+          background-color: $color-mischka;
+          border: 1px solid rgba($color-mischka, 1);
+
+          & svg {
+            stroke: rgba($color-default-white, 0.7);
+          }
+        }
+
+        & .modal__button {
+          border: 1px solid $color-mischka;
+          color: $color-mischka;
+
+          & span {
+            background-color: $color-mischka;
+
+            svg {
+              stroke: rgba($color-default-white, 0.6);
+            }
+          }
+        }
+
+        & .modal__custom-select {
+          & .custom-select__button {
+            border: 1px solid rgba($color-mischka, 0.2);
+            background-color: rgba($color-mischka, 0.4);
+          }
+        }
+      }
+    }
+  }
+
+  &__custom-input,
+  &__custom-textarea,
+  &__custom-select {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p {
+      font-size: $fz-xsmall;
+      line-height: $lh-xxxsmall;
+      color: rgba($color-charcoal, 0.8);
+      padding: 0;
+      margin: 0;
+    }
+
+    input,
+    textarea {
+      outline: none;
+      border: 1px solid rgba($color-charcoal, 0.3);
+      background-color: transparent;
+      border-radius: 8px;
+      height: 50px;
+      width: 350px;
+      padding: 16px 25px;
+      font-size: $fz-xsmall;
+      line-height: $lh-xsmall;
+      color: $color-charcoal;
+
+      @include hover-focus {
+        border: 1px solid rgba($color-charcoal, 1);
+      }
+
+      @include active {
+        border: 1px solid rgba($color-charcoal, 1);
+      }
+
+      @include disabled {
+        border: 1px solid rgba($color-mischka, 0.2);
+        background-color: rgba($color-mischka, 0.4);
+      }
+    }
+
+    &.is-invalid {
+      input,
+      textarea, {
+        border: 1px solid $color-wild-watermelon;
+        background-color: rgba($color-wild-watermelon, 0.2);
+      }
+    }
+  }
+
+  &__custom-select {
+    & .custom-select__button {
+      border: 1px solid rgba($color-charcoal, 0.3);
+
+      &--active {
+        border: 1px solid rgba($color-charcoal, 1);
+
+        &::before {
+          transition: all $trans-default;
+          transform: rotate(180deg);
+        }
+      }
+
+      & .custom-select__text {
+        color: $color-charcoal;
+      }
+
+      & .custom-select__icon {
+        background-image: url("../img/svg/arrow-down-modal.svg");
+      }
+
+      @include hover-focus {
+        outline: none;
+        border: 1px solid rgba($color-charcoal, 1);
+      }
+
+      @include active {
+        border: 1px solid rgba($color-charcoal, 1);
+      }
+
+      @include vp-1199 {
+        width: 352px;
+      }
+
+      @include vp-767 {
+        width: 100%;
+      }
+    }
+  }
+
+  &__custom-input-checkbox {
+    label {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+
+      span {
+        font-size: $fz-small;
+        line-height: $lh-small;
+        color: rgba($color-charcoal, 0.9);
+      }
+
+      input[type="checkbox"] + .modal__checkbox {
+        width: 20px;
+        height: 20px;
+        background-color: $color-default-white;
+        border: 1px solid rgba($color-charcoal, 0.7);
+        border-radius: 2px;
+        cursor: pointer;
+        padding: 6px 4px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+
+        & svg {
+          width: 10px;
+          height: 10px;
+        }
+
+        @include hover-focus {
+          border: 1px solid rgba($color-charcoal, 1);
+        }
+      }
+
+      input[type="checkbox"]:checked + .modal__checkbox {
+        background-color: $color-cerulean-blue;
+        border: 1px solid rgba($color-cerulean-blue, 1);
+
+        & svg {
+          stroke: $color-default-white;
+          stroke-width: 2px;
+        }
+
+        @include hover-focus {
+          background-color: $color-default-white;
+          border: 1px solid rgba($color-cerulean-blue, 1);
+
+          & svg {
+            stroke: $color-cerulean-blue;
+          }
+        }
+      }
+
+      @include disabled {
+        input[type="checkbox"] + .modal__checkbox {
+          border: 1px solid rgba($color-default-white, 1);
+          background-color: rgba($color-default-white, 0.6);
+          pointer-events: none;
+          cursor: default;
+        }
+
+        input[type="checkbox"]:checked + .modal__checkbox {
+          background-color: $color-mischka;
+          border: 1px solid rgba($color-mischka, 1);
+          pointer-events: none;
+          cursor: default;
+
+          & svg {
+            stroke: $color-default-white;
+          }
+        }
+      }
+    }
+
+    &.is-invalid {
+      input[type="checkbox"] + .modal__checkbox {
+        border: 1px solid $color-wild-watermelon;
+        background-color: rgba($color-wild-watermelon, 0.2);
+      }
+    }
+  }
+
+  &__button {
+    width: max-content;
+    align-self: center;
+  }
+
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 32px;
+    right: 32px;
     z-index: 1;
-
     width: 40px;
     height: 40px;
     padding: 0;
-
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    & svg {
+      width: 22px;
+      height: 22px;
+      stroke: $color-cerulean-blue;
+    }
   }
 
   &--responsive {
@@ -113,7 +369,6 @@
     transform: scale(1);
     visibility: visible;
     opacity: 1;
-
     pointer-events: auto;
   }
 }

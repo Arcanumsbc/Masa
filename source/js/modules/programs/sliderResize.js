@@ -5,6 +5,7 @@ const programsControl = document.querySelector('.programs__control');
 const reviewsTitle = document.querySelector('.reviews__title');
 const reviewsContainer = document.querySelector('.reviews__container');
 const reviewsControl = document.querySelector('.reviews__control');
+
 function moveElement() {
   if (programsHeading.contains(programsButton) && programsContainer.contains(programsControl)) {
     programsHeading.removeChild(programsButton);
@@ -19,6 +20,7 @@ function moveElement() {
 function moveElementsBack() {
   programsHeading.appendChild(programsButton);
   programsContainer.appendChild(programsControl);
+  reviewsContainer.appendChild(reviewsControl);
   reviewsContainer.appendChild(reviewsControl);
 }
 function sliderWindowResize() {

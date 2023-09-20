@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicons/512.png">
@@ -29,7 +29,7 @@
             </div>
             <div class="main-header__inner">
               <button class="main-header__button btn burger" type="button" data-burger="data-burger" tabindex="0" aria-label="Кнопка открытия меню.">
-                <p>Меню</p>
+                Меню
                 <span>
                 <svg class="burger__open" width="22" height="22" aria-hidden="true">
                   <use xlink:href="./img/sprite.svg#icon-menu"></use>
@@ -48,7 +48,7 @@
                     <div class="menu__select select" data-accordion="parent">
                       <div class="select-wrapper" data-accordion="element">
                         <button class="select__button" data-accordion="button" type="button" tabindex="0" aria-label="Нажми чтобы развернуть.">
-                          <p>Программы</p>
+                          Программы
                           <span>
                           <svg width="12" height="12" aria-hidden="true">
                             <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
@@ -82,7 +82,7 @@
                     <div class="menu__select select" data-accordion="parent">
                       <div class="select-wrapper" data-accordion="element">
                         <button class="select__button" data-accordion="button" type="button" tabindex="0" aria-label="Нажми чтобы развернуть.">
-                          <p>Новости</p>
+                          Новости
                           <span>
                           <svg width="12" height="12" aria-hidden="true">
                             <use xlink:href="./img/sprite.svg#icon-arrow-down"></use>
@@ -128,7 +128,7 @@
                       <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
                       <div class="hero__wrapper-btn">
                         <a class="hero__button btn" href="#" aria-label="Подробнее о программе.">
-                          <p>Подробнее</p>
+                          Подробнее
                           <span>
                             <svg width="22" height="22" aria-hidden="true">
                               <use xlink:href="./img/sprite.svg#icon-arrow"></use>
@@ -161,7 +161,7 @@
                       <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
                       <div class="hero__wrapper-btn">
                         <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
-                          <p>Подробнее</p>
+                          Подробнее
                           <span>
                             <svg width="22" height="22" aria-hidden="true">
                               <use xlink:href="./img/sprite.svg#icon-arrow"></use>
@@ -194,7 +194,7 @@
                       <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
                       <div class="hero__wrapper-btn">
                         <a class="hero__button btn" href="#" aria-label="Подробнее о программе">
-                          <p>Подробнее</p>
+                          Подробнее
                           <span>
                             <svg width="22" height="22" aria-hidden="true">
                               <use xlink:href="./img/sprite.svg#icon-arrow"></use>
@@ -221,10 +221,6 @@
                 </li>
               </ul>
             </div>
-<!--            <p>На данной странице показан пример модальных окон.</p>-->
-<!--            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>-->
-<!--            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>-->
-<!--            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>-->
           </div>
         </section>
         <section class="about">
@@ -239,8 +235,8 @@
                 <p>Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на&nbsp;ранних и&nbsp;средних стадиях карьеры,
                   предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире.
                   Цель центра&nbsp;&mdash; наделить этих людей способностью инициировать значимые изменения. </p>
-                <button class="about__button btn" type="button" aria-label="Нажми чтобы задать вопрос" tabindex="0">
-                  <p>подробнее о&nbsp;проекте</p>
+                <button class="about__button btn" type="button" aria-label="Нажми чтобы задать вопрос" tabindex="0" data-open-modal="about-modal">
+                  подробнее о проекте
                   <span>
                     <svg width="22" height="22" aria-hidden="true">
                       <use xlink:href="./img/sprite.svg#icon-arrow"></use>
@@ -297,7 +293,7 @@
             <div class="programs__heading">
               <h2 class="title">Программы</h2>
               <button class="programs__button btn" type="button" aria-label="Нажми чтобы увидеть все программы" tabindex="0">
-                <p>все программы</p>
+                все программы
                 <span>
                     <svg width="22" height="22" aria-hidden="true">
                       <use xlink:href="./img/sprite.svg#icon-arrow"></use>
@@ -681,12 +677,12 @@
                     </div>
                     <div class="reviews__info">
                       <dl>
-                        <dd>программа</dd>
-                        <dt>Masa Art Challenge</dt>
+                        <dt>программа</dt>
+                        <dd>Masa Art Challenge</dd>
                       </dl>
                       <dl>
-                        <dd>Дата</dd>
-                        <dt>Осень 2022</dt>
+                        <dt>Дата</dt>
+                        <dd>Осень 2022</dd>
                       </dl>
                     </div>
                   </div>
@@ -710,12 +706,12 @@
                     </div>
                     <div class="reviews__info">
                       <dl>
-                        <dd>программа</dd>
-                        <dt>Volunteer Chance</dt>
+                        <dt>программа</dt>
+                        <dd>Volunteer Chance</dd>
                       </dl>
                       <dl>
-                        <dd>Дата</dd>
-                        <dt>Лето 2022</dt>
+                        <dt>Дата</dt>
+                        <dd>Лето 2022</dd>
                       </dl>
                     </div>
                   </div>
@@ -738,12 +734,12 @@
                     </div>
                     <div class="reviews__info">
                       <dl>
-                        <dd>программа</dd>
-                        <dt>Masa Art Challenge</dt>
+                        <dt>программа</dt>
+                        <dd>Masa Art Challenge</dd>
                       </dl>
                       <dl>
-                        <dd>Дата</dd>
-                        <dt>Осень 2022</dt>
+                        <dt>Дата</dt>
+                        <dd>Осень 2022</dd>
                       </dl>
                     </div>
                   </div>
@@ -767,12 +763,12 @@
                     </div>
                     <div class="reviews__info">
                       <dl>
-                        <dd>программа</dd>
-                        <dt>Volunteer Chance</dt>
+                        <dt>программа</dt>
+                        <dd>Volunteer Chance</dd>
                       </dl>
                       <dl>
-                        <dd>Дата</dd>
-                        <dt>Лето 2022</dt>
+                        <dt>Дата</dt>
+                        <dd>Лето 2022</dd>
                       </dl>
                     </div>
                   </div>
@@ -813,20 +809,20 @@
               </div>
               <div class="contacts__inner">
                 <dl>
-                  <dd>центральный офис</dd>
-                  <dt>г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</dt>
+                  <dt>центральный офис</dt>
+                  <dd>г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</dd>
                 </dl>
                 <dl>
-                  <dd>Телефон</dd>
-                  <dt>
+                  <dt>Телефон</dt>
+                  <dd>
                     <a href="tel:896387687676" aria-label="Наш номер">+7 963 876 876 76</a>
-                  </dt>
+                  </dd>
                 </dl>
                 <dl>
-                  <dd>E-mail</dd>
-                  <dt>
+                  <dt>E-mail</dt>
+                  <dd>
                     <a href="mailto:info@masa.ru" aria-label="Наш почта">Info@masa.ru</a>
-                  </dt>
+                  </dd>
                 </dl>
               </div>
             </div>
@@ -842,52 +838,228 @@
                         srcset="./img/contacts/map-mobile.jpg 1x, ./img/contacts/map-mobile@2x.jpg 2x" width="290" height="240">
                 <source media="(max-width: 1199px)"
                         srcset="./img/contacts/map-tablet.jpg 1x, ./img/contacts/map-tablet@2x.jpg 2x" width="678" height="500">
-                <img src="./img/contacts/map-desk.jpg" srcset="./img/contacts/map-desk@2x.jpg 2x"
-                     alt="Программы стажировок в крупнейших компаниях Израиля" width="1240" height="500">
+                <img src="./img/contacts/map-desk.jpg" srcset="./img/contacts/map-desk@2x.jpg 2x" alt="Программы стажировок в крупнейших компаниях Израиля" width="1240" height="500">
               </picture>
             </div>
           </div>
         </section>
 
+        <section class="form" id="form">
+          <div class="form__container container">
+            <div class="form__wrapper">
+              <h2 class="title">Напишите нам</h2>
+              <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
+              <div class="form__feedback" data-form-validate="data-form-validate" data-callback="base">
+                <form action="https://echo.htmlacademy.ru" method="get">
+                  <fieldset>
+                    <div class="form__custom-input" data-validate-type="text" data-limitation="name" data-required="data-required">
+                      <p>Имя</p>
+                      <label for="user-name"><span class="visually-hidden">Введите ваше имя</span>
+                        <input id="user-name" type="text" name="userName" placeholder="">
+                      </label>
+                    </div>
+                    <div class="form__custom-input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                      <p>Телефон</p>
+                      <label for="user-phone"><span class="visually-hidden">Введите ваш телефон</span>
+                        <input id="user-phone" type="tel" name="userPhone" placeholder="" pattern="[0-9]{1,20}">
+                      </label>
+                    </div>
+                    <div class="form__custom-textarea" data-validate-type="text" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                      <p>Ваше сообщение</p>
+                      <label for="form-message"><span class="visually-hidden">Напишите сообщение</span>
+                        <textarea name="formMessage" id="form-message" data-required="data-required"></textarea>
+                      </label>
+                    </div>
+                    <div class="form__custom-select">
+                      <p>Выберите город</p>
+                      <div class="form__custom-select__wrapper custom-select" data-select data-validate-type="select" data-name="select-name" data-id="select-id" data-required="data-required">
+                        <button class="custom-select__button" type="button" tabindex="0" aria-label="Выберите город">
+                          <span class="custom-select__text"></span>
+                          <span class="custom-select__icon"></span>
+                        </button>
+                        <ul class="custom-select__list" role="listbox">
+                          <li class="custom-select__item" data-select-value="id-1" tabindex="0" aria-selected="false" role="option">Санкт-Петербург</li>
+                          <li class="custom-select__item" data-select-value="id-2" tabindex="0" aria-selected="false" role="option">Новосибирск</li>
+                          <li class="custom-select__item" data-select-value="id-3" tabindex="0" aria-selected="false" role="option">Москва</li>
+                          <li class="custom-select__item" data-select-value="id-4" tabindex="0" aria-selected="false" role="option">Сочи</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form__custom-input-checkbox" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                      <label for="form-policy">
+                        <input class="visually-hidden" id="form-policy" type="checkbox" name="formPolicy">
+                        <span class="form__checkbox" tabindex="0">
+                          <svg width="10" height="10" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                        <span>Я согласен на обработку моих персональных данных</span>
+                      </label>
+                    </div>
+                    <button class="form__button btn" type="submit" aria-label="Нажми чтобы отправить" tabindex="0">
+                      отправить
+                      <span>
+                        <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                      </svg>
+                      </span>
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)"
+                      srcset="./img/form/form-bg-tablet.webp 1x, ./img/form/form-bg-tablet@2x.webp 2x" width="678" height="780">
+              <source type="image/webp"
+                      srcset="./img/form/form-bg-desk.webp 1x, ./img/form/form-bg-desk@2x.webp 2x" width="1240" height="803">
+              <source media="(max-width: 1199px)"
+                      srcset="./img/form/form-bg-tablet.jpg 1x, ./img/form/form-bg-tablet@2x.jpg 2x" width="678" height="500">
+              <img src="./img/form/form-bg-desk.jpg" srcset="./img/form/form-bg-desk@2x.jpg 2x" alt="Программы стажировок в крупнейших компаниях Израиля" width="1240" height="500">
+            </picture>
+          </div>
+        </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="main-footer">
+        <div class="main-footer__container container">
+          <div class="main-footer__wrapper">
+            <div class="main-footer__nav nav-footer">
+              <div class="main-footer__logo">
+                <a href="index.html" aria-label="Логотип сайта Маса.">
+                  <svg width="52" height="52" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#logo"></use>
+                  </svg>
+                </a>
+              </div>
+              <ul class="nav-footer__list">
+                <li class="nav-footer__item">
+                  <a class="nav-footer__link" href="#">О проекте</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a class="nav-footer__link" href="#">Программы</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a class="nav-footer__link" href="#">Как поехать</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a class="nav-footer__link" href="#">Отзывы</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a class="nav-footer__link" href="#">Новости</a>
+                </li>
+                <li class="nav-footer__item">
+                  <a class="nav-footer__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-footer__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="" target="_blank" rel="noopener" aria-label="ВКонтакте.">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="./img/sprite.svg#icon-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="" target="_blank" rel="noopener" aria-label="Одноклассники.">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="./img/sprite.svg#icon-ok"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="" target="_blank" rel="noopener" aria-label="Reddit.">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false">
+                      <use xlink:href="./img/sprite.svg#icon-rd"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="main-footer__copyright">
+            <p>Masa © 2023 Все права защищены</p>
+            <a href="#" aria-label="Политика конфиденциальности" target="_blank" rel="noopener">Политика конфиденциальности</a>
+          </div>
+        </div>
       </footer>
     </div>
+    <section class="modal" data-modal="about-modal">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <button class="modal__close-btn" type="button" tabindex="0" aria-label="Закрыть окно." data-close-modal data-focus>
+          <span>
+           <svg class="burger__closed" width="22" height="22" aria-hidden="true">
+             <use xlink:href="./img/sprite.svg#icon-cross"></use>
+           </svg>
+          </span>
+          </button>
+          <h2 class="title">Напишите нам</h2>
+          <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
+          <div class="modal__feedback" data-form-validate="data-form-validate" data-callback="base">
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <fieldset>
+                <div class="modal__custom-input" data-validate-type="text" data-limitation="name" data-required="data-required">
+                  <p>Имя</p>
+                  <label for="user-name-modal"><span class="visually-hidden">Введите ваше имя</span>
+                    <input id="user-name-modal" type="text" name="userName" placeholder="">
+                  </label>
+                </div>
+                <div class="modal__custom-input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                  <p>Телефон</p>
+                  <label for="user-phone-modal"><span class="visually-hidden">Введите ваш телефон</span>
+                    <input id="user-phone-modal" type="tel" name="userPhone" placeholder="" pattern="[0-9]{1,20}">
+                  </label>
+                </div>
+                <div class="modal__custom-select">
+                  <p>Выберите город</p>
+                  <div class="modal__custom-select__wrapper custom-select" data-select data-validate-type="select" data-name="select-name" data-id="select-id" data-required="data-required" disabled="">
+                    <button class="custom-select__button" type="button" tabindex="0" aria-label="Выберите город">
+                      <span class="custom-select__text"></span>
+                      <span class="custom-select__icon"></span>
+                    </button>
+                    <ul class="custom-select__list" role="listbox">
+                      <li class="custom-select__item" data-select-value="id-1" tabindex="0" aria-selected="false" role="option">Санкт-Петербург</li>
+                      <li class="custom-select__item" data-select-value="id-2" tabindex="0" aria-selected="false" role="option">Новосибирск</li>
+                      <li class="custom-select__item" data-select-value="id-3" tabindex="0" aria-selected="false" role="option">Москва</li>
+                      <li class="custom-select__item" data-select-value="id-4" tabindex="0" aria-selected="false" role="option">Сочи</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="modal__custom-input-checkbox" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                  <label for="modal-policy-modal">
+                    <input class="visually-hidden" id="modal-policy-modal" type="checkbox" name="formPolicy">
+                    <span class="modal__checkbox" tabindex="0">
+                          <svg width="10" height="10" aria-hidden="true">
+                            <use xlink:href="./img/sprite.svg#icon-check"></use>
+                          </svg>
+                        </span>
+                    <span>Я согласен на обработку моих персональных данных</span>
+                  </label>
+                </div>
+                <button class="modal__button btn" type="submit" aria-label="Нажми чтобы отправить" tabindex="0">
+                  отправить
+                  <span>
+                        <svg width="22" height="22" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                      </svg>
+                      </span>
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Модалки -->
-<!--    <div class="modal modal&#45;&#45;preload" data-modal="feedback">-->
-<!--      <div class="modal__wrapper">-->
-<!--        <div class="modal__overlay" data-close-modal></div>-->
-<!--        <div class="modal__content">-->
-<!--          <p class="modal__description">Обычная модалка</p>-->
-<!--          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>-->
-<!--            <svg width="15" height="15">-->
-<!--              <use xlink:href="img/sprite.svg#icon-close"></use>-->
-<!--            </svg>-->
-<!--          </button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
-<!--    <div class="modal modal&#45;&#45;preload modal&#45;&#45;fit-content modal&#45;&#45;no-scale" data-modal="success">-->
-<!--      <div class="modal__wrapper">-->
-<!--        <div class="modal__overlay" data-close-modal></div>-->
-<!--        <div class="modal__content">-->
-<!--          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>-->
-<!--          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>-->
-<!--            <svg width="15" height="15">-->
-<!--              <use xlink:href="img/sprite.svg#icon-close"></use>-->
-<!--            </svg>-->
-<!--          </button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
     <template id="news-card">
       <div class="news-card">
         <picture>
-          <source srcset="image.webp" type="image/webp" />
-          <img src="image.jpg" srcset="image@2x.jpg" loading="lazy" alt="Новость" width="286" height="400"/>
+          <source srcset="image.webp" type="image/webp">
+          <img src="image.jpg" srcset="image@2x.jpg" loading="lazy" alt="Новость" width="286" height="400">
         </picture>
         <div class="news-card__content">
           <div class="news-card__date">

@@ -73,7 +73,7 @@
     max-width: 275px;
   }
 
-  & dd {
+  & dt {
     margin: 0;
     padding-bottom: 19px;
     font-size: $fz-small;
@@ -87,7 +87,7 @@
     }
   }
 
-  & dt {
+  & dd {
     margin: 0;
     font-size: $fz-xxsmall;
     line-height: $lh-xxxmedium;
@@ -139,7 +139,6 @@
 .contacts__map {
   margin-top: 40px;
   border-radius: 16px;
-  width: 1240px;
   height: 500px;
   flex-shrink: 0;
 

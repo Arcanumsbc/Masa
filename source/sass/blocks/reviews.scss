@@ -140,18 +140,19 @@
     gap: 11px;
 
     dd {
+      font-size: $fz-xsmall;
+      line-height: $lh-xxxsmall;
+      display: flex;
+      margin: 0;
+    }
+
+    dt {
       margin: 0;
       font-size: $fz-small;
       line-height: $lh-small;
       letter-spacing: $ls-small;
       text-transform: uppercase;
       color: $color-cerulean-blue;
-    }
-
-    dt {
-      font-size: $fz-xsmall;
-      line-height: $lh-xxxsmall;
-      display: flex;
 
       @include vp-1199 {
         line-height: $lh-smedium;

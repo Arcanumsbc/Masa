@@ -71,10 +71,7 @@
     width: 286px;
     background-color: $color-cerulean-blue;
     transition: width $trans-default;
-
-    >  p {
-      color: $color-default-white;
-    }
+    color: $color-default-white;
 
     > span {
       background-color: $color-default-white;

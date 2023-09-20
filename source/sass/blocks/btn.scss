@@ -12,19 +12,13 @@
   justify-content: space-between;
   cursor: pointer;
   transition: all $trans-default;
-
-  & p {
-    margin: 0;
-    padding: 0;
-    max-width: max-content;
-    font-size: $fz-xsmall;
-    line-height: $lh-xsmall;
-    font-weight: $fw-medium;
-    letter-spacing: $ls-light;
-    align-items: center;
-    text-transform: uppercase;
-    color: $color-cerulean-blue;
-  }
+  font-size: $fz-xsmall;
+  line-height: $lh-xsmall;
+  font-weight: $fw-medium;
+  letter-spacing: $ls-light;
+  text-transform: uppercase;
+  color: $color-cerulean-blue;
+  user-select: none;
 
   & span {
     display: flex;
@@ -49,11 +43,7 @@
     outline: none;
     background-color: $color-cerulean-blue;
     transition: all $trans-default;
-
-    > p {
-      color: $color-default-white;
-      transition: all $trans-default;
-    }
+    color: $color-default-white;
 
     > span {
       background-color: $color-default-white;
@@ -64,13 +54,10 @@
         transform: rotate(45deg);
       }
     }
-  }
 
-  @include active {
-    transition: $trans-default;
-
-    > p {
-      opacity: 0.7;
+    @include active {
+      transition: $trans-default;
+      color: rgba($color-default-white, 0.7);
     }
   }
 
@@ -78,10 +65,7 @@
     border-color: $color-mischka;
     pointer-events: none;
     cursor: default;
-
-    > p {
-      color: $color-mischka;
-    }
+    color: $color-mischka;
 
     > span {
       background-color: $color-mischka;
@@ -96,11 +80,8 @@
     padding-left: 20px;
     gap: 20px;
     min-height: 42px;
-
-    & p {
-      font-size: $fz-small;
-      line-height: $lh-small;
-    }
+    font-size: $fz-small;
+    line-height: $lh-small;
 
     & span {
       width: 34px;
