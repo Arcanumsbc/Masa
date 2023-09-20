@@ -42,7 +42,7 @@
               <nav class="main-header__menu menu">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a class="menu__link" href="#" data-link="data-link">О проекте</a>
+                    <a class="menu__link" href="#about" data-link="data-link">О проекте</a>
                   </li>
                   <li class="menu__item">
                     <div class="menu__select select" data-accordion="parent">
@@ -57,26 +57,26 @@
                         </button>
                         <ul class="select__list" data-accordion="content">
                           <li class="select__item">
-                            <a class="select__link" href="#">Стажировки</a>
+                            <a class="select__link" href="#programs">Стажировки</a>
                           </li>
                           <li class="select__item">
-                            <a class="select__link" href="#">Волонтёрство</a>
+                            <a class="select__link" href="#programs">Волонтёрство</a>
                           </li>
                           <li class="select__item">
-                            <a class="select__link" href="#">Учеба</a>
+                            <a class="select__link" href="#programs">Учеба</a>
                           </li>
                           <li class="select__item">
-                            <a class="select__link" href="#">Религия</a>
+                            <a class="select__link" href="#programs">Религия</a>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#" data-link="data-link">Как поехать</a>
+                    <a class="menu__link" href="#conditions" data-link="data-link">Как поехать</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#" data-link="data-link">Отзывы</a>
+                    <a class="menu__link" href="#reviews" data-link="data-link">Отзывы</a>
                   </li>
                   <li class="menu__item">
                     <div class="menu__select select" data-accordion="parent">
@@ -91,23 +91,23 @@
                         </button>
                         <ul class="select__list" data-accordion="content">
                           <li class="select__item">
-                            <a class="select__link" href="#">Стажировки</a>
+                            <a class="select__link" href="#news">Стажировки</a>
                           </li>
                           <li class="select__item">
-                            <a class="select__link" href="#">Волонтёрство</a>
+                            <a class="select__link" href="#news">Волонтёрство</a>
                           </li>
                           <li class="select__item">
-                            <a class="select__link" href="#">Учеба</a>
+                            <a class="select__link" href="#news">Учеба</a>
                           </li>
                           <li class="select__item">
-                            <a class="select__link" href="#">Религия</a>
+                            <a class="select__link" href="#news">Религия</a>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__link" href="#" data-link="data-link">Контакты</a>
+                    <a class="menu__link" href="#contacts" data-link="data-link">Контакты</a>
                   </li>
                 </ul>
               </nav>
@@ -223,7 +223,7 @@
             </div>
           </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
           <div class="about__container container">
             <div class="about__inner-top">
               <div class="about__heading">
@@ -292,14 +292,14 @@
           <div class="programs__container container">
             <div class="programs__heading">
               <h2 class="title">Программы</h2>
-              <button class="programs__button btn" type="button" aria-label="Нажми чтобы увидеть все программы" tabindex="0">
+              <a class="programs__button btn" href="#" aria-label="Нажми чтобы увидеть все программы" tabindex="0">
                 все программы
                 <span>
                     <svg width="22" height="22" aria-hidden="true">
                       <use xlink:href="./img/sprite.svg#icon-arrow"></use>
                     </svg>
                   </span>
-              </button>
+              </a>
             </div>
 
             <div class="programs__slider swiper">
@@ -309,7 +309,7 @@
                     <h3>Стажировки</h3>
                     <div class="programs__description">
                       <p>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</p>
-                      <a class="programs__link link-btn" href="#" aria-label="Показать программу">
+                      <a class="programs__link link-btn" href="#" aria-label="Показать программу" tabindex="0">
                         <span>
                           <svg width="8" height="8" aria-hidden="true">
                             <use xlink:href="./img/sprite.svg#icon-arrow"></use>
@@ -923,7 +923,7 @@
                       srcset="./img/form/form-bg-desk.webp 1x, ./img/form/form-bg-desk@2x.webp 2x" width="1240" height="803">
               <source media="(max-width: 1199px)"
                       srcset="./img/form/form-bg-tablet.jpg 1x, ./img/form/form-bg-tablet@2x.jpg 2x" width="678" height="500">
-              <img src="./img/form/form-bg-desk.jpg" srcset="./img/form/form-bg-desk@2x.jpg 2x" alt="Программы стажировок в крупнейших компаниях Израиля" width="1240" height="500">
+              <img src="./img/form/form-bg-desk.jpg" srcset="./img/form/form-bg-desk@2x.jpg 2x" alt="Программы стажировок в крупнейших компаниях Израиля" width="1240" height="803">
             </picture>
           </div>
         </section>
@@ -941,22 +941,22 @@
               </div>
               <ul class="nav-footer__list">
                 <li class="nav-footer__item">
-                  <a class="nav-footer__link" href="#">О проекте</a>
+                  <a class="nav-footer__link" href="#about">О проекте</a>
                 </li>
                 <li class="nav-footer__item">
-                  <a class="nav-footer__link" href="#">Программы</a>
+                  <a class="nav-footer__link" href="#programs">Программы</a>
                 </li>
                 <li class="nav-footer__item">
-                  <a class="nav-footer__link" href="#">Как поехать</a>
+                  <a class="nav-footer__link" href="#conditions">Как поехать</a>
                 </li>
                 <li class="nav-footer__item">
-                  <a class="nav-footer__link" href="#">Отзывы</a>
+                  <a class="nav-footer__link" href="#reviews">Отзывы</a>
                 </li>
                 <li class="nav-footer__item">
-                  <a class="nav-footer__link" href="#">Новости</a>
+                  <a class="nav-footer__link" href="#news">Новости</a>
                 </li>
                 <li class="nav-footer__item">
-                  <a class="nav-footer__link" href="#">Контакты</a>
+                  <a class="nav-footer__link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -1051,10 +1051,10 @@
                 <button class="modal__button btn" type="submit" aria-label="Нажми чтобы отправить" tabindex="0">
                   отправить
                   <span>
-                        <svg width="22" height="22" aria-hidden="true">
-                        <use xlink:href="./img/sprite.svg#icon-arrow"></use>
-                      </svg>
-                      </span>
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </span>
                 </button>
               </fieldset>
             </form>

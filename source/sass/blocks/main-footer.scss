@@ -35,6 +35,16 @@
   }
 }
 
+.main-footer__logo {
+  & a {
+    outline: none;
+  }
+
+  @include hover-focus {
+    outline: none;
+  }
+}
+
 .main-footer__nav {
   display: flex;
   gap: 52px;

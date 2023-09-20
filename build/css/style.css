@@ -4277,6 +4277,7 @@ button,
 }
 
 .questions__item.focus-visible:focus .questions__accordion-button {
+  outline: none;
   background-color: transparent;
 }
 
@@ -4354,6 +4355,19 @@ button,
   visibility: visible;
 }
 
+.questions__item.is-active .questions__accordion-button.focus-visible:focus {
+  background-color: transparent;
+}
+
+.questions__item.is-active .questions__accordion-button.focus-visible:focus span {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+.questions__item.is-active .questions__accordion-button.focus-visible:focus::after {
+  background: #ffffff;
+}
+
 .questions__accordion-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4402,6 +4416,29 @@ button,
   -webkit-transform: translateX(1px) translateY(1px);
   -ms-transform: translateX(1px) translateY(1px);
   transform: translateX(1px) translateY(1px);
+  outline: none;
+}
+
+.questions__accordion-button.focus-visible:focus {
+  background-color: transparent;
+}
+
+.questions__accordion-button.focus-visible:focus span {
+  background-color: transparent;
+  border-color: #316dc2;
+}
+
+.questions__accordion-button.focus-visible:focus span svg {
+  stroke: #316dc2;
+}
+
+.questions__accordion-button[disabled] span {
+  background-color: #a9afb7;
+  border-color: #a9afb7;
+}
+
+.questions__accordion-button[disabled] svg {
+  stroke: #ffffff;
 }
 
 .questions__accordion-button span {
@@ -5353,6 +5390,14 @@ button,
   justify-content: space-between;
 }
 
+.main-footer__logo a {
+  outline: none;
+}
+
+.main-footer__logo.focus-visible:focus {
+  outline: none;
+}
+
 .main-footer__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5580,6 +5625,10 @@ button,
 
   .modal__button {
     margin-top: 14px;
+  }
+
+  .main-header__container {
+    padding-top: 30px;
   }
 
   .hero {
@@ -6337,7 +6386,7 @@ button,
   }
 
   .hero__item:last-child .hero__content h2 {
-    padding: 20px 30px 12px 15px;
+    padding: 20px 30px 13px 14px;
   }
 
   .hero__item:last-child .hero__description {
@@ -6345,7 +6394,7 @@ button,
   }
 
   .hero__item:last-child .hero__description > p {
-    padding: 0 12px 0 14px;
+    padding: 0 12px 8px 14px;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
@@ -7313,6 +7362,7 @@ button,
   }
 
   .questions__item:hover:not(.focus-visible) .questions__accordion-button {
+    outline: none;
     background-color: transparent;
   }
 
@@ -7366,6 +7416,32 @@ button,
 
   .questions__item:hover:not(.focus-visible).is-active .questions__accordion-button::after {
     background-color: #ffffff;
+  }
+
+  .questions__item.is-active .questions__accordion-button:hover:not(.focus-visible) {
+    background-color: transparent;
+  }
+
+  .questions__item.is-active .questions__accordion-button:hover:not(.focus-visible) span {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+
+  .questions__item.is-active .questions__accordion-button:hover:not(.focus-visible)::after {
+    background: #ffffff;
+  }
+
+  .questions__accordion-button:hover:not(.focus-visible) {
+    background-color: transparent;
+  }
+
+  .questions__accordion-button:hover:not(.focus-visible) span {
+    background-color: transparent;
+    border-color: #316dc2;
+  }
+
+  .questions__accordion-button:hover:not(.focus-visible) span svg {
+    stroke: #316dc2;
   }
 
   .contacts__inner dd a:hover:not(.focus-visible) {
@@ -7428,6 +7504,10 @@ button,
   .custom-select__item:hover:not(.focus-visible) {
     background-color: #316dc2;
     color: #ffffff;
+  }
+
+  .main-footer__logo:hover:not(.focus-visible) {
+    outline: none;
   }
 
   .main-footer__copyright a:hover:not(.focus-visible) {

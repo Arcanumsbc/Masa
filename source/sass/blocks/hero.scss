@@ -63,14 +63,14 @@
 
     @include vp-767 {
       & .hero__content h2 {
-        padding: 20px 30px 12px 15px;
+        padding: 20px 30px 13px 14px;
       }
 
       & .hero__description {
         padding: 0;
 
         > p {
-          padding: 0 12px 0 14px;
+          padding: 0 12px 8px 14px;
           transform: translateY(0);
         }
       }
