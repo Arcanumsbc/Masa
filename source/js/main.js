@@ -1,6 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {CustomSelect} from './modules/select/custom-select.js';
-import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import './vendor/focus-visible-polyfill';
 import './utils/scroll-lock';
@@ -13,6 +12,7 @@ import {sliderWindowResize} from './modules/programs/sliderResize';
 import {initNewsSlider} from './modules/news/sliderNews';
 import {initReviewsSlider} from './modules/rewiews/sliderReviews';
 import {initContactsMap} from './modules/map/map';
+import {initModals} from './modules/modals/init-modals';
 
 // ---------------------------------
 
@@ -37,7 +37,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const burger = new Burger();
     window.burger = burger;
     burger.init();
-    initModals();
     initAccordions();
     initHeroSlider();
     initProgramsSlider();
@@ -45,6 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initNewsSlider();
     initReviewsSlider();
     initContactsMap();
+    initModals();
   });
 });
 
