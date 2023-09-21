@@ -2211,6 +2211,7 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  opacity: 1;
 }
 
 .wrapper {
@@ -3021,6 +3022,7 @@ button,
 }
 
 .main-header__menu {
+  display: none;
   height: 0;
   width: 0;
   opacity: 0;
@@ -3039,6 +3041,7 @@ button,
 }
 
 .main-header.is-open .main-header__menu {
+  display: block;
   width: 286px;
   height: auto;
   margin-top: 4px;
@@ -3148,33 +3151,6 @@ button,
   transform: rotate(0);
 }
 
-.select-wrapper {
-  opacity: 0.7;
-}
-
-.select-wrapper.focus-visible:focus {
-  opacity: 1;
-}
-
-.select-wrapper.is-active {
-  opacity: 1;
-}
-
-.select-wrapper.is-active .select__list {
-  margin-top: 12px;
-  padding: 0 0 0 16px;
-  display: block;
-  visibility: visible;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.select-wrapper.is-active .select__button svg {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .select__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3186,7 +3162,7 @@ button,
   cursor: pointer;
   outline: none;
   text-transform: uppercase;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 16px;
   letter-spacing: 0.02em;
   margin: 0;
@@ -3196,7 +3172,48 @@ button,
   width: 12px;
   height: 12px;
   fill: none;
-  stroke: #ffffff;
+  stroke: rgba(255, 255, 255, 0.7);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.select__button.focus-visible:focus {
+  outline: none;
+  color: white;
+}
+
+.select__button.focus-visible:focus svg {
+  stroke: white;
+}
+
+.select__button.focus-visible:focus:active {
+  color: white;
+}
+
+.select__button.focus-visible:focus:active svg {
+  stroke: white;
+}
+
+.select-wrapper.is-active .select__list {
+  margin-top: 12px;
+  padding: 0 0 0 16px;
+  display: block;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.select-wrapper.is-active .select__button {
+  color: white;
+}
+
+.select-wrapper.is-active .select__button svg {
+  stroke: white;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .select__list {
@@ -3415,11 +3432,12 @@ button,
 
 .hero__control .swiper-pagination-bullet.focus-visible:focus {
   outline: none;
-  border: 1px solid #316dc2;
+  border: 1px solid #275699;
 }
 
 .hero__control .swiper-pagination-bullet:active {
   background-color: #316dc2;
+  border: 1px solid #316dc2;
 }
 
 .hero__bg-photo {
@@ -3522,6 +3540,7 @@ button,
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 53px;
+  height: auto;
 }
 
 .about__inner-bottom li {
@@ -4594,6 +4613,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 5px;
+  max-width: 126px;
 }
 
 .reviews__info dl dd {
@@ -4602,6 +4622,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
 }
 
@@ -5588,6 +5610,31 @@ button,
     }
   }
 */
+
+@media (max-width: 1439px) {
+  .about__inner-bottom li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .about__inner-bottom li h4 {
+    width: 100%;
+  }
+
+  .about__inner-bottom li p {
+    width: 100%;
+  }
+}
 
 @media (max-width: 1199px) {
   .container {
@@ -7326,8 +7373,21 @@ button,
     transform: rotate(0);
   }
 
-  .select-wrapper:hover:not(.focus-visible) {
-    opacity: 1;
+  .select__button:hover:not(.focus-visible) {
+    outline: none;
+    color: white;
+  }
+
+  .select__button:hover:not(.focus-visible) svg {
+    stroke: white;
+  }
+
+  .select__button:hover:not(.focus-visible):active {
+    color: white;
+  }
+
+  .select__button:hover:not(.focus-visible):active svg {
+    stroke: white;
   }
 
   .select__link:hover:not(.focus-visible) {
@@ -7340,7 +7400,7 @@ button,
 
   .hero__control .swiper-pagination-bullet:hover:not(.focus-visible) {
     outline: none;
-    border: 1px solid #316dc2;
+    border: 1px solid #275699;
   }
 
   .news__btn:hover:not(.focus-visible) {

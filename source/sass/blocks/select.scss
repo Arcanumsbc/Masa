@@ -1,29 +1,3 @@
-.select-wrapper {
-  opacity: 0.7;
-
-  @include hover-focus {
-    opacity: 1;
-  }
-}
-
-.select-wrapper.is-active {
-  opacity: 1;
-
-  & .select__list {
-    margin-top: 12px;
-    padding: 0 0 0 16px;
-    display: block;
-    visibility: visible;
-    transition: all $trans-default;
-  }
-
-  & .select__button {
-    & svg {
-      transform: rotate(180deg);
-    }
-  }
-}
-
 .select__button {
   display: flex;
   background-color: transparent;
@@ -33,7 +7,7 @@
   cursor: pointer;
   outline: none;
   text-transform: uppercase;
-  color: $color-default-white;
+  color: rgba($color-default-white, 0.7);
   line-height: $lh-xxsmall;
   letter-spacing: $ls-light;
   margin: 0;
@@ -42,7 +16,45 @@
     width: 12px;
     height: 12px;
     fill: none;
-    stroke: $color-default-white;
+    stroke: rgba($color-default-white, 0.7);
+    transition: $trans-default;
+  }
+
+  @include hover-focus {
+    outline: none;
+    color: rgba($color-default-white, 1);
+
+    svg {
+      stroke: rgba($color-default-white, 1);
+    }
+
+    @include active {
+      color: rgba($color-default-white, 1);
+
+      svg {
+        stroke: rgba($color-default-white, 1);
+      }
+    }
+  }
+}
+
+.select-wrapper.is-active {
+  & .select__list {
+    margin-top: 12px;
+    padding: 0 0 0 16px;
+    display: block;
+    visibility: visible;
+    transition: all $trans-default;
+  }
+
+  & .select__button {
+    color: rgba($color-default-white, 1);
+
+    & svg {
+      stroke: rgba($color-default-white, 1);
+      transform: rotate(180deg);
+      transition: $trans-default;
+    }
   }
 }
 

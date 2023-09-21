@@ -145,6 +145,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 53px;
+    height: auto;
 
     @include vp-1199 {
       gap: 42px 48px;
@@ -253,6 +254,21 @@
         font-size: $fz-xsmall;
         line-height: $lh-smedium;
         word-spacing: -1px;
+      }
+    }
+
+    @include vp-1439 {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      h4 {
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
       }
     }
 

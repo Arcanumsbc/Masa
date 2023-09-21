@@ -316,11 +316,12 @@
 
     @include hover-focus {
       outline: none;
-      border: 1px solid $color-cerulean-blue;
+      border: 1px solid $color-endeavour;
     }
 
     &:active {
       background-color: $color-cerulean-blue;
+      border: 1px solid $color-cerulean-blue;
     }
 
     @include vp-767 {

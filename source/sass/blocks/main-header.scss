@@ -42,6 +42,7 @@
 }
 
 .main-header__menu {
+  display: none;
   height: 0;
   width: 0;
   opacity: 0;
@@ -58,6 +59,7 @@
   }
 
   & .main-header__menu {
+    display: block;
     width: 286px;
     height: auto;
     margin-top: 4px;
