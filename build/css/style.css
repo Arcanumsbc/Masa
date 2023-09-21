@@ -4814,14 +4814,14 @@ button,
   height: 803px;
 }
 
-.form__container > picture {
+.form__container picture {
   z-index: -1;
   position: relative;
   border-radius: 16px;
   top: 0;
 }
 
-.form__container > picture img {
+.form__container picture img {
   width: 100%;
   height: 100%;
   border-radius: 16px;
@@ -4928,9 +4928,9 @@ button,
   gap: 8px;
 }
 
-.form__custom-input p,
-.form__custom-textarea p,
-.form__custom-select p {
+.form__custom-input span,
+.form__custom-textarea span,
+.form__custom-select span {
   font-size: 14px;
   line-height: 18px;
   color: rgba(240, 239, 233, 0.8);
@@ -5208,6 +5208,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   outline: none;
+  gap: 43px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -6147,9 +6148,9 @@ button,
     gap: 7px;
   }
 
-  .form__custom-input p,
-  .form__custom-textarea p,
-  .form__custom-select p {
+  .form__custom-input span,
+  .form__custom-textarea span,
+  .form__custom-select span {
     line-height: 20px;
   }
 
@@ -7071,7 +7072,7 @@ button,
     height: 100%;
   }
 
-  .form__container > picture {
+  .form__container picture {
     display: none;
   }
 
@@ -7104,9 +7105,9 @@ button,
     gap: 10px;
   }
 
-  .form__custom-input p,
-  .form__custom-textarea p,
-  .form__custom-select p {
+  .form__custom-input span,
+  .form__custom-textarea span,
+  .form__custom-select span {
     font-size: 12px;
     line-height: 14px;
   }
@@ -7138,6 +7139,7 @@ button,
 
   .custom-select__button {
     width: 100%;
+    gap: 25px;
   }
 
   .custom-select__text {

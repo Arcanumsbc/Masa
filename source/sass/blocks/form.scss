@@ -11,7 +11,7 @@
   width: 100%;
   height: 803px;
 
-  > picture {
+  picture {
     z-index: -1;
     position: relative;
     border-radius: 16px;
@@ -32,7 +32,7 @@
   @include vp-767 {
     height: 100%;
 
-    > picture {
+    picture {
       display: none;
     }
   }
@@ -168,7 +168,7 @@
   flex-direction: column;
   gap: 8px;
 
-  p {
+  span {
     font-size: $fz-xsmall;
     line-height: $lh-xxxsmall;
     color: rgba($color-alabaster, 0.8);
@@ -219,7 +219,7 @@
   @include vp-1199 {
     gap: 7px;
 
-    p {
+    span {
       line-height: $lh-smedium;
     }
 
@@ -232,7 +232,7 @@
   @include vp-767 {
     gap: 10px;
 
-    p {
+    span {
       font-size: $fz-small;
       line-height: $lh-xsmall;
     }
@@ -297,7 +297,7 @@
       background-color: $color-default-white;
       border: 1px solid rgba($color-default-white, 1);
 
-      & svg {
+      svg {
         stroke: $color-cerulean-blue;
         stroke-width: 2px;
       }
@@ -305,7 +305,7 @@
       @include hover-focus {
         background-color: $color-cerulean-blue;
 
-        & svg {
+        svg {
           stroke: $color-default-white;
         }
       }
@@ -325,7 +325,7 @@
         pointer-events: none;
         cursor: default;
 
-        & svg {
+        svg {
           stroke: $color-default-white;
         }
       }
@@ -356,7 +356,7 @@
   text-align: center;
   justify-content: center;
 
-  & span {
+  span {
     position: absolute;
     right: 3px;
     background-color: $color-default-white;
@@ -370,7 +370,7 @@
     background-color: $color-default-white;
     color: $color-cerulean-blue;
 
-    & span {
+    span {
       background-color: $color-cerulean-blue;
 
       svg {
@@ -391,7 +391,7 @@
     border: 1px solid $color-mischka;
     color: $color-mischka;
 
-    & span {
+    span {
       background-color: $color-mischka;
 
       svg {
