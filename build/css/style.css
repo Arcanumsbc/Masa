@@ -5199,7 +5199,7 @@ button,
   border-radius: 8px;
   height: 50px;
   width: 350px;
-  padding: 15px;
+  padding: 15px 19px 15px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5208,7 +5208,9 @@ button,
   -ms-flex-align: center;
   align-items: center;
   outline: none;
-  gap: 43px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -7139,7 +7141,6 @@ button,
 
   .custom-select__button {
     width: 100%;
-    gap: 25px;
   }
 
   .custom-select__text {

@@ -35,12 +35,12 @@
     border-radius: 8px;
     height: 50px;
     width: 350px;
-    padding: 15px;
+    padding: 15px 19px 15px 15px;
     display: flex;
     cursor: pointer;
     align-items: center;
     outline: none;
-    gap: 43px;
+    justify-content: space-between;
     transition: all $trans-default;
 
     &--active {
@@ -67,7 +67,6 @@
 
     @include vp-767 {
       width: 100%;
-      gap: 25px;
     }
   }
 
