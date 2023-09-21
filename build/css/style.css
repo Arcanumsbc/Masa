@@ -5204,6 +5204,7 @@ button,
 }
 
 .custom-select select {
+  visibility: hidden;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -5212,6 +5213,7 @@ button,
   overflow: hidden;
   white-space: nowrap;
   border: 0;
+  background-color: transparent;
 }
 
 .custom-select__button {
