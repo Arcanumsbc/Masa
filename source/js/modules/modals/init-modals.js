@@ -1,5 +1,6 @@
 import {Modals} from './modals';
-
+const firstInputModal = document.querySelector('#user-name-modal');
+const buttonModal = document.querySelector('.about__button');
 let modals;
 
 // Здесь реализован пример открытия модалки через колбэк закрытия
@@ -27,6 +28,12 @@ const settings = {
 };
 
 const initModals = () => {
+  buttonModal.addEventListener('click', () => {
+    setTimeout(focusInput, 100);
+  });
+  const focusInput = () => {
+    firstInputModal.focus();
+  };
   const modalElements = document.querySelectorAll('.modal');
   modalElements.forEach((el) => {
     setTimeout(() => {

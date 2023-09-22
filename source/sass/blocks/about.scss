@@ -119,6 +119,7 @@
 
 .about__button {
   gap: 28px;
+  max-width: 280px;
 
   @include vp-767 {
     gap: 17px;
@@ -176,6 +177,19 @@
       }
     }
 
+    &:last-child {
+      @include vp-1199 {
+        padding-right: 52px;
+      }
+
+      @include vp-767 {
+        p {
+          padding-right: 53px;
+        }
+        padding-right: 9px;
+      }
+    }
+
     &:nth-child(3n) {
       padding-right: 45px;
 
@@ -184,7 +198,7 @@
       }
 
       @include vp-767 {
-        padding-right: 0;
+        padding-right: 10px;
       }
     }
 
@@ -250,7 +264,7 @@
       }
 
       @include vp-767 {
-        padding-right: 44px;
+        padding-right: 41px;
         font-size: $fz-xsmall;
         line-height: $lh-smedium;
         word-spacing: -1px;

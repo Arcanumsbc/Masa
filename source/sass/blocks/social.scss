@@ -1,12 +1,12 @@
 .social {
-  min-width: 150px;
+  max-width: 150px;
 
   @include vp-1199 {
-    max-width: 230px;
+    max-width: 130px;
   }
 
   @include vp-767 {
-    min-width: 98px;
+    max-width: 100px;
   }
 }
 
@@ -17,13 +17,22 @@
   display: flex;
   gap: 5px 20px;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  transform: translateY(-3px);
+  max-width: 150px;
+  justify-content: flex-start;
+  transform: translateX(2px) translateY(-3px);
 
   @include vp-1199 {
     margin: 0;
     gap: 5px 10px;
     transform: translateY(0);
+    padding-bottom: 50px;
+    max-width: 130px;
+  }
+
+  @include vp-767 {
+    max-width: 98px;
+    padding-bottom: 38px;
+    transform: translateY(2px);
   }
 }
 

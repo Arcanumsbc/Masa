@@ -2338,6 +2338,8 @@ button,
   display: -ms-flexbox;
   display: flex;
   background-color: #316dc2;
+  min-width: 46px;
+  min-height: 46px;
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -2717,9 +2719,9 @@ button,
   gap: 8px;
 }
 
-.modal__custom-input p,
-.modal__custom-textarea p,
-.modal__custom-select p {
+.modal__custom-input span,
+.modal__custom-textarea span,
+.modal__custom-select span {
   font-size: 14px;
   line-height: 18px;
   color: rgba(72, 72, 72, 0.8);
@@ -2783,6 +2785,40 @@ button,
   background-color: rgba(255, 94, 102, 0.2);
 }
 
+.modal__custom-input:focus-within span,
+.modal__custom-textarea:focus-within span,
+.modal__custom-select:focus-within span {
+  color: #484848;
+}
+
+.modal__custom-input.focus-visible:focus span,
+.modal__custom-textarea.focus-visible:focus span,
+.modal__custom-select.focus-visible:focus span {
+  color: #484848;
+}
+
+.modal__custom-input.focus-visible:focus input,
+.modal__custom-input.focus-visible:focus textarea,
+.modal__custom-textarea.focus-visible:focus input,
+.modal__custom-textarea.focus-visible:focus textarea,
+.modal__custom-select.focus-visible:focus input,
+.modal__custom-select.focus-visible:focus textarea {
+  border: 1px solid #484848;
+}
+
+.modal__custom-input[disabled],
+.modal__custom-textarea[disabled],
+.modal__custom-select[disabled] {
+  border: 1px solid rgba(169, 175, 183, 0.2);
+  background-color: rgba(169, 175, 183, 0.4);
+}
+
+.modal__custom-input[disabled] span,
+.modal__custom-textarea[disabled] span,
+.modal__custom-select[disabled] span {
+  color: rgba(72, 72, 72, 0.6);
+}
+
 .modal__custom-select .custom-select__button {
   border: 1px solid rgba(72, 72, 72, 0.3);
 }
@@ -2799,6 +2835,10 @@ button,
   transform: rotate(180deg);
 }
 
+.modal__custom-select .custom-select__button .custom-select__list {
+  border: 1px solid #484848;
+}
+
 .modal__custom-select .custom-select__button .custom-select__text {
   color: #484848;
 }
@@ -2813,6 +2853,10 @@ button,
 }
 
 .modal__custom-select .custom-select__button:active {
+  border: 1px solid #484848;
+}
+
+.modal__custom-select__wrapper.custom-select.is-open .custom-select__list {
   border: 1px solid #484848;
 }
 
@@ -2838,6 +2882,19 @@ button,
   font-size: 12px;
   line-height: 12px;
   color: rgba(72, 72, 72, 0.9);
+}
+
+.modal__custom-input-checkbox label.focus-visible:focus input[type=checkbox] + .modal__checkbox {
+  border: 1px solid #484848;
+}
+
+.modal__custom-input-checkbox label.focus-visible:focus input[type=checkbox]:checked + .modal__checkbox {
+  background-color: #ffffff;
+  border: 1px solid #316dc2;
+}
+
+.modal__custom-input-checkbox label.focus-visible:focus input[type=checkbox]:checked + .modal__checkbox svg {
+  stroke: #316dc2;
 }
 
 .modal__custom-input-checkbox label input[type=checkbox] + .modal__checkbox {
@@ -2866,10 +2923,6 @@ button,
   height: 10px;
 }
 
-.modal__custom-input-checkbox label input[type=checkbox] + .modal__checkbox.focus-visible:focus {
-  border: 1px solid #484848;
-}
-
 .modal__custom-input-checkbox label input[type=checkbox]:checked + .modal__checkbox {
   background-color: #316dc2;
   border: 1px solid #316dc2;
@@ -2880,13 +2933,8 @@ button,
   stroke-width: 2px;
 }
 
-.modal__custom-input-checkbox label input[type=checkbox]:checked + .modal__checkbox.focus-visible:focus {
-  background-color: #ffffff;
-  border: 1px solid #316dc2;
-}
-
-.modal__custom-input-checkbox label input[type=checkbox]:checked + .modal__checkbox.focus-visible:focus svg {
-  stroke: #316dc2;
+.modal__custom-input-checkbox label[disabled] span {
+  color: rgba(72, 72, 72, 0.6);
 }
 
 .modal__custom-input-checkbox label[disabled] input[type=checkbox] + .modal__checkbox {
@@ -2980,6 +3028,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -3022,7 +3072,7 @@ button,
 }
 
 .main-header__menu {
-  display: none;
+  overflow: auto;
   height: 0;
   width: 0;
   opacity: 0;
@@ -3041,9 +3091,11 @@ button,
 }
 
 .main-header.is-open .main-header__menu {
-  display: block;
+  top: 84px;
+  position: fixed;
   width: 286px;
   height: auto;
+  max-height: calc(100vh - 90px);
   margin-top: 4px;
   padding: 29px 25px 31px;
   opacity: 1;
@@ -3523,6 +3575,7 @@ button,
 
 .about__button {
   gap: 28px;
+  max-width: 280px;
 }
 
 .about__inner-bottom {
@@ -3632,6 +3685,7 @@ button,
 }
 
 .programs__button {
+  max-width: 280px;
   gap: 30px;
   padding-left: 30px;
   -webkit-transform: translateX(2px) translateY(-4px);
@@ -3673,6 +3727,7 @@ button,
 
 .programs__content {
   z-index: 2;
+  width: 100%;
 }
 
 .programs__content h3 {
@@ -3941,13 +3996,14 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   gap: 15px 30px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 1240px;
+  margin: 0 auto;
   padding-bottom: 40px;
 }
 
@@ -4035,6 +4091,7 @@ button,
 }
 
 .news__pagination .swiper-pagination-bullet.focus-visible:focus {
+  background-color: transparent;
   color: #316dc2;
   opacity: 1;
   border-color: #316dc2;
@@ -4543,6 +4600,7 @@ button,
   border: 1px solid #316dc2;
   width: auto;
   min-height: 430px;
+  height: auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -4659,7 +4717,7 @@ button,
 .reviews__content p {
   margin: 0;
   line-height: 26px;
-  word-spacing: 0;
+  word-spacing: -1px;
 }
 
 .reviews__control {
@@ -4833,14 +4891,19 @@ button,
 
 .form__container {
   width: 100%;
-  height: 803px;
+  min-height: 803px;
+  height: auto;
+  position: relative;
 }
 
 .form__container picture {
   z-index: -1;
-  position: relative;
+  position: absolute;
   border-radius: 16px;
   top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .form__container picture img {
@@ -4853,11 +4916,12 @@ button,
 
 .form__wrapper {
   z-index: 1;
-  position: absolute;
+  position: relative;
   background-color: #316dc2;
   border-radius: 16px;
   padding: 82px 71px 51px 74px;
-  height: 803px;
+  min-height: 803px;
+  height: auto;
   max-width: 498px;
 }
 
@@ -5023,6 +5087,40 @@ button,
   background-color: rgba(255, 94, 102, 0.2);
 }
 
+.form__custom-input:focus-within span,
+.form__custom-textarea:focus-within span,
+.form__custom-select:focus-within span {
+  color: #f0efe9;
+}
+
+.form__custom-input.focus-visible:focus span,
+.form__custom-textarea.focus-visible:focus span,
+.form__custom-select.focus-visible:focus span {
+  color: #f0efe9;
+}
+
+.form__custom-input.focus-visible:focus input,
+.form__custom-input.focus-visible:focus textarea,
+.form__custom-textarea.focus-visible:focus input,
+.form__custom-textarea.focus-visible:focus textarea,
+.form__custom-select.focus-visible:focus input,
+.form__custom-select.focus-visible:focus textarea {
+  border: 1px solid white;
+}
+
+.form__custom-input[disabled],
+.form__custom-textarea[disabled],
+.form__custom-select[disabled] {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.form__custom-input[disabled] span,
+.form__custom-textarea[disabled] span,
+.form__custom-select[disabled] span {
+  color: rgba(240, 239, 233, 0.6);
+}
+
 .form__custom-input-checkbox {
   margin-top: 6px;
 }
@@ -5045,6 +5143,18 @@ button,
   font-size: 12px;
   line-height: 12px;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.form__custom-input-checkbox label.focus-visible:focus input[type=checkbox] + .form__checkbox {
+  border: 1px solid white;
+}
+
+.form__custom-input-checkbox label.focus-visible:focus input[type=checkbox]:checked + .form__checkbox {
+  background-color: #316dc2;
+}
+
+.form__custom-input-checkbox label.focus-visible:focus input[type=checkbox]:checked + .form__checkbox svg {
+  stroke: #ffffff;
 }
 
 .form__custom-input-checkbox label input[type=checkbox] + .form__checkbox {
@@ -5306,6 +5416,10 @@ button,
 }
 
 .custom-select__item.focus-visible:focus {
+  color: #316dc2;
+}
+
+.custom-select__item.focus-visible:focus:active {
   background-color: #316dc2;
   color: #ffffff;
 }
@@ -5357,6 +5471,11 @@ button,
 .custom-select.is-open .custom-select__list {
   visibility: visible;
   opacity: 1;
+}
+
+.custom-select.is-open .custom-select__item[aria-selected=true] {
+  background-color: #316dc2;
+  color: #ffffff;
 }
 
 .custom-select.is-open .custom-select__icon {
@@ -5513,7 +5632,7 @@ button,
 }
 
 .social {
-  min-width: 150px;
+  max-width: 150px;
 }
 
 .social__list {
@@ -5526,12 +5645,13 @@ button,
   gap: 5px 20px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-transform: translateY(-3px);
-  -ms-transform: translateY(-3px);
-  transform: translateY(-3px);
+  max-width: 150px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-transform: translateX(2px) translateY(-3px);
+  -ms-transform: translateX(2px) translateY(-3px);
+  transform: translateX(2px) translateY(-3px);
 }
 
 .social__link {
@@ -5661,9 +5781,9 @@ button,
     line-height: 20px;
   }
 
-  .modal__custom-input p,
-  .modal__custom-textarea p,
-  .modal__custom-select p {
+  .modal__custom-input span,
+  .modal__custom-textarea span,
+  .modal__custom-select span {
     line-height: 20px;
   }
 
@@ -5785,6 +5905,10 @@ button,
 
   .about__inner-bottom ul {
     gap: 42px 48px;
+  }
+
+  .about__inner-bottom li:last-child {
+    padding-right: 52px;
   }
 
   .about__inner-bottom li:nth-child(3n) {
@@ -6116,6 +6240,7 @@ button,
 
   .reviews__content p {
     line-height: 20px;
+    word-spacing: 0;
   }
 
   .reviews__control {
@@ -6173,11 +6298,13 @@ button,
   }
 
   .form__container {
-    height: 780px;
+    min-height: 780px;
+    height: auto;
   }
 
   .form__wrapper {
-    height: 780px;
+    min-height: 780px;
+    height: auto;
     max-width: 442px;
     padding: 60px 43px 50px 45px;
   }
@@ -6287,7 +6414,7 @@ button,
   }
 
   .social {
-    max-width: 230px;
+    max-width: 130px;
   }
 
   .social__list {
@@ -6296,6 +6423,8 @@ button,
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+    padding-bottom: 50px;
+    max-width: 130px;
   }
 }
 
@@ -6313,6 +6442,8 @@ button,
   }
 
   .btn span {
+    min-width: 34px;
+    min-height: 34px;
     width: 34px;
     height: 34px;
   }
@@ -6359,9 +6490,9 @@ button,
     height: 44px;
   }
 
-  .modal__custom-input p,
-  .modal__custom-textarea p,
-  .modal__custom-select p {
+  .modal__custom-input span,
+  .modal__custom-textarea span,
+  .modal__custom-select span {
     font-size: 14px;
     line-height: 14px;
   }
@@ -6415,6 +6546,7 @@ button,
 
   .main-header.is-open .main-header__menu {
     width: 290px;
+    top: 75px;
   }
 
   .main-header.is-open .main-header__button {
@@ -6624,8 +6756,16 @@ button,
     padding-right: 0;
   }
 
+  .about__inner-bottom li:last-child {
+    padding-right: 9px;
+  }
+
+  .about__inner-bottom li:last-child p {
+    padding-right: 53px;
+  }
+
   .about__inner-bottom li:nth-child(3n) {
-    padding-right: 0;
+    padding-right: 10px;
   }
 
   .about__inner-bottom li span svg {
@@ -6641,7 +6781,7 @@ button,
   }
 
   .about__inner-bottom li p {
-    padding-right: 44px;
+    padding-right: 41px;
     font-size: 14px;
     line-height: 20px;
     word-spacing: -1px;
@@ -6673,7 +6813,7 @@ button,
 
   .programs__button {
     gap: 27px;
-    width: 203px;
+    max-width: 203px;
   }
 
   .programs__list {
@@ -6688,13 +6828,18 @@ button,
   }
 
   .programs__content h3 {
-    width: 146px;
+    min-width: 146px;
+    width: auto;
+    margin-right: 120px;
     font-size: 16px;
     line-height: 18px;
     padding: 18px 18px 10px 18px;
   }
 
   .programs__description {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     min-height: 69px;
     padding: 0 18px 4px 18px;
   }
@@ -6736,6 +6881,8 @@ button,
     font-size: 14px;
     padding-right: 0;
     padding-bottom: 25px;
+    width: auto;
+    max-width: 450px;
   }
 
   .conditions__inner img {
@@ -6883,7 +7030,8 @@ button,
   }
 
   .news-card__content {
-    max-width: 400px;
+    width: 100%;
+    max-width: 100%;
     padding-right: 27px;
   }
 
@@ -6903,8 +7051,23 @@ button,
   }
 
   .news-card__description {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     gap: 10px;
     padding: 12px 10px 10px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .news-card.slide-active .news-card__content {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .news-card.slide-active .news-card__title {
+    width: auto;
+    max-width: 100%;
   }
 
   .news-card.slide-active {
@@ -7116,11 +7279,11 @@ button,
   }
 
   .form {
-    margin-bottom: 29px;
+    margin-bottom: 2px;
   }
 
   .form__container {
-    height: 100%;
+    height: auto;
   }
 
   .form__container picture {
@@ -7130,7 +7293,8 @@ button,
   .form__wrapper {
     position: relative;
     max-width: 100%;
-    height: 100%;
+    min-height: 753px;
+    height: auto;
     padding: 50px 15px 50px 15px;
   }
 
@@ -7217,7 +7381,8 @@ button,
   }
 
   .main-footer__copyright {
-    margin-top: 11px;
+    margin-top: 12px;
+    gap: 8px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -7254,7 +7419,15 @@ button,
   }
 
   .social {
-    min-width: 98px;
+    max-width: 100px;
+  }
+
+  .social__list {
+    max-width: 98px;
+    padding-bottom: 38px;
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
   }
 
   .social__link {
@@ -7337,21 +7510,36 @@ button,
     border: 1px solid #484848;
   }
 
+  .modal__custom-input:hover:not(.focus-visible) span,
+  .modal__custom-textarea:hover:not(.focus-visible) span,
+  .modal__custom-select:hover:not(.focus-visible) span {
+    color: #484848;
+  }
+
+  .modal__custom-input:hover:not(.focus-visible) input,
+  .modal__custom-input:hover:not(.focus-visible) textarea,
+  .modal__custom-textarea:hover:not(.focus-visible) input,
+  .modal__custom-textarea:hover:not(.focus-visible) textarea,
+  .modal__custom-select:hover:not(.focus-visible) input,
+  .modal__custom-select:hover:not(.focus-visible) textarea {
+    border: 1px solid #484848;
+  }
+
   .modal__custom-select .custom-select__button:hover:not(.focus-visible) {
     outline: none;
     border: 1px solid #484848;
   }
 
-  .modal__custom-input-checkbox label input[type=checkbox] + .modal__checkbox:hover:not(.focus-visible) {
+  .modal__custom-input-checkbox label:hover:not(.focus-visible) input[type=checkbox] + .modal__checkbox {
     border: 1px solid #484848;
   }
 
-  .modal__custom-input-checkbox label input[type=checkbox]:checked + .modal__checkbox:hover:not(.focus-visible) {
+  .modal__custom-input-checkbox label:hover:not(.focus-visible) input[type=checkbox]:checked + .modal__checkbox {
     background-color: #ffffff;
     border: 1px solid #316dc2;
   }
 
-  .modal__custom-input-checkbox label input[type=checkbox]:checked + .modal__checkbox:hover:not(.focus-visible) svg {
+  .modal__custom-input-checkbox label:hover:not(.focus-visible) input[type=checkbox]:checked + .modal__checkbox svg {
     stroke: #316dc2;
   }
 
@@ -7411,6 +7599,7 @@ button,
   }
 
   .news__pagination .swiper-pagination-bullet:hover:not(.focus-visible) {
+    background-color: transparent;
     color: #316dc2;
     opacity: 1;
     border-color: #316dc2;
@@ -7530,6 +7719,33 @@ button,
     border: 1px solid white;
   }
 
+  .form__custom-input:hover:not(.focus-visible) span,
+  .form__custom-textarea:hover:not(.focus-visible) span,
+  .form__custom-select:hover:not(.focus-visible) span {
+    color: #f0efe9;
+  }
+
+  .form__custom-input:hover:not(.focus-visible) input,
+  .form__custom-input:hover:not(.focus-visible) textarea,
+  .form__custom-textarea:hover:not(.focus-visible) input,
+  .form__custom-textarea:hover:not(.focus-visible) textarea,
+  .form__custom-select:hover:not(.focus-visible) input,
+  .form__custom-select:hover:not(.focus-visible) textarea {
+    border: 1px solid white;
+  }
+
+  .form__custom-input-checkbox label:hover:not(.focus-visible) input[type=checkbox] + .form__checkbox {
+    border: 1px solid white;
+  }
+
+  .form__custom-input-checkbox label:hover:not(.focus-visible) input[type=checkbox]:checked + .form__checkbox {
+    background-color: #316dc2;
+  }
+
+  .form__custom-input-checkbox label:hover:not(.focus-visible) input[type=checkbox]:checked + .form__checkbox svg {
+    stroke: #ffffff;
+  }
+
   .form__custom-input-checkbox label input[type=checkbox] + .form__checkbox:hover:not(.focus-visible) {
     border: 1px solid white;
   }
@@ -7569,6 +7785,10 @@ button,
   }
 
   .custom-select__item:hover:not(.focus-visible) {
+    color: #316dc2;
+  }
+
+  .custom-select__item:hover:not(.focus-visible):active {
     background-color: #316dc2;
     color: #ffffff;
   }

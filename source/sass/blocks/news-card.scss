@@ -45,7 +45,8 @@
   }
 
   @include vp-767 {
-    max-width: 400px;
+    width: 100%;
+    max-width: 100%;
     padding-right: 27px;
   }
 }
@@ -188,8 +189,11 @@
   }
 
   @include vp-767 {
+    justify-content: space-between;
     gap: 10px;
     padding: 12px 10px 10px 0;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -198,11 +202,21 @@
 
   & .news-card__content {
     max-width: 435px;
+
+    @include vp-767 {
+      width: auto;
+      max-width: 100%;
+    }
   }
 
   & .news-card__title {
     max-width: 291px;
     padding: 13px 14px 2px 0;
+
+    @include vp-767 {
+      width: auto;
+      max-width: 100%;
+    }
   }
 
   & .news-card__description {

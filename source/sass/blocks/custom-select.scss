@@ -109,8 +109,12 @@
     }
 
     @include hover-focus {
-      background-color: $color-cerulean-blue;
-      color: $color-default-white;
+      color: $color-cerulean-blue;
+
+      @include active {
+        background-color: $color-cerulean-blue;
+        color: $color-default-white;
+      }
     }
   }
 
@@ -169,6 +173,11 @@
     .custom-select__list {
       visibility: visible;
       opacity: 1;
+    }
+
+    .custom-select__item[aria-selected="true"] {
+      background-color: $color-cerulean-blue;
+      color: $color-default-white;
     }
 
     .custom-select__icon {

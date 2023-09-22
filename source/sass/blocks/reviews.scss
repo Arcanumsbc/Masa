@@ -67,6 +67,7 @@
   border: 1px solid $color-cerulean-blue;
   width: auto;
   min-height: 430px;
+  height: auto;
   align-items: center;
 
   @include vp-1199 {
@@ -226,10 +227,11 @@
   p {
     margin: 0;
     line-height: $lh-xxxmedium;
-    word-spacing: 0;
+    word-spacing: -1px;
 
     @include vp-1199 {
       line-height: $lh-smedium;
+      word-spacing: 0;
     }
 
     @include vp-767 {

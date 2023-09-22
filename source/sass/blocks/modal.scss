@@ -175,7 +175,7 @@
     flex-direction: column;
     gap: 8px;
 
-    p {
+    span {
       font-size: $fz-xsmall;
       line-height: $lh-xxxsmall;
       color: rgba($color-charcoal, 0.8);
@@ -211,7 +211,7 @@
     }
 
     @include vp-1199 {
-      p {
+      span {
         line-height: $lh-smedium;
       }
     }
@@ -225,7 +225,7 @@
         height: 44px;
       }
 
-      p {
+      span {
         font-size: $fz-xsmall;
         line-height: $lh-xsmall;
       }
@@ -237,6 +237,32 @@
         border: 1px solid $color-wild-watermelon;
         background-color: rgba($color-wild-watermelon, 0.2);
       }
+    }
+
+    &:focus-within {
+      span {
+        color: rgba($color-charcoal, 1);
+      }
+    }
+
+    @include hover-focus {
+      span {
+        color: rgba($color-charcoal, 1);
+      }
+
+      input,
+      textarea {
+        border: 1px solid rgba($color-charcoal, 1);
+      }
+    }
+
+    @include disabled {
+      span {
+        color: rgba($color-charcoal, 0.6);
+      }
+
+      border: 1px solid rgba($color-mischka, 0.2);
+      background-color: rgba($color-mischka, 0.4);
     }
   }
 
@@ -251,6 +277,10 @@
           transition: all $trans-default;
           transform: rotate(180deg);
         }
+      }
+
+      & .custom-select__list {
+        border: 1px solid $color-charcoal;
       }
 
       & .custom-select__text {
@@ -281,6 +311,12 @@
     }
   }
 
+  &__custom-select__wrapper.custom-select.is-open {
+    & .custom-select__list {
+      border: 1px solid $color-charcoal;
+    }
+  }
+
   &__custom-input-checkbox {
     margin-top: 7px;
 
@@ -294,6 +330,21 @@
         font-size: $fz-small;
         line-height: $lh-small;
         color: rgba($color-charcoal, 0.9);
+      }
+
+      @include hover-focus {
+        input[type="checkbox"] + .modal__checkbox {
+          border: 1px solid rgba($color-charcoal, 1);
+        }
+
+        input[type="checkbox"]:checked + .modal__checkbox {
+          background-color: $color-default-white;
+          border: 1px solid rgba($color-cerulean-blue, 1);
+
+          svg {
+            stroke: $color-cerulean-blue;
+          }
+        }
       }
 
       input[type="checkbox"] + .modal__checkbox {
@@ -314,10 +365,6 @@
           width: 10px;
           height: 10px;
         }
-
-        @include hover-focus {
-          border: 1px solid rgba($color-charcoal, 1);
-        }
       }
 
       input[type="checkbox"]:checked + .modal__checkbox {
@@ -328,18 +375,13 @@
           stroke: $color-default-white;
           stroke-width: 2px;
         }
-
-        @include hover-focus {
-          background-color: $color-default-white;
-          border: 1px solid rgba($color-cerulean-blue, 1);
-
-          svg {
-            stroke: $color-cerulean-blue;
-          }
-        }
       }
 
       @include disabled {
+        span {
+          color: rgba($color-charcoal, 0.6);
+        }
+
         input[type="checkbox"] + .modal__checkbox {
           border: 1px solid rgba($color-default-white, 1);
           background-color: rgba($color-default-white, 0.6);
