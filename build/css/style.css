@@ -3616,6 +3616,10 @@ button,
   padding-right: 45px;
 }
 
+.about__inner-bottom li:last-child p {
+  padding-right: 10px;
+}
+
 .about__inner-bottom li:nth-child(3n) {
   padding-right: 45px;
 }
@@ -5649,9 +5653,9 @@ button,
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-transform: translateX(2px) translateY(-3px);
-  -ms-transform: translateX(2px) translateY(-3px);
-  transform: translateX(2px) translateY(-3px);
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .social__link {

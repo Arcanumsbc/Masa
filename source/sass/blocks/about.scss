@@ -178,6 +178,10 @@
     }
 
     &:last-child {
+      p {
+        padding-right: 10px;
+      }
+
       @include vp-1199 {
         padding-right: 52px;
       }
@@ -186,6 +190,7 @@
         p {
           padding-right: 53px;
         }
+
         padding-right: 9px;
       }
     }

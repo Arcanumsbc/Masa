@@ -19,7 +19,7 @@
   flex-wrap: wrap;
   max-width: 150px;
   justify-content: flex-start;
-  transform: translateX(2px) translateY(-3px);
+  transform: translateY(-3px);
 
   @include vp-1199 {
     margin: 0;
