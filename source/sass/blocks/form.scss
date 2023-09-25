@@ -302,6 +302,7 @@
       font-size: $fz-small;
       line-height: $lh-small;
       color: rgba($color-default-white, 0.9);
+      cursor: pointer;
     }
 
     @include hover-focus {

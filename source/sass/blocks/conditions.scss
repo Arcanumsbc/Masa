@@ -70,7 +70,9 @@
     }
 
     img {
-      height: 375px;
+      min-height: 375px;
+      height: auto;
+      max-height: 100%;
     }
   }
 
@@ -84,12 +86,13 @@
       font-size: $fz-xsmall;
       padding-right: 0;
       padding-bottom: 25px;
-      width: auto;
-      max-width: 450px;
+      width: 100%;
     }
 
     img {
-      height: 200px;
+      min-height: 200px;
+      height: auto;
+      max-height: 100%;
     }
   }
 }

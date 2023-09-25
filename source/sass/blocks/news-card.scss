@@ -25,11 +25,15 @@
   }
 
   @include vp-767 {
-    height: 330px;
+    min-height: 330px;
+    height: auto;
+    aspect-ratio: 35/40;
 
     &:nth-child(even) {
       @include vp-767 {
-        height: 240px;
+        min-height: 240px;
+        height: auto;
+        aspect-ratio: 40/29;
       }
     }
   }

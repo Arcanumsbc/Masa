@@ -5147,6 +5147,7 @@ button,
   font-size: 12px;
   line-height: 12px;
   color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
 }
 
 .form__custom-input-checkbox label.focus-visible:focus input[type=checkbox] + .form__checkbox {
@@ -6021,7 +6022,9 @@ button,
   }
 
   .conditions__inner img {
-    height: 375px;
+    min-height: 375px;
+    height: auto;
+    max-height: 100%;
   }
 
   .conditions__info {
@@ -6826,7 +6829,10 @@ button,
 
   .programs__item {
     min-height: 400px;
+    height: auto;
+    max-height: 100%;
     min-width: 290px;
+    aspect-ratio: 35/40;
     width: 100%;
     padding: 20px 10px 18px 10px;
   }
@@ -6885,12 +6891,13 @@ button,
     font-size: 14px;
     padding-right: 0;
     padding-bottom: 25px;
-    width: auto;
-    max-width: 450px;
+    width: 100%;
   }
 
   .conditions__inner img {
-    height: 200px;
+    min-height: 200px;
+    height: auto;
+    max-height: 100%;
   }
 
   .conditions__info h3 {
@@ -7030,7 +7037,9 @@ button,
   }
 
   .news-card {
-    height: 330px;
+    min-height: 330px;
+    height: auto;
+    aspect-ratio: 35/40;
   }
 
   .news-card__content {
@@ -7447,7 +7456,9 @@ button,
 
 @media (max-width: 767px) and (max-width: 767px) {
   .news-card:nth-child(even) {
-    height: 240px;
+    min-height: 240px;
+    height: auto;
+    aspect-ratio: 40/29;
   }
 }
 
